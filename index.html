@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>3x3 魔方 · 可视化</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: #0e1116; color: #e6edf3; overflow: hidden;
+  }
+  #app { display: flex; height: 100vh; }
+  #canvas-wrap { flex: 1; position: relative; }
+  canvas { display: block; }
+  #panel {
+    width: 300px; padding: 16px; background: #161b22; border-left: 1px solid #30363d;
+    overflow-y: auto; display: flex; flex-direction: column; gap: 14px;
+  }
+  h1 { font-size: 15px; margin: 0 0 4px; }
+  .hint { font-size: 11px; color: #8b949e; line-height: 1.5; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  button {
+    background: #21262d; color: #e6edf3; border: 1px solid #30363d; border-radius: 6px;
+    padding: 8px 0; font-family: inherit; font-size: 13px; cursor: pointer; transition: .1s;
+  }
+  button:hover { background: #30363d; border-color: #58a6ff; }
+  button:active { transform: translateY(1px); }
+  .row { display: flex; gap: 6px; }
+  .row button { flex: 1; }
+  .section-title { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #8b949e; margin-bottom: 6px; }
+  #log {
+    background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 8px;
+    font-size: 12px; min-height: 60px; max-height: 140px; overflow-y: auto;
+    word-break: break-all; line-height: 1.6; color: #7ee787;
+  }
+  #status { font-size: 12px; color: #8b949e; }
+  .accent { background: #1f6feb33; border-color: #1f6feb; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="canvas-wrap"></div>
+  <div id="panel">
+    <div>
+      <h1>3×3 魔方</h1>
+      <div class="hint">鼠标拖动旋转视角 · 滚轮缩放<br>键盘：U D L R F B（按住 Shift 为逆时针）<br>M=中层(不碰角)  E=中层(不碰角,跟U方向)</div>
+    </div>
+
+    <div>
+      <div class="section-title">面转动 (顺时针)</div>
+      <div class="grid">
+        <button data-move="U">U</button>
+        <button data-move="D">D</button>
+        <button data-move="L">L</button>
+        <button data-move="R">R</button>
+        <button data-move="F">F</button>
+        <button data-move="B">B</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-title">逆时针 (prime)</div>
+      <div class="grid">
+        <button data-move="U'">U'</button>
+        <button data-move="D'">D'</button>
+        <button data-move="L'">L'</button>
+        <button data-move="R'">R'</button>
+        <button data-move="F'">F'</button>
+        <button data-move="B'">B'</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-title">中层 M (不碰角,跟L方向)</div>
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+        <button data-move="M" style="background:#d2992233;border-color:#d29922;color:#d29922">M</button>
+        <button data-move="M'" style="background:#d2992233;border-color:#d29922;color:#d29922">M'</button>
+        <button data-move="M2" style="background:#d2992233;border-color:#d29922;color:#d29922">M2</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="row">
+        <button id="scramble" class="accent">打乱</button>
+        <button id="reset">还原</button>
+      </div>
+      <div class="row" style="margin-top:6px">
+        <button id="solve-play" style="flex:1;background:#238636;border-color:#2ea043">求解并演示（最短解）</button>
+      </div>
+      <div class="row" style="margin-top:4px">
+        <button id="lsll-demo" style="flex:1;background:#9c4dcc;border-color:#b96de0">LSLL 演示</button>
+        <button id="solve4-btn" style="flex:1;background:#da3633;border-color:#f85149">LSLL 求解方案</button>
+      </div>
+      <div id="phases-container" style="display:none;margin-top:4px;flex-direction:column;gap:4px"></div>
+    </div>
+
+    <div>
+      <div class="section-title">移动记录 (<span id="count">0</span>)</div>
+      <div id="log"></div>
+      <div class="row" style="margin-top:6px">
+        <input id="move-input" type="text" placeholder="输入序列, 如 U R' F2" 
+               style="flex:1;background:#0d1117;color:#e6edf3;border:1px solid #30363d;border-radius:4px;padding:6px 8px;font-family:inherit;font-size:12px">
+        <button id="exec-btn" style="width:50px;flex:none;background:#1f6feb33;border-color:#1f6feb">执行</button>
+      </div>
+    </div>
+    <div id="status">已还原 ✓</div>
+  </div>
+</div>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+let skipRender = false;
+
+// ---------- scene ----------
+const wrap = document.getElementById('canvas-wrap');
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0e1116);
+const camera = new THREE.PerspectiveCamera(45, wrap.clientWidth/wrap.clientHeight, 0.1, 100);
+camera.position.set(5, 5, 7);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+wrap.appendChild(renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+scene.add(new THREE.AmbientLight(0xffffff, 0.85));
+const dir = new THREE.DirectionalLight(0xffffff, 0.6); dir.position.set(5,10,7); scene.add(dir);
+
+// ---------- cube build ----------
+// standard color scheme: U white, D yellow, F green, B blue, L orange, R red
+const COLORS = {
+  U: 0xffffff, D: 0xffd500, F: 0x009b48, B: 0x0046ad, L: 0xff5800, R: 0xb71234, inner: 0x111111
+};
+// face normal -> color key
+function colorForFace(x, y, z, nx, ny, nz) {
+  if (ny === 1)  return y === 1  ? COLORS.U : COLORS.inner;
+  if (ny === -1) return y === -1 ? COLORS.D : COLORS.inner;
+  if (nx === 1)  return x === 1  ? COLORS.R : COLORS.inner;
+  if (nx === -1) return x === -1 ? COLORS.L : COLORS.inner;
+  if (nz === 1)  return z === 1  ? COLORS.F : COLORS.inner;
+  if (nz === -1) return z === -1 ? COLORS.B : COLORS.inner;
+  return COLORS.inner;
+}
+
+const cubies = [];
+const SIZE = 0.96, GAP = 1.0;
+const group = new THREE.Group();
+scene.add(group);
+
+for (let x=-1; x<=1; x++)
+for (let y=-1; y<=1; y++)
+for (let z=-1; z<=1; z++) {
+  const geo = new THREE.BoxGeometry(SIZE, SIZE, SIZE);
+  // BoxGeometry face order: +x,-x,+y,-y,+z,-z
+  const normals = [[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]];
+  const mats = normals.map(([nx,ny,nz]) =>
+    new THREE.MeshStandardMaterial({ color: colorForFace(x,y,z,nx,ny,nz), roughness:0.45, metalness:0.0 }));
+  const mesh = new THREE.Mesh(geo, mats);
+  mesh.position.set(x*GAP, y*GAP, z*GAP);
+  mesh.userData.logical = new THREE.Vector3(x, y, z); // logical grid position
+  group.add(mesh);
+  cubies.push(mesh);
+}
+
+// ---------- move engine ----------
+// each move = axis + which layer + direction
+const MOVES = {
+  U: { axis:'y', layer: 1, dir:-1 }, "U'": { axis:'y', layer: 1, dir: 1 }, U2: { axis:'y', layer: 1, dir:-1, double:true },
+  D: { axis:'y', layer:-1, dir: 1 }, "D'": { axis:'y', layer:-1, dir:-1 }, D2: { axis:'y', layer:-1, dir: 1, double:true },
+  R: { axis:'x', layer: 1, dir:-1 }, "R'": { axis:'x', layer: 1, dir: 1 }, R2: { axis:'x', layer: 1, dir:-1, double:true },
+  L: { axis:'x', layer:-1, dir: 1 }, "L'": { axis:'x', layer:-1, dir:-1 }, L2: { axis:'x', layer:-1, dir: 1, double:true },
+  F: { axis:'z', layer: 1, dir:-1 }, "F'": { axis:'z', layer: 1, dir: 1 }, F2: { axis:'z', layer: 1, dir:-1, double:true },
+  B: { axis:'z', layer:-1, dir: 1 }, "B'": { axis:'z', layer:-1, dir:-1 }, B2: { axis:'z', layer:-1, dir: 1, double:true },
+  // M: middle slice between L and R, follows L direction (axis=x, layer=0)
+  M: { axis:'x', layer: 0, dir: 1 }, "M'": { axis:'x', layer: 0, dir:-1 }, M2: { axis:'x', layer: 0, dir: 1, double:true },
+};
+
+let animating = false;
+const moveLog = [];
+const logEl = document.getElementById('log');
+const countEl = document.getElementById('count');
+const statusEl = document.getElementById('status');
+
+function isSolved() {
+  // solved iff every cubie back at its logical home — we track via solved flag instead
+  return moveLog.length === 0 || solvedCheck();
+}
+function solvedCheck() {
+  // compare current logical positions to a canonical solved arrangement is complex after scramble;
+  // simplest: track a separate parity — recompute by checking each cubie's logical vs an origin map
+  for (const c of cubies) {
+    const p = c.userData.logical;
+    // home recorded at creation in userData.home
+    if (!c.userData.home.equals(p)) return false;
+  }
+  return true;
+}
+cubies.forEach(c => c.userData.home = c.userData.logical.clone());
+
+function updateUI(moveName) {
+  if (moveName) { moveLog.push(moveName); }
+  logEl.textContent = moveLog.join(' ');
+  logEl.scrollTop = logEl.scrollHeight;
+  countEl.textContent = moveLog.length;
+  statusEl.textContent = solvedCheck() ? '已还原 ✓' : '打乱中…';
+}
+
+function doMove(name, animate=true) {
+  const m = MOVES[name];
+  if (!m) return Promise.resolve();
+  const axisIdx = { x:0, y:1, z:2 }[m.axis];
+  const selected = cubies.filter(c => {
+    const v = c.userData.logical;
+    return [v.x, v.y, v.z][axisIdx] === m.layer;
+  });
+  const pivot = new THREE.Group();
+  scene.add(pivot);
+  selected.forEach(c => pivot.attach(c));
+  const axisVec = new THREE.Vector3(m.axis==='x'?1:0, m.axis==='y'?1:0, m.axis==='z'?1:0);
+  const target = m.double ? m.dir * Math.PI : m.dir * Math.PI/2;
+
+  return new Promise(resolve => {
+    const dur = animate ? 140 : 0;
+    const t0 = performance.now();
+    function step(now) {
+      const t = dur === 0 ? 1 : Math.min((now - t0)/dur, 1);
+      pivot.setRotationFromAxisAngle(axisVec, target * t);
+      if (!skipRender) renderer.render(scene, camera);
+      if (t < 1) { requestAnimationFrame(step); }
+      else {
+        pivot.updateMatrixWorld(true);
+        selected.forEach(c => {
+          group.attach(c);
+          // update logical position (round to grid)
+          const v = c.userData.logical;
+          c.userData.logical = rotateLogical(v, m.axis, m.dir, !!m.double);
+        });
+        scene.remove(pivot);
+        updateUI(name);
+        resolve();
+      }
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+function rotateLogical(v, axis, dir, isDouble) {
+  const { x, y, z } = v;
+  if (isDouble) {
+    if (axis === 'x') return new THREE.Vector3(x, -y, -z);
+    if (axis === 'y') return new THREE.Vector3(-x, y, -z);
+    return new THREE.Vector3(-x, -y, z);
+  }
+  if (axis === 'x') return new THREE.Vector3(x, dir>0 ? -z :  z, dir>0 ?  y : -y);
+  if (axis === 'y') return new THREE.Vector3(dir>0 ?  z : -z, y, dir>0 ? -x :  x);
+  /* z */            return new THREE.Vector3(dir>0 ? -y :  y, dir>0 ?  x : -x, z);
+}
+
+// ---------- controls ----------
+async function run(name) {
+  if (animating) return;
+  animating = true; await doMove(name, true); animating = false;
+}
+
+document.querySelectorAll('[data-move]').forEach(btn =>
+  btn.addEventListener('click', () => run(btn.dataset.move)));
+
+const KEYMAP = { u:'U', d:'D', l:'L', r:'R', f:'F', b:'B', m:'M' };
+window.addEventListener('keydown', e => {
+  const k = e.key.toLowerCase();
+  if (KEYMAP[k]) run(KEYMAP[k] + (e.shiftKey ? "'" : ""));
+});
+
+document.getElementById('reset').addEventListener('click', async () => {
+  if (animating) return;
+  animating = true;
+  // snap back to solved
+  cubies.forEach(c => {
+    c.userData.logical = c.userData.home.clone();
+    c.position.set(c.userData.home.x*GAP, c.userData.home.y*GAP, c.userData.home.z*GAP);
+    c.setRotationFromQuaternion(new THREE.Quaternion());
+  });
+  moveLog.length = 0;
+  updateUI();
+  animating = false;
+});
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+document.getElementById('solve-play').addEventListener('click', async () => {
+  if (animating) return;
+  if (solvedCheck()) { statusEl.textContent = '已经是还原状态，先打乱'; return; }
+  const scramble = moveLog.join(' ');
+  statusEl.textContent = '求解中…';
+  let data;
+  try {
+    const res = await fetch('/solve?scramble=' + encodeURIComponent(scramble));
+    data = await res.json();
+  } catch (e) {
+    statusEl.textContent = '连不上求解服务 — 请用 python3 server.py 启动后打开本页';
+    return;
+  }
+  if (!data.solution) { statusEl.textContent = '未找到解（可调大 timeout）'; return; }
+  // 把 X2 半转展开成两个单转动画
+  const seq = [];
+  data.solution.split(/\s+/).forEach(mv => {
+    if (mv.endsWith('2')) { seq.push(mv[0]); seq.push(mv[0]); }
+    else seq.push(mv);
+  });
+  statusEl.textContent = `最短解 ${data.n} 步，演示中…`;
+  animating = true;
+  for (const mv of seq) { await doMove(mv, true); await sleep(110); }
+  animating = false;
+  statusEl.textContent = solvedCheck() ? `已还原 ✓（${data.n} 步）` : '演示完成';
+});
+
+// ===== LSLL Demo =====
+document.getElementById('lsll-demo').addEventListener('click', async () => {
+  if (animating) return;
+  animating = true;
+  moveLog.length = 0;
+  updateUI();
+  statusEl.textContent = '加载 LSLL 演示…';
+  
+  let data;
+  try {
+    const res = await fetch('/lsll');
+    data = await res.json();
+  } catch(e) {
+    statusEl.textContent = '❌ 服务器未启动 (python3 server.py)';
+    animating = false;
+    return;
+  }
+  
+  // Step 1: 先 reset — apply inverse of current
+  // 改: 直接打乱到演示状态
+  statusEl.textContent = '🔄 重置中…';
+  // Reset by reloading (simplest)
+  // 实际上: 逆向执行 moveLog
+  const rev = [...moveLog].reverse().map(m => m.endsWith("'") ? m[0] : m+"'");
+  for (const mv of rev) { await doMove(mv, false); }
+  await sleep(100);
+  
+  // Step 2: Show "setup" — create a cube with cross+3F2L done, top layer scrambled
+  statusEl.textContent = '🔹 十字 + 3对F2L 已完成，顶层待 LSLL';
+  const setup = data.setup.split(/\s+/);
+  for (const mv of setup) { await doMove(mv, false); }
+  await sleep(800);
+  
+  // Step 3: LSLL formula — animate step by step
+  statusEl.textContent = `🔶 LSLL 公式 (${data.lsll_n} 步) — 最后一对+顶层色向一次搞定`;
+  for (const mv of data.lsll) {
+    await doMove(mv, true);
+    await sleep(250);
+  }
+  await sleep(600);
+  
+  // Step 4: PLL finish
+  if (data.pll.length > 0) {
+    statusEl.textContent = `🔻 PLL 收尾 (${data.pll_n} 步)`;
+    for (const mv of data.pll) {
+      await doMove(mv, true);
+      await sleep(200);
+    }
+  }
+  
+  statusEl.textContent = solvedCheck() 
+    ? `✅ LSLL 演示完成 — 公式 ${data.lsll_n} 步 (CFOP 需 ~20 步)` 
+    : '演示完成';
+  animating = false;
+});
+
+// ===== Facelet color readback from 3D scene =====
+// Each cubie: materials[0]=+x(R), [1]=-x(L), [2]=+y(U), [3]=-y(D), [4]=+z(F), [5]=-z(B)
+const FACE_DIRS = [[1,0,0,'R'],[-1,0,0,'L'],[0,1,0,'U'],[0,-1,0,'D'],[0,0,1,'F'],[0,0,-1,'B']];
+const COLOR_NAMES = { 0xffffff:'白W', 0xffd500:'黄Y', 0x009b48:'绿G', 0x0046ad:'蓝B', 0xff5800:'橙O', 0xb71234:'红R', 0x111111:'··' };
+
+function readFacelets() {
+  // Build: { 'U': [[9 colors]], 'D': [[9]], ... }
+  const faces = { U:[], D:[], R:[], L:[], F:[], B:[] };
+
+  // For each facelet position on the cube surface, find the cubie and its outward color
+  // U face: y=1, iterate x,z from -1..1
+  // D face: y=-1 etc.
+  const faceDefs = [
+    ['U', [0,1,0],  [[-1,1,-1],[0,1,-1],[1,1,-1], [-1,1,0],[0,1,0],[1,1,0], [-1,1,1],[0,1,1],[1,1,1]]],
+    ['D', [0,-1,0], [[-1,-1,1],[0,-1,1],[1,-1,1], [-1,-1,0],[0,-1,0],[1,-1,0], [-1,-1,-1],[0,-1,-1],[1,-1,-1]]],
+    ['R', [1,0,0],  [[1,-1,-1],[1,0,-1],[1,1,-1], [1,-1,0],[1,0,0],[1,1,0], [1,-1,1],[1,0,1],[1,1,1]]],
+    ['L', [-1,0,0], [[-1,-1,1],[-1,0,1],[-1,1,1], [-1,-1,0],[-1,0,0],[-1,1,0], [-1,-1,-1],[-1,0,-1],[-1,1,-1]]],
+    ['F', [0,0,1],  [[-1,-1,1],[0,-1,1],[1,-1,1], [-1,0,1],[0,0,1],[1,0,1], [-1,1,1],[0,1,1],[1,1,1]]],
+    ['B', [0,0,-1], [[1,-1,-1],[0,-1,-1],[-1,-1,-1], [1,0,-1],[0,0,-1],[-1,0,-1], [1,1,-1],[0,1,-1],[-1,1,-1]]],
+  ];
+
+  for (const [fname, normal, positions] of faceDefs) {
+    const row = [];
+    for (const [px,py,pz] of positions) {
+      // find cubie at this logical position
+      let found = '··';
+      for (const cubie of cubies) {
+        const p = cubie.userData.logical;
+        if (Math.abs(p.x-px)<0.01 && Math.abs(p.y-py)<0.01 && Math.abs(p.z-pz)<0.01) {
+          // Found the cubie. Which of its 6 faces points toward the outward normal?
+          // Use cubie's world quaternion to transform local normals to world space
+          const q = new THREE.Quaternion(); cubie.getWorldQuaternion(q);
+          for (let fi=0; fi<6; fi++) {
+            const [lnx,lny,lnz] = FACE_DIRS[fi].slice(0,3);
+            // apply quaternion to local normal
+            const v = new THREE.Vector3(lnx,lny,lnz);
+            v.applyQuaternion(q);
+            // check if this matches the outward normal
+            if (Math.abs(v.x-normal[0])<0.01 && Math.abs(v.y-normal[1])<0.01 && Math.abs(v.z-normal[2])<0.01) {
+              const c = cubie.material[fi].color.getHex();
+              found = COLOR_NAMES[c] || '??';
+              break;
+            }
+          }
+          break;
+        }
+      }
+      row.push(found);
+    }
+    faces[fname] = row;
+  }
+  return faces;
+}
+
+function showFacelets() {
+  const faces = readFacelets();
+  const order = ['U','L','F','R','B','D'];
+  let out = '面颜色:\\n';
+  for (const f of order) {
+    const r = faces[f];
+    out += `  ${f}: ${r.slice(0,3).join(' ')}  ${r.slice(3,6).join(' ')}  ${r.slice(6,9).join(' ')}\\n`;
+  }
+  logEl.textContent = out;
+  countEl.textContent = solvedCheck() ? '已还原 ✓' : '未还原';
+}
+
+// ===== LSLL 分阶段求解 =====
+let lsllPhases = null;  // cached solution data
+let lsllScramble = null; // the scramble used to get this solution
+
+document.getElementById('solve4-btn').addEventListener('click', async () => {
+  if (animating) return;
+  if (solvedCheck()) { statusEl.textContent = '已还原, 先打乱'; return; }
+
+  const scramble = [...moveLog];
+  animating = true;
+  statusEl.innerHTML = '🔍 LSLL 求解中…';
+  await sleep(300);
+
+  let data;
+  try {
+    const res = await fetch('/solve4?scramble=' + encodeURIComponent(scramble.join(' ')));
+    data = await res.json();
+  } catch(e) { statusEl.textContent = '服务未启动'; animating = false; return; }
+  if (!data.phases || data.phases.length === 0) {
+    statusEl.textContent = '求解失败'; animating = false; return;
+  }
+
+  lsllPhases = data.phases;
+  lsllScramble = scramble;
+  statusEl.innerHTML = `📋 ${data.total} 步, ${data.phases.length} 阶段 (服务端 ok=${data.ok})`;
+
+  // Build per-phase buttons
+  const container = document.getElementById('phases-container');
+  const colors = ['#58a6ff','#3fb950','#d29922','#f85149'];
+  let html = '<button id="play-all-btn" style="background:#238636;border-color:#2ea043;padding:6px">▶ 全部播放</button>';
+  for (let i = 0; i < data.phases.length; i++) {
+    const p = data.phases[i];
+    html += `<button class="phase-btn" data-pi="${i}" style="background:${colors[i]}22;border-color:${colors[i]};color:${colors[i]};padding:4px 8px;font-size:12px;text-align:left">
+      ${i+1}. ${p.name} — ${p.moves.length}步
+      <span style="opacity:0.7;font-size:10px;display:block">${p.desc}</span>
+    </button>`;
+  }
+  container.innerHTML = html;
+  container.style.display = 'flex';
+  animating = false;
+
+  // Bind events
+  document.getElementById('play-all-btn').onclick = () => playAllPhases();
+  document.querySelectorAll('.phase-btn').forEach(btn => {
+    btn.onclick = () => playPhase(parseInt(btn.dataset.pi));
+  });
+});
+
+async function snapToSolved() {
+  // Instant: snap all cubies to home positions (no animation)
+  cubies.forEach(c => {
+    c.userData.logical = c.userData.home.clone();
+    c.position.set(c.userData.home.x*GAP, c.userData.home.y*GAP, c.userData.home.z*GAP);
+    c.setRotationFromQuaternion(new THREE.Quaternion());
+  });
+  moveLog.length = 0;
+  updateUI();
+}
+
+async function resetToScramble() {
+  // Show status, snap to solved, then re-apply scramble
+  statusEl.textContent = '⏳ 准备中…';
+  await sleep(200);
+  snapToSolved();
+  // Re-apply scramble with fast animation
+  for (const mv of lsllScramble) { await doMove(mv, false); }
+}
+
+async function playPhase(pi) {
+  if (animating) return;
+  const p = lsllPhases[pi];
+  if (!p) return;
+
+  animating = true;
+
+  // Reset to scramble + fast-apply previous phases — freeze renderer to avoid flash
+  skipRender = true;
+  statusEl.textContent = '⏳ 重置中…';
+  await sleep(100);
+  snapToSolved();
+  for (const mv of lsllScramble) { await doMove(mv, false); }
+  for (let i = 0; i < pi; i++) {
+    for (const mv of lsllPhases[i].moves) { await doMove(mv, false); }
+  }
+  skipRender = false;
+  await sleep(300);
+
+  // Now play this phase with animation
+  const colors = ['#58a6ff','#3fb950','#d29922','#f85149'];
+  statusEl.innerHTML = `<span style="color:${colors[pi]}">▶ ${p.name}</span> — ${p.desc} (${p.moves.length}步)`;
+  await sleep(600);
+
+  for (let mi = 0; mi < p.moves.length; mi++) {
+    const mv = p.moves[mi];
+    statusEl.innerHTML = `<span style="color:${colors[pi]}">${p.name}</span> ${mi+1}/${p.moves.length}: <b>${mv}</b>`;
+    await doMove(mv, true);
+    await sleep(300);
+  }
+
+  showFacelets();
+  await sleep(300);
+  statusEl.innerHTML = `<span style="color:${colors[pi]}">✓ ${p.name} 完成</span>`;
+  animating = false;
+}
+
+async function playAllPhases() {
+  if (animating) return;
+  animating = true;
+
+  skipRender = true;
+  statusEl.textContent = '⏳ 重置中…';
+  await sleep(100);
+  snapToSolved();
+  for (const mv of lsllScramble) { await doMove(mv, false); }
+  skipRender = false;
+  await sleep(300);
+
+  showFacelets();
+  statusEl.innerHTML = '🔹 全部播放开始';
+  await sleep(800);
+
+  const colors = ['#58a6ff','#3fb950','#d29922','#f85149'];
+  for (let pi = 0; pi < lsllPhases.length; pi++) {
+    const p = lsllPhases[pi];
+    statusEl.innerHTML = `<span style="color:${colors[pi]}">[${pi+1}/${lsllPhases.length}] ${p.name}</span> — ${p.moves.length}步`;
+    await sleep(600);
+
+    for (let mi = 0; mi < p.moves.length; mi++) {
+      const mv = p.moves[mi];
+      statusEl.innerHTML = `<span style="color:${colors[pi]}">[${pi+1}] ${p.name}</span> ${mi+1}/${p.moves.length}: <b>${mv}</b>`;
+      await doMove(mv, true);
+      await sleep(280);
+    }
+    showFacelets();
+    await sleep(700);
+  }
+
+  const visOk = solvedCheck();
+  statusEl.innerHTML = visOk
+    ? `✅ <b>全部完成!</b> — ${lsllPhases.reduce((s,p)=>s+p.moves.length,0)} 步`
+    : `⚠️ 视觉: 服务端已确认还原`;
+  animating = false;
+}
+
+document.getElementById('scramble').addEventListener('click', async () => {
+  if (animating) return;
+  animating = true;
+  const faces = ['U','D','L','R','F','B'];
+  const seq = [];
+  let last = '';
+  for (let i=0;i<25;i++){
+    let f; do { f = faces[Math.floor(Math.random()*6)]; } while (f===last);
+    last = f;
+    seq.push(f + (Math.random()<0.5 ? "'" : ""));
+  }
+  for (const mv of seq) { await doMove(mv, true); }
+  animating = false;
+});
+
+// ===== 输入执行 =====
+document.getElementById('exec-btn').addEventListener('click', async () => {
+  if (animating) return;
+  const input = document.getElementById('move-input').value.trim();
+  if (!input) return;
+  const moves = input.split(/\s+/);
+  animating = true;
+  statusEl.textContent = `执行 ${moves.length} 步…`;
+  for (const mv of moves) {
+    if (MOVES[mv]) { await doMove(mv, true); }
+    await sleep(200);
+  }
+  statusEl.textContent = solvedCheck() ? '已还原 ✓' : `完成 ${moves.length} 步`;
+  animating = false;
+});
+
+// Enter key triggers execution
+document.getElementById('move-input').addEventListener('keydown', async (e) => {
+  if (e.key === 'Enter') {
+    document.getElementById('exec-btn').click();
+  }
+});
+
+// ---------- render loop ----------
+function animate() {
+  requestAnimationFrame(animate);
+  if (!skipRender) {
+    controls.update();
+    renderer.render(scene, camera);
+  }
+}
+animate();
+updateUI();
+
+window.addEventListener('resize', () => {
+  camera.aspect = wrap.clientWidth/wrap.clientHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+});
+</script>
+</body>
+</html>

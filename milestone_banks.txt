@@ -1,0 +1,396 @@
+里程碑链公式库 (凑=0 全查表)
+============================================================
+
+--- EO表 (298条, 按翻色图案索引) ---
+翻:-                                        [ 0] 
+翻:DB,FL,BL,BR                              [ 6] U' D L U D' B'
+翻:DB,FR,BL,BR                              [ 6] U D' R' U' D B
+翻:UB,DB,BL,BR                              [ 6] U2 D2 F U2 D2 B'
+翻:UB,DB,FL,BR                              [ 6] R2 F R2 L2 B' L2
+翻:UB,DB,FR,FL                              [ 6] F R2 L2 B' R2 L2
+翻:UB,DL,BL,BR                              [ 6] D' B U' D L' U
+翻:UB,DL,DB,BR                              [ 6] L B R L' D' R'
+翻:UB,DF,BL,BR                              [ 6] U2 F U2 D2 B' D2
+翻:UB,DF,DB,BR                              [ 6] R D R' L B' L'
+翻:UB,DF,DB,BL                              [ 6] R L' D' R' L B
+翻:UB,DF,DL,DB                              [ 6] R D' R' L B L'
+翻:UB,DR,BL,BR                              [ 6] D B U D' R' U'
+翻:UB,DR,DB,BL                              [ 6] R' B R L' D' L
+翻:UB,DR,DL,DB                              [ 6] R' L B R L' D'
+翻:UB,DR,DF,DB                              [ 6] D R' L B' R L'
+翻:DB,FL                                    [ 7] F' R' L D2 R L' F'
+翻:DB,FR                                    [ 7] F R' L D2 R L' F
+翻:DB,FR,FL,BR                              [ 7] U' D' R U D' F' D2
+翻:DB,FR,FL,BL                              [ 7] U D L' U' D F D2
+翻:DL,DB                                    [ 7] F2 B R' F2 B2 L B
+翻:UB,DL                                    [ 7] F2 B' R' F2 B2 L B'
+翻:UB,DL,DB,FR                              [ 7] R2 L B R L' D' R
+翻:UB,DF,DB,FL                              [ 7] R L D' R' L B L2
+翻:UB,DF,DB,FR                              [ 7] R' D R' L B' R2 L'
+翻:UB,DR                                    [ 7] F2 B L F2 B2 R' B
+翻:UB,DR,DB,FL                              [ 7] R F R2 L2 B' R L2
+翻:UB,DR,DF,DL                              [ 7] D2 R' L B R L' D
+翻:UL,UB,DF,DB                              [ 7] R L2 D' R' L B L
+翻:UL,UB,DF,DL                              [ 7] F B L F B' U' F2
+翻:UL,UB,DR,DB                              [ 7] R' L' B R L' D' L2
+翻:UL,UB,DR,DL                              [ 7] B L F' B D' F B2
+翻:UF,UB,DF,DB,FR,FL,BL,BR                  [ 7] F U2 D2 R2 L2 F B2
+翻:BL,BR                                    [ 8] B R D R' L B' L' B'
+翻:FR,FL,BL,BR                              [ 8] U R F2 U' D R2 B' D'
+翻:DB,BR                                    [ 8] U2 R2 U2 F L2 D2 L2 F
+翻:DB,BL                                    [ 8] U2 R2 D2 F D2 R2 U2 B
+翻:DL,DB,BL,BR                              [ 8] R2 L2 U F R2 L2 B' D'
+翻:DL,DB,FL,BR                              [ 8] L2 U B U' D L' D' L2
+翻:DL,DB,FR,BR                              [ 8] R D' F' B R F B' R'
+翻:DL,DB,FR,BL                              [ 8] L2 U F R2 L2 B' D' R2
+翻:DL,DB,FR,FL                              [ 8] F R2 D R2 L2 U' L2 F'
+翻:DL,DB,FR,FL,BL,BR                        [ 8] U B L' U' D F L' D'
+翻:DF,DB                                    [ 8] D F D F' B R' B' D'
+翻:DF,DB,BL,BR                              [ 8] F U2 F' R2 L2 F R2 B'
+翻:DF,DB,FL,BR                              [ 8] F R L' U' D R' L B'
+翻:DF,DB,FL,BL                              [ 8] F R L' U' D' R' L B
+翻:DF,DB,FR,BL                              [ 8] F U2 R2 D2 R2 U2 L2 F'
+翻:DF,DL,DB,FL,BL,BR                        [ 8] U' L U F B' L' F' D
+翻:DF,DL,DB,FR,FL,BL                        [ 8] U L' U' F B' L B D'
+翻:UB,DB                                    [ 8] B U R U' D B' D' B'
+翻:UB,DB,FL,BL                              [ 8] F R2 F' U2 D2 F D2 B'
+翻:UB,DB,FR,FL,BL,BR                        [ 8] R B U D' R' F' U' D
+翻:UB,DL,FL,BR                              [ 8] R2 D' F R2 L2 B' U L2
+翻:UB,DL,FR,BR                              [ 8] F L B R L' D' R' F'
+翻:UB,DL,FR,BL                              [ 8] R2 D' B U' D L' U R2
+翻:UB,DL,FR,FL,BL,BR                        [ 8] U' D F' L' U D' B L
+翻:UB,DL,DB,BL                              [ 8] U2 D2 R' F U2 D2 B' L
+翻:UB,DL,DB,FL                              [ 8] L U2 D2 R' F U2 D2 B'
+翻:UB,DL,DB,FL,BL,BR                        [ 8] R B R' L D' B' U' D
+翻:UB,DL,DB,FR,BL,BR                        [ 8] F B' D F' R' L U L'
+翻:UB,DL,DB,FR,FL,BR                        [ 8] R' U D' B R F B' U'
+翻:UB,DL,DB,FR,FL,BL                        [ 8] F2 B' U2 D' R2 L2 U' B'
+翻:UB,DF,FL,BR                              [ 8] U2 L2 F U2 D2 B' R2 D2
+翻:UB,DF,FL,BL                              [ 8] F U2 R2 D2 L2 D2 R2 F'
+翻:UB,DF,FR,BR                              [ 8] F U D' R L' U' D B'
+翻:UB,DF,FR,FL,BL,BR                        [ 8] U F R U' D B' R' D'
+翻:UB,DF,DL,BR                              [ 8] U2 L F U2 D2 B' R' D2
+翻:UB,DF,DL,BL                              [ 8] D2 R' B R L' D' L D2
+翻:UB,DF,DL,FL                              [ 8] D2 R B U2 D2 F' L' U2
+翻:UB,DF,DL,FR                              [ 8] U2 L' F R' L D' R U2
+翻:UB,DF,DL,FR,BL,BR                        [ 8] D' L F' B U' F R L'
+翻:UB,DF,DL,FR,FL,BR                        [ 8] L' U' L F B' D' B R
+翻:UB,DF,DL,DB,BL,BR                        [ 8] U' B' U D' L B R L'
+翻:UB,DF,DL,DB,FL,BL                        [ 8] R D' R' F' B D F L'
+翻:UB,DF,DL,DB,FR,FL                        [ 8] F' R2 L' U2 D2 R' F' B2
+翻:UB,DR,FL,BR                              [ 8] D R2 F R2 L2 B' L2 D'
+翻:UB,DR,FL,BL                              [ 8] R' U' D L' U D' B R
+翻:UB,DR,FR,BL                              [ 8] R' D B U D' R' U' R
+翻:UB,DR,FR,FL,BL,BR                        [ 8] U D' F R U' D B' R'
+翻:UB,DR,DB,BR                              [ 8] U2 D2 L F U2 D2 B' R'
+翻:UB,DR,DB,FL,BL,BR                        [ 8] R' F B' U F' R L' D
+翻:UB,DR,DB,FR                              [ 8] R' U2 D2 L F U2 D2 B'
+翻:UB,DR,DB,FR,BL,BR                        [ 8] F B' D' F' R L' D L
+翻:UB,DR,DB,FR,FL,BR                        [ 8] F2 B U2 D R2 L2 U B
+翻:UB,DR,DB,FR,FL,BL                        [ 8] F2 B' U2 D R2 L2 U B'
+翻:UB,DR,DL,BR                              [ 8] U R F B' D' F' B U'
+翻:UB,DR,DL,BL                              [ 8] U' L' F' B D F B' U
+翻:UB,DR,DL,FL                              [ 8] U' F' D F B' L' B U
+翻:UB,DR,DL,FL,BL,BR                        [ 8] F' D F B' R' U R L'
+翻:UB,DR,DL,FR                              [ 8] U R' F B' D F' B U'
+翻:UB,DR,DL,FR,BL,BR                        [ 8] F D F' B L' D' R' L
+翻:UB,DR,DL,FR,FL,BR                        [ 8] L F D F' B L' D' R'
+翻:UB,DR,DL,FR,FL,BL                        [ 8] R' F' D' F B' R D L
+翻:UB,DR,DL,DB,FL,BL                        [ 8] R' F' B D F R L' D'
+翻:UB,DR,DL,DB,FR,BR                        [ 8] R' U' D F L' F' B U
+翻:UB,DR,DF,BR                              [ 8] D2 L B R L' D' R' D2
+翻:UB,DR,DF,BL                              [ 8] U2 R' F U2 D2 B' L D2
+翻:UB,DR,DF,FL                              [ 8] U2 R F R' L D' L' U2
+翻:UB,DR,DF,FL,BL,BR                        [ 8] D R' F B' U F' R L'
+翻:UB,DR,DF,FR                              [ 8] D2 L' B U2 D2 F' R U2
+翻:UB,DR,DF,FR,FL,BL                        [ 8] R U R' F' B D B' L'
+翻:UB,DR,DF,DB,BL,BR                        [ 8] U B U' D R' B' R L'
+翻:UB,DR,DF,DB,FR,BR                        [ 8] F B' U' L U D' F' R
+翻:UB,DR,DF,DB,FR,FL                        [ 8] F R L2 U2 D2 L F B2
+翻:UB,DR,DF,DL,DB,FL,BL,BR                  [ 8] B R L' U' F U D' R'
+翻:UB,DR,DF,DL,DB,FR,BL,BR                  [ 8] B' R L' U F' U' D L
+翻:UB,DR,DF,DL,DB,FR,FL,BR                  [ 8] D L B' R L' U F' U'
+翻:UB,DR,DF,DL,DB,FR,FL,BL                  [ 8] R' B R L' U' F U D'
+翻:UL,UB,DL,DB                              [ 8] F R D R' L F' D' B'
+翻:UL,UB,DL,DB,FR,BR                        [ 8] B U' D L' F U D' L'
+翻:UL,UB,DL,DB,FR,FL,BL,BR                  [ 8] R U D' R' F' B D L'
+翻:UL,UB,DF,DB,BL,BR                        [ 8] U F' B R' F U' D L'
+翻:UL,UB,DF,DB,FL,BR                        [ 8] L' U F' B R' F U' D
+翻:UL,UB,DF,DB,FR,BL                        [ 8] U R U' F B' L F' D'
+翻:UL,UB,DF,DB,FR,FL                        [ 8] F' R2 L U2 D2 R F' B2
+翻:UL,UB,DF,DL,FR,BR                        [ 8] F U D' B R L' U' B'
+翻:UL,UB,DF,DL,FR,FL,BL,BR                  [ 8] U' F B' U D' B R L'
+翻:UL,UB,DF,DL,DB,BR                        [ 8] F L F' B U' L' U D'
+翻:UL,UB,DF,DL,DB,BL                        [ 8] U D' B' U' R' L B R
+翻:UL,UB,DF,DL,DB,FL,BL,BR                  [ 8] B' U' D R F' R' L U
+翻:UL,UB,DF,DL,DB,FR                        [ 8] U' B' L' F' B U L D
+翻:UL,UB,DF,DL,DB,FR,BL,BR                  [ 8] F R L' D' R' F' B D
+翻:UL,UB,DF,DL,DB,FR,FL,BL                  [ 8] U' F U D' R' B R L'
+翻:UL,UB,DR,DB,BL,BR                        [ 8] B U' L' U D' F L F'
+翻:UL,UB,DR,DB,FR,FL,BL,BR                  [ 8] U R' L U' D L' F' B
+翻:UL,UB,DR,DL,BL,BR                        [ 8] L' F' D F B' R' U R
+翻:UL,UB,DR,DL,FL,BR                        [ 8] F' U R' U' D F L' B
+翻:UL,UB,DR,DL,FL,BL                        [ 8] F' D F R L' D' R' B
+翻:UL,UB,DR,DL,FR,BR                        [ 8] U F B' R' D F' B R'
+翻:UL,UB,DR,DL,FR,BL                        [ 8] U D' R U' F B' L F'
+翻:UL,UB,DR,DL,FR,FL                        [ 8] R' L F' D' F B' R D
+翻:UL,UB,DR,DL,DB,BR                        [ 8] D F L' F' B U R' U'
+翻:UL,UB,DR,DL,DB,BL                        [ 8] U D' F' R F B' U' L
+翻:UL,UB,DR,DL,DB,FL                        [ 8] L F' U D' R U' F B'
+翻:UL,UB,DR,DL,DB,FL,BL,BR                  [ 8] L B' R U' D F' U R'
+翻:UL,UB,DR,DL,DB,FR                        [ 8] U' D B' L' F' B U L
+翻:UL,UB,DR,DL,DB,FR,BL,BR                  [ 8] D F R L' D' R' F' B
+翻:UL,UB,DR,DL,DB,FR,FL,BL                  [ 8] R' L B' R U' D F' U
+翻:UL,UB,DR,DF,DB,BR                        [ 8] D B U R' L B' L' U'
+翻:UL,UB,DR,DF,DB,BL                        [ 8] U F' R F B' U' L D'
+翻:UL,UB,DR,DF,DB,FL                        [ 8] R D R' L F' D' F B'
+翻:UL,UB,DR,DF,DL,BR                        [ 8] F R' U R L' F' D B'
+翻:UL,UB,DR,DF,DL,BL                        [ 8] F' U' R L' F U D' B
+翻:UL,UB,DR,DF,DL,FL,BL,BR                  [ 8] U' R L' F R' U D' B
+翻:UL,UB,DR,DF,DL,FR                        [ 8] R L' U R' F' B D B'
+翻:UL,UB,DR,DF,DL,FR,BL,BR                  [ 8] D' F B' R D R' L F'
+翻:UL,UB,DR,DF,DL,DB,BL,BR                  [ 8] D' B U' R L' F R' U
+翻:UL,UB,DR,DF,DL,DB,FL,BR                  [ 8] R U' D F' U R' L B'
+翻:UL,UB,DR,DF,DL,DB,FL,BL                  [ 8] R U' F U D' R' B L'
+翻:UL,UB,DR,DF,DL,DB,FR,FL                  [ 8] U' F' U R' L B' R D
+翻:UF,UB,DF,DB                              [ 8] U F2 R L' U2 B' R' L
+翻:UF,UB,DF,DB,BL,BR                        [ 8] U B R' L U' F' R L'
+翻:UF,UB,DF,DB,FL,BR                        [ 8] R F D R' L B' D' L'
+翻:UF,UB,DF,DL,DB,BR                        [ 8] R L' F D R' L B' D'
+翻:UF,UB,DF,DL,DB,BL                        [ 8] R L' F D' R' L B D'
+翻:UF,UB,DF,DL,DB,FL                        [ 8] R F D' R' L B D' L'
+翻:UF,UB,DF,DL,DB,FR                        [ 8] R' L B' D' R L' F D
+翻:UF,UB,DR,DL                              [ 8] R2 F B' D2 R F' B U'
+翻:UF,UB,DR,DL,BL,BR                        [ 8] B R L' D' F R' L D'
+翻:UF,UB,DR,DL,FL,BR                        [ 8] F' R' L B' U' D R B
+翻:UF,UB,DR,DL,FR,BL                        [ 8] F R' L B U D' L' B'
+翻:UF,UB,DR,DL,FR,FL,BL,BR                  [ 8] U R L U' D F' B' D'
+翻:UF,UB,DR,DL,DB,BR                        [ 8] R' L D' B' U' D R B
+翻:UF,UB,DR,DL,DB,BL                        [ 8] R' L D B U D' L' B'
+翻:UF,UB,DR,DL,DB,FL                        [ 8] D R' L B' D R L' F'
+翻:UF,UB,DR,DL,DB,FL,BL,BR                  [ 8] F' U' D L U F B' L'
+翻:UF,UB,DR,DL,DB,FR                        [ 8] D R' L B' D' R L' F
+翻:UF,UB,DR,DL,DB,FR,BL,BR                  [ 8] F U D' R' U' F' B R
+翻:UF,UB,DR,DF,DL,DB                        [ 8] R F' D' R' L B D L'
+翻:UF,UB,DR,DF,DL,DB,BL,BR                  [ 8] U R' L U' F' B R D'
+翻:UF,UB,DR,DF,DL,DB,FL,BR                  [ 8] R F' B R' L B' U' D
+翻:UF,UB,DR,DF,DL,DB,FR,BL                  [ 8] R' F' B R L' F U D'
+翻:UF,UL,UB,DF,DL,DB,FR,BR                  [ 8] R U D R' L F' B' L'
+翻:UF,UL,UB,DR,DL,DB,BL,BR                  [ 8] L' F' U' D L U F B'
+翻:UF,UL,UB,DR,DL,DB,FL,BR                  [ 8] L F' B U' L' U D' F
+翻:UF,UL,UB,DR,DL,DB,FR,BR                  [ 8] D L F B' D' R L' U'
+翻:UF,UL,UB,DR,DL,DB,FR,FL,BL,BR            [ 8] R F U D' R' F' B L'
+翻:UF,UL,UB,DR,DF,DB,BL,BR                  [ 8] R' U D' R L' D F B'
+翻:UF,UL,UB,DR,DF,DB,FR,FL                  [ 8] R U' D R' L D' F B'
+翻:UF,UL,UB,DR,DF,DL,FR,BL                  [ 8] L' F' B U L U' D B'
+翻:UF,UL,UB,DR,DF,DL,FR,FL,BL,BR            [ 8] R' L B' U' D R F' B
+翻:UF,UL,UB,DR,DF,DL,DB,FR,BL,BR            [ 8] U' F' R' L U F B' D
+翻:UF,UL,UB,DR,DF,DL,DB,FR,FL,BR            [ 8] U D' B R L' U' F B'
+翻:UR,UF,UL,UB,DR,DF,DL,DB                  [ 8] U R L' F B' R' L D'
+翻:FL,BR                                    [ 9] R F U F2 B2 D' F B2 R'
+翻:DL,DB,FL,BL                              [ 9] F2 U D' R' D F2 B2 D' B'
+翻:DF,DL,DB,BR                              [ 9] R U F2 R L' D2 F B2 L'
+翻:DF,DL,DB,BL                              [ 9] F2 R' L U L' F2 B2 L B
+翻:DF,DL,DB,FL                              [ 9] F' R F2 B2 R' U2 R L' F'
+翻:DF,DL,DB,FR                              [ 9] R D2 F' B R F B' D R'
+翻:DF,DL,DB,FR,BL,BR                        [ 9] U D2 R' U' F' B R F D
+翻:DF,DL,DB,FR,FL,BR                        [ 9] U' D2 R U F' B R' B' D'
+翻:DR,DF,DL,DB                              [ 9] U R2 F B' U2 R2 L F B'
+翻:DR,DF,DL,DB,FL,BR                        [ 9] F R L' F U' D R2 L B'
+翻:UB,DF                                    [ 9] U F R U2 D2 L' B' U D2
+翻:UB,DF,DB,FL,BL,BR                        [ 9] U' L' U F B' L' F' B2 D
+翻:UB,DF,DB,FR,BL,BR                        [ 9] U R U' F' B R F B2 D'
+翻:UB,DF,DB,FR,FL,BR                        [ 9] F U D' R2 F2 U D' R2 F
+翻:UB,DF,DB,FR,FL,BL                        [ 9] F U D' R2 U D' R2 L2 F
+翻:UB,DF,DL,FL,BL,BR                        [ 9] F B R' U R L' F' D B2
+翻:UB,DF,DL,FR,FL,BL                        [ 9] U2 R' F' R L' D F U' D'
+翻:UB,DF,DL,DB,FL,BR                        [ 9] F' B' U R' U' D F L' B2
+翻:UB,DF,DL,DB,FR,BR                        [ 9] F B' U' D2 L U D' F' R'
+翻:UB,DF,DL,DB,FR,BL                        [ 9] R2 U' B' U D' L B R' L'
+翻:UB,DF,DL,DB,FR,FL,BL,BR                  [ 9] U' F B U D' R2 B R L'
+翻:UB,DR,DL,DB,BL,BR                        [ 9] U2 D F B' L F R2 L2 F'
+翻:UB,DR,DL,DB,FL,BR                        [ 9] F' U' D L' U F B' L' B2
+翻:UB,DR,DL,DB,FR,BL                        [ 9] F U D' R U' F B' L F2
+翻:UB,DR,DL,DB,FR,FL                        [ 9] B U2 R2 L2 U F' B L F'
+翻:UB,DR,DL,DB,FR,FL,BL,BR                  [ 9] R L U D' F2 R F B' U'
+翻:UB,DR,DF,FR,BL,BR                        [ 9] F' B' L U' R L' F D' B2
+翻:UB,DR,DF,FR,FL,BR                        [ 9] U2 L F R L' D' F' U D
+翻:UB,DR,DF,DB,FL,BR                        [ 9] R U F U' D R2 L B' L'
+翻:UB,DR,DF,DB,FL,BL                        [ 9] F' B U D2 R' U' D F L
+翻:UB,DR,DF,DB,FR,BL                        [ 9] R2 U' F B' L F' U D' R'
+翻:UB,DR,DF,DB,FR,FL,BL,BR                  [ 9] U F B U' D R2 B' R L'
+翻:UB,DR,DF,DL,BL,BR                        [ 9] U2 F U2 D' F B' L' F' D2
+翻:UB,DR,DF,DL,FL,BL                        [ 9] U2 R F' B D' B R' L D
+翻:UB,DR,DF,DL,FR,BR                        [ 9] U2 R U D' B' L F' B U
+翻:UB,DR,DF,DL,FR,FL                        [ 9] F R2 L F R2 L2 F' D B'
+翻:UB,DR,DF,DL,FR,FL,BL,BR                  [ 9] F2 U R L' F' U' D F' B'
+翻:UB,DR,DF,DL,DB,BR                        [ 9] R L' U F U' D R2 L B'
+翻:UB,DR,DF,DL,DB,BL                        [ 9] R L2 D R' L F' D F B'
+翻:UB,DR,DF,DL,DB,FL                        [ 9] R U' F' U D' R' L2 B L'
+翻:UB,DR,DF,DL,DB,FR                        [ 9] F2 D R' L B' D R L' F
+翻:UL,UB,DL,DB,BL,BR                        [ 9] U2 D2 B R F B' U2 D B'
+翻:UL,UB,DL,DB,FL,BR                        [ 9] R2 F R2 L' F B' U' F' L2
+翻:UL,UB,DL,DB,FR,BL                        [ 9] L U R L2 F B' U F' R'
+翻:UL,UB,DF,DB,FL,BL                        [ 9] R L2 D' R' F' B D F L
+翻:UL,UB,DF,DB,FR,BR                        [ 9] F' B D' R U' D F B2 R
+翻:UL,UB,DF,DB,FR,FL,BL,BR                  [ 9] B R2 L2 U D2 F2 B2 D B'
+翻:UL,UB,DF,DL,BL,BR                        [ 9] F R L' D R' F B' U F2
+翻:UL,UB,DF,DL,FL,BL                        [ 9] F' U' D F' R L' U2 D' B
+翻:UL,UB,DF,DL,DB,FL                        [ 9] U2 D F U R L' F' R' U
+翻:UL,UB,DF,DL,DB,FR,FL,BR                  [ 9] U' F B2 U D' R B R L'
+翻:UL,UB,DR,DB,FL,BR                        [ 9] R2 B U F B' R L2 B' L2
+翻:UL,UB,DR,DB,FL,BL                        [ 9] R2 F U D' R' D' F' B L'
+翻:UL,UB,DR,DB,FR,FL                        [ 9] F R2 U F B' R L2 D2 B'
+翻:UL,UB,DR,DL,DB,FR,FL,BR                  [ 9] U R' L B L' U D' F U2
+翻:UL,UB,DR,DF                              [ 9] U F' B' R F B' U' L2 D'
+翻:UL,UB,DR,DF,BL,BR                        [ 9] U2 B R F B' U2 D B' D2
+翻:UL,UB,DR,DF,FR,FL,BL,BR                  [ 9] U2 R L' U D' L F' B U
+翻:UL,UB,DR,DF,DB,FL,BL,BR                  [ 9] U B' U' D R' L2 B' R L'
+翻:UL,UB,DR,DF,DB,FR                        [ 9] U' D2 B' L' F' B U L D'
+翻:UL,UB,DR,DF,DB,FR,BL,BR                  [ 9] U B U D' L' F R' L U2
+翻:UL,UB,DR,DF,DB,FR,FL,BR                  [ 9] U2 F' U' D L B' R L' U'
+翻:UL,UB,DR,DF,DB,FR,FL,BL                  [ 9] U2 B R' L D' L F B' D
+翻:UL,UB,DR,DF,DL,FL                        [ 9] U2 F U R L' F' R' U D
+翻:UL,UB,DR,DF,DL,FR,FL,BR                  [ 9] D2 B' D' F B' R2 L' B U2
+翻:UL,UB,DR,DF,DL,FR,FL,BL                  [ 9] U2 D B R' L D' L F B'
+翻:UL,UB,DR,DF,DL,DB                        [ 9] R U' D F' U D2 R' L B
+翻:UL,UB,DR,DF,DL,DB,FR,BR                  [ 9] R L' U F' B2 U' D L' B'
+翻:UL,UB,DR,DF,DL,DB,FR,BL                  [ 9] R2 L F U' D L' D F' B
+翻:UL,UB,DR,DF,DL,DB,FR,FL,BL,BR            [ 9] R F' U D' R U2 F B' L
+翻:UF,UB,DF,DL,DB,FL,BL,BR                  [ 9] R F B R' L D2 B' U' D
+翻:UF,UB,DF,DL,DB,FR,BL,BR                  [ 9] B U2 D2 R2 L F2 B2 R B'
+翻:UF,UB,DF,DL,DB,FR,FL,BR                  [ 9] F U2 D2 R2 L' F2 B2 R' F'
+翻:UF,UB,DF,DL,DB,FR,FL,BL                  [ 9] R' F B R L' U2 F U D'
+翻:UF,UB,DR,DL,DB,FR,FL,BR                  [ 9] F B' U' R U' D F' R' L2
+翻:UF,UB,DR,DL,DB,FR,FL,BL                  [ 9] R' F2 B R L' U F U D'
+翻:UF,UB,DR,DF,DL,DB,FL,BL                  [ 9] F B R L' U2 F U D' R'
+翻:UF,UB,DR,DF,DL,DB,FR,FL,BL,BR            [ 9] F U2 D F B' L U2 D2 B'
+翻:UF,UL,UB,DF,DL,DB,BL,BR                  [ 9] U F2 B' D R' L F' R' D'
+翻:UF,UL,UB,DF,DL,DB,FL,BR                  [ 9] F2 R U D' B' R' L F B
+翻:UF,UL,UB,DF,DL,DB,FR,FL,BL,BR            [ 9] F U2 D2 R F B' U2 D B'
+翻:UF,UL,UB,DR,DL,DB                        [ 9] R' U D' B' D R L' B' L2
+翻:UF,UL,UB,DR,DL,DB,FR,BL                  [ 9] D B2 L F B' D' R' L' U'
+翻:UF,UL,UB,DR,DF,DB                        [ 9] R F U R L' B' U' R2 L
+翻:UF,UL,UB,DR,DF,DB,FL,BR                  [ 9] R2 U D' R' L D' F' B L'
+翻:UF,UL,UB,DR,DF,DB,FL,BL                  [ 9] U2 R F B' U' R' L U' D'
+翻:UF,UL,UB,DR,DF,DL                        [ 9] R U' D F D' R' L F L2
+翻:UF,UL,UB,DR,DF,DL,BL,BR                  [ 9] U R L' F2 D F B' R' D
+翻:UF,UL,UB,DR,DF,DL,FL,BR                  [ 9] D' F2 L F' B U' R' L' U
+翻:UF,UL,UB,DR,DF,DL,FL,BL                  [ 9] U2 D R F' B D' R' L U
+翻:UF,UL,UB,DR,DF,DL,DB,BL                  [ 9] R' U D R L' F2 D F B'
+翻:UF,UL,UB,DR,DF,DL,DB,FL                  [ 9] R U D R' L F2 D' F B'
+翻:UF,UL,UB,DR,DF,DL,DB,FL,BL,BR            [ 9] U2 F B' U R L' F' U D
+翻:UF,UL,UB,DR,DF,DL,DB,FR,FL,BL            [ 9] U D B' R L' U R2 F' B
+翻:DF,DB,FR,FL,BL,BR                        [10] U R' U F' R L' D L' F D'
+翻:DR,DF,DL,DB,BL,BR                        [10] U R' L B' D L' U' D B R'
+翻:DR,DF,DL,DB,FR,FL,BL,BR                  [10] U R U F U' R' D' R' U' B
+翻:UB,DR,DF,DL,FL,BR                        [10] U L' F B' D B' L U D' F'
+翻:UB,DR,DF,DL,FR,BL                        [10] U F B' L' D' F' U' D L B
+翻:UL,UB,DF,DL,FL,BR                        [10] U' L U2 F B' L2 U' F R' L
+翻:UL,UB,DR,DL,FR,FL,BL,BR                  [10] U R U D' F' U' B U' D L'
+翻:UL,UB,DR,DF,FL,BR                        [10] U2 R D' L' F' B U B R' D2
+翻:UL,UB,DR,DF,FL,BL                        [10] U F' U' D B' R L' U B U'
+翻:UL,UB,DR,DF,FR,BL                        [10] F D F B' U2 R L' F2 L' B'
+翻:UF,UB,DF,DB,FL,BL                        [10] U R B' U' D R D' F' R' L
+翻:UF,UL,UB,DF,DL,DB                        [10] U R2 D' R L' F R2 B' R' L
+翻:UF,UL,UB,DF,DL,DB,FL,BL                  [10] U R B R' U' L' U' R' F R
+翻:UF,UL,UB,DR,DF,DB,FR,FL,BL,BR            [10] U R F B' L U D' F' L' U'
+翻:UF,UL,UB,DR,DF,DL,DB,BR                  [10] U R' L B' U F' R L' D L'
+翻:UF,UL,UB,DR,DF,DL,DB,FR                  [10] U F D R L' B' R' F' R' L
+翻:UR,UF,UL,UB,DR,DF,DL,DB,BL,BR            [10] R U' F' R' L U F B' D R'
+翻:UR,UF,UL,UB,DR,DF,DL,DB,FL,BR            [10] U F D F B' R' D' L' F' B
+翻:UR,UF,UL,UB,DR,DF,DL,DB,FR,FL,BL,BR      [10] U F U2 R' L F2 U' F' B D'
+
+--- 中层表 (72条, 按中层棱位置索引) ---
+中层棱在:FR,FL,BL,BR                  [ 0] 
+中层棱在:UR,DR,FR,BL                  [ 6] B2 L F2 B2 R' F2
+中层棱在:UR,UL,DR,DL                  [ 7] R U2 D2 R2 F2 B2 R
+中层棱在:UF,FR,FL,BL                  [ 7] R D R2 L2 U' R L2
+中层棱在:UL,FR,FL,BL                  [ 7] L' U D' B2 U' D L'
+中层棱在:UB,FR,FL,BL                  [ 7] R D' R2 L2 U R L2
+中层棱在:UR,UF,DR,FR                  [ 8] R U F2 B2 U2 D R L2
+中层棱在:UR,UB,DR,FR                  [ 8] R U D2 F2 B2 D R L2
+中层棱在:UF,UB,FR,FL                  [ 8] R L' D R2 L2 U' R L'
+中层棱在:UR,DR,FR,FL                  [ 8] R U2 R' U2 D2 L D2 R'
+中层棱在:UL,DR,FR,FL                  [ 8] R' U2 F2 D2 B2 D2 F2 R
+中层棱在:UR,DL,FR,FL                  [ 8] R U2 F2 D2 F2 U2 B2 R'
+中层棱在:UR,UL,FR,BL                  [ 8] R' U2 F2 U2 F2 U2 F2 R
+中层棱在:UF,UL,FR,BL                  [ 8] F2 D' R F2 B2 L' U B2
+中层棱在:UF,UB,FR,BL                  [ 8] R L D R2 L2 U' R L
+中层棱在:UF,DR,FR,BL                  [ 8] U' B2 L F2 B2 R' F2 U
+中层棱在:UL,DR,FR,BL                  [ 8] U2 B2 R U2 D2 L' F2 D2
+中层棱在:UB,DR,FR,BL                  [ 8] U B2 L F2 B2 R' F2 U'
+中层棱在:UR,DF,FR,BL                  [ 8] D B2 L F2 B2 R' F2 D'
+中层棱在:UL,DF,FR,BL                  [ 8] D' F2 R F2 B2 L' B2 D
+中层棱在:UR,FR,FL,BL                  [ 8] U2 R' F2 U2 F2 R' U2 F2
+中层棱在:UR,UF,UL,DR                  [ 9] R U F2 R2 L2 F2 U D2 R'
+中层棱在:UR,UL,UB,DR                  [ 9] R U D2 F2 R2 L2 F2 U R'
+中层棱在:UR,UF,DR,DF                  [ 9] R U F2 B2 U2 R2 L2 U R'
+中层棱在:UR,UL,DR,DF                  [ 9] R F2 B2 U2 D R2 L2 U R'
+中层棱在:UR,UB,DR,DF                  [ 9] R U D2 R2 L2 F2 B2 U R'
+中层棱在:UF,UB,DR,DL                  [ 9] U R U2 D2 R2 F2 B2 R U'
+中层棱在:UR,UL,DR,FR                  [ 9] R U2 F2 R2 B2 U2 L2 F2 R
+中层棱在:UF,UL,DL,FR                  [ 9] F2 L U R2 L2 U2 D R' B2
+中层棱在:UL,UB,DL,FR                  [ 9] F2 L' U2 D' R2 L2 U' R B2
+中层棱在:UL,DF,DL,FR                  [ 9] F2 L' U2 D R2 L2 U R B2
+中层棱在:UR,UF,FR,FL                  [ 9] R U B2 U' D R2 U' R L2
+中层棱在:UR,UL,FR,FL                  [ 9] R U2 F2 D2 R2 B2 U2 F2 R
+中层棱在:UF,UL,FR,FL                  [ 9] R2 L' D' R2 U D' B2 D L'
+中层棱在:UR,UB,FR,FL                  [ 9] R U D' B2 U' R2 L2 U R
+中层棱在:UL,UB,FR,FL                  [ 9] L' U F2 B2 U' F2 U' D L'
+中层棱在:UF,DR,FR,FL                  [ 9] R L2 U F2 U' D L2 U' R
+中层棱在:UB,DR,FR,FL                  [ 9] R D' R2 U D' B2 D R L2
+中层棱在:UR,DF,FR,FL                  [ 9] R' L2 D' F2 U' D L2 D R'
+中层棱在:UB,DF,FR,FL                  [ 9] B2 R' L U R2 L2 D R' L
+中层棱在:UB,DL,FR,FL                  [ 9] R2 L' U F2 U' D L2 U' L'
+中层棱在:UR,UF,FR,BL                  [ 9] R D R2 U' D F2 D' R L2
+中层棱在:UR,UF,UL,UB                  [10] R2 L2 U R U2 D2 F2 B2 R' D'
+中层棱在:UR,UF,UB,DR                  [10] R U2 L2 U F2 B2 D R2 U2 R
+中层棱在:UF,UL,UB,DR                  [10] L2 U R U2 D2 F2 B2 R' D' R2
+中层棱在:UR,UF,UL,FR                  [10] L U' F2 R2 U' D F2 R2 D L'
+中层棱在:UR,UF,UB,FR                  [10] R U2 D2 R' U F2 B2 D' R L'
+中层棱在:UR,UL,UB,FR                  [10] L U' F2 B2 U R2 U' D F2 L'
+中层棱在:UF,UL,DR,FR                  [10] U2 R U D2 F2 B2 D R L2 U2
+中层棱在:UF,UB,DR,FR                  [10] R U2 D2 R U F2 B2 D' R L
+中层棱在:UL,UB,DR,FR                  [10] U R U D2 F2 B2 D R L2 U'
+中层棱在:UR,UF,DF,FR                  [10] R U2 D' R F2 B2 R2 L D' R'
+中层棱在:UR,UL,DF,FR                  [10] L F2 U B2 U D' L2 U' B2 L'
+中层棱在:UF,UL,DF,FR                  [10] L' U B2 U' R2 L2 U R2 D' L
+中层棱在:UR,UB,DF,FR                  [10] D R U D2 F2 B2 D R L2 D'
+中层棱在:UL,UB,DF,FR                  [10] R D' R F2 B2 R2 L U2 D' R'
+中层棱在:UL,DR,DF,FR                  [10] U2 R' U D2 R2 L2 D R2 L' D2
+中层棱在:UB,DR,DF,FR                  [10] U R' U2 D F2 B2 U R' L2 U'
+中层棱在:UR,UL,DL,FR                  [10] U2 F2 U2 R F2 B2 U2 F2 D2 R
+中层棱在:UR,UB,DL,FR                  [10] D2 R U D2 F2 B2 D R L2 D2
+中层棱在:UL,DR,DL,FR                  [10] U2 R U2 D2 F2 U2 B2 R U2 F2
+中层棱在:UR,UL,DB,FR                  [10] L U' R2 U F2 B2 U' B2 D L'
+中层棱在:UF,UL,DB,FR                  [10] R D R F2 B2 R2 L U2 D R'
+中层棱在:UL,UB,DB,FR                  [10] L' U' F2 D F2 B2 D' R2 D L
+中层棱在:UF,DF,FR,FL                  [10] U2 R L' F2 U F2 B2 D' R' L
+中层棱在:UB,DB,FR,FL                  [10] U2 R L' B2 D R2 L2 U' R L'
+中层棱在:UF,UL,DR,DF                  [11] U2 R U D2 R2 L2 F2 B2 U R' U2
+中层棱在:UF,UB,DR,DF                  [11] U R F2 B2 U2 D R2 L2 U R' U'
+中层棱在:UL,UB,DR,DF                  [11] U R U D2 R2 L2 F2 B2 U R' U'
+中层棱在:UF,UL,UB,FR                  [11] U R D2 L' U D2 R' D' F2 D R
+中层棱在:UF,UB,DF,FR                  [11] U' D R F2 U D' R L U' R' L
+中层棱在:UF,UB,DL,FR                  [11] U F2 U2 R F2 B2 U2 F2 D2 R U
+
+--- 分层表 (18条, 按顶棱位置索引) ---
+顶棱在:UR,UF,UL,UB                  [ 0] 
+顶棱在:UR,UF,DR,DL                  [ 6] B2 D F2 B2 U' F2
+顶棱在:UR,UF,DF,DB                  [ 6] L2 D' R2 L2 U R2
+顶棱在:UR,UF,DL,DB                  [ 6] R2 F2 L2 F2 R2 B2
+顶棱在:UR,UL,DR,DL                  [ 6] R2 L2 U R2 L2 D'
+顶棱在:UR,UL,DF,DB                  [ 6] U R2 L2 D' R2 L2
+顶棱在:DR,DF,DL,DB                  [ 6] U2 D2 R2 L2 F2 B2
+顶棱在:UR,UF,UL,DR                  [ 8] R2 U' R2 F2 R2 U' R2 F2
+顶棱在:UR,UF,UL,DF                  [ 8] U R2 F2 R2 U R2 F2 R2
+顶棱在:UR,UF,UL,DL                  [ 8] R2 U F2 B2 D' F2 B2 R2
+顶棱在:UR,UF,UL,DB                  [ 8] U R2 F2 L2 D L2 F2 R2
+顶棱在:UR,UF,DR,DF                  [ 8] U2 R2 F2 R2 F2 R2 F2 U2
+顶棱在:UR,UF,DR,DB                  [ 8] U R2 F2 L2 B2 L2 F2 U'
+顶棱在:UR,UF,DF,DL                  [ 8] U2 R2 F2 R2 U2 B2 L2 B2
+顶棱在:UR,DR,DF,DL                  [ 8] R2 U B2 L2 B2 U R2 F2
+顶棱在:UR,DR,DF,DB                  [ 8] U2 F2 U2 R2 F2 D2 F2 L2
+顶棱在:UR,DR,DL,DB                  [ 8] R2 U' F2 L2 F2 U' R2 B2
+顶棱在:UR,DF,DL,DB                  [ 8] U2 R2 F2 U2 F2 L2 U2 B2

@@ -1,0 +1,2934 @@
+V5 收棱表 — G3内、角已对, 全部180°转
+识别: 三个切片各看4条棱怎么排 (M层=UF/UB/DF/DB位, S层=UR/UL/DR/DL位, E层=中层)
+976 条核心 (覆盖全部6912态, 其余视角=整体转动后字母映射)
+平均 11.0 步, 最长 14
+==========================================================================================
+
+E001 [ 0步] M[好]                                       S[好]                                       E[好]                                      
+      
+
+E002 [ 6步] M[好]                                       S[好]                                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 F2 U2 D2 B2
+
+E003 [ 6步] M[DB→DF DF→DB]                             S[好]                                       E[BL→FL FL→BL]                            
+      U2 R2 D2 R2 U2 L2
+
+E004 [ 6步] M[DB→UB UB→DB]                             S[DL→UL UL→DL]                             E[好]                                      
+      R2 F2 L2 F2 R2 B2
+
+E005 [ 6步] M[UB→UF UF→UB DB→DF DF→DB]                 S[好]                                       E[好]                                      
+      U2 R2 L2 D2 R2 L2
+
+E006 [ 6步] M[DF→UF DB→UB UF→DF UB→DB]                 S[好]                                       E[好]                                      
+      R2 L2 F2 R2 L2 B2
+
+E007 [ 6步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 B2 R2 D2
+
+E008 [ 6步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 D2 F2 B2 L2
+
+E009 [ 6步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 R2 F2 B2 R2
+
+E010 [ 6步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 F2 U2 D2 F2 L2
+
+E011 [ 6步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 L2 F2 B2 D2
+
+E012 [ 6步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 F2 B2 U2 L2
+
+E013 [ 6步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 B2 U2 R2 L2
+
+E014 [ 6步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UR DR→UL UL→DR UR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 D2 R2 F2 B2
+
+E015 [ 6步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UR DR→UL UL→DR UR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 R2 L2 F2 B2
+
+E016 [ 8步] M[好]                                       S[好]                                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 F2 D2 R2 U2 B2
+
+E017 [ 8步] M[好]                                       S[好]                                       E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 D2 L2 F2 U2 D2 B2
+
+E018 [ 8步] M[DB→DF DF→DB]                             S[好]                                       E[BR→BL BL→BR]                            
+      U2 R2 F2 D2 R2 U2 B2 L2
+
+E019 [ 8步] M[DB→DF DF→DB]                             S[好]                                       E[BR→FL FL→BR]                            
+      R2 U2 L2 F2 U2 R2 D2 B2
+
+E020 [ 8步] M[DB→DF DF→DB]                             S[好]                                       E[BL→FR FR→BL]                            
+      R2 U2 L2 F2 D2 L2 U2 B2
+
+E021 [ 8步] M[DF→UB UB→DF]                             S[好]                                       E[BL→FL FL→BL]                            
+      U2 R2 D2 F2 R2 U2 L2 B2
+
+E022 [ 8步] M[DF→UB UB→DF]                             S[好]                                       E[BR→FL FL→BR]                            
+      F2 U2 R2 U2 R2 U2 R2 F2
+
+E023 [ 8步] M[DF→UB UB→DF]                             S[好]                                       E[BR→FR FR→BR]                            
+      U2 R2 U2 F2 R2 U2 R2 F2
+
+E024 [ 8步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[好]                                      
+      U2 R2 F2 R2 U2 L2 B2 L2
+
+E025 [ 8步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[好]                                      
+      R2 F2 L2 U2 L2 F2 R2 D2
+
+E026 [ 8步] M[DB→UB UB→DB]                             S[好]                                       E[BL→FL FL→BL]                            
+      U2 F2 R2 D2 R2 F2 U2 L2
+
+E027 [ 8步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[好]                                      
+      R2 U2 F2 L2 F2 U2 R2 B2
+
+E028 [ 8步] M[DF→UB UB→DF]                             S[DR→UL UL→DR]                             E[好]                                      
+      U2 R2 F2 R2 F2 R2 F2 U2
+
+E029 [ 8步] M[DB→UB UB→DB]                             S[DR→UL UL→DR]                             E[好]                                      
+      U2 F2 R2 F2 U2 L2 B2 L2
+
+E030 [ 8步] M[DF→UB UB→DF]                             S[DL→UL UL→DL]                             E[好]                                      
+      U2 R2 F2 R2 U2 B2 L2 B2
+
+E031 [ 8步] M[UB→UF UF→UB DB→DF DF→DB]                 S[好]                                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 R2 U2 R2 L2 U2 R2
+
+E032 [ 8步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 R2 B2 U2 B2 L2 F2
+
+E033 [ 8步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      F2 R2 F2 U2 B2 R2 B2 D2
+
+E034 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[好]                                       E[好]                                      
+      U2 R2 L2 D2 F2 R2 L2 B2
+
+E035 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      F2 U2 F2 R2 B2 U2 B2 L2
+
+E036 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 F2 U2 B2 R2 B2 D2 F2
+
+E037 [ 8步] M[UB→UF UF→UB DB→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 D2 F2 R2 L2 F2 R2
+
+E038 [ 8步] M[UB→UF UF→UB DB→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 R2 F2 R2 L2 F2 L2
+
+E039 [ 8步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 D2 F2 L2 F2 R2 F2
+
+E040 [ 8步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 R2 F2 R2 B2 R2 B2
+
+E041 [ 8步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 R2 D2 B2 R2 B2
+
+E042 [ 8步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 R2 F2 D2 L2 F2 L2
+
+E043 [ 8步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 R2 B2 R2 B2 D2
+
+E044 [ 8步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 D2 F2 B2 L2 U2
+
+E045 [ 8步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 D2 F2 L2 U2
+
+E046 [ 8步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 D2 L2 U2 F2 B2 L2
+
+E047 [ 8步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 R2 D2 F2 L2
+
+E048 [ 8步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 F2 L2 U2 B2
+
+E049 [ 8步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 F2 U2 L2 B2 R2 U2 B2
+
+E050 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 F2 D2 B2 U2 F2 L2
+
+E051 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 R2 F2 D2 F2 L2
+
+E052 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 D2 R2 F2 D2 B2 R2
+
+E053 [ 8步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[好]                                      
+      R2 L2 F2 R2 F2 B2 R2 F2
+
+E054 [ 8步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 D2 R2 F2 B2 U2
+
+E055 [ 8步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 D2 L2 F2 B2 D2 L2
+
+E056 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BL→FL BR→BL FL→BR]                      
+      R2 U2 F2 D2 R2 D2 B2 U2
+
+E057 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 R2 D2 F2 D2 L2
+
+E058 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 F2 U2 D2 F2 D2 R2 L2
+
+E059 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 F2 D2 R2 F2 D2 B2
+
+E060 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 R2 L2 B2 U2 B2
+
+E061 [ 8步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 U2 F2 U2 L2 B2 U2 B2
+
+E062 [10步] M[DB→DF DF→DB]                             S[好]                                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 L2 F2 U2 R2 U2 F2
+
+E063 [10步] M[DB→DF DF→DB]                             S[好]                                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 L2 U2 R2 F2 U2 D2 B2
+
+E064 [10步] M[DB→DF DF→DB]                             S[好]                                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 U2 R2 U2 F2 L2
+
+E065 [10步] M[DB→DF DF→DB]                             S[好]                                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 U2 L2 F2 D2 L2 D2 F2
+
+E066 [10步] M[DB→DF DF→DB]                             S[DL→DR DR→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 R2 F2 D2 R2 F2 U2 B2
+
+E067 [10步] M[DB→DF DF→DB]                             S[DL→DR DR→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 F2 D2 F2 R2 D2 F2 R2 U2 L2
+
+E068 [10步] M[DF→UB UB→DF]                             S[好]                                       E[BR→BL BL→BR]                            
+      R2 F2 U2 R2 D2 L2 D2 R2 F2 R2
+
+E069 [10步] M[DF→UB UB→DF]                             S[好]                                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 F2 U2 R2 D2 R2 D2 R2 B2
+
+E070 [10步] M[DF→UB UB→DF]                             S[好]                                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 F2 U2 D2 L2 D2 R2 F2
+
+E071 [10步] M[DF→UB UB→DF]                             S[好]                                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 D2 F2 U2 D2 L2 D2 L2 B2
+
+E072 [10步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 F2 U2 D2 L2 D2 L2 B2 L2
+
+E073 [10步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 L2 F2 U2 D2 R2 D2 R2 B2
+
+E074 [10步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 R2 U2 L2 F2 R2 U2 R2 F2
+
+E075 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[好]                                      
+      U2 R2 U2 F2 R2 B2 D2 L2 B2 U2
+
+E076 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 D2 F2 R2 D2 R2 U2 B2
+
+E077 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 F2 D2 F2 R2 D2 R2 U2 L2 B2
+
+E078 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 B2 R2 D2 R2 D2 R2 B2
+
+E079 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BR]                      
+      U2 F2 R2 U2 B2 L2 D2 L2 D2 B2
+
+E080 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 F2 R2 D2 F2 R2 U2 L2 D2 B2
+
+E081 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 F2 D2 F2 R2 U2 L2 D2 L2 B2
+
+E082 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BR]                      
+      U2 F2 U2 B2 R2 U2 L2 U2 R2 B2
+
+E083 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[BR→FR FR→BL BL→BR]                      
+      U2 F2 R2 U2 B2 L2 U2 R2 U2 B2
+
+E084 [10步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 U2 F2 R2 B2 U2 R2 F2 D2
+
+E085 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 D2 F2 R2 F2 R2 F2 U2 L2
+
+E086 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BR→FL FL→BR]                            
+      F2 U2 R2 U2 R2 B2 R2 F2 D2 L2
+
+E087 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BL→FR FR→BL]                            
+      F2 U2 R2 D2 L2 F2 L2 B2 U2 L2
+
+E088 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BR→FR FR→BR]                            
+      U2 R2 U2 F2 R2 B2 R2 F2 D2 L2
+
+E089 [10步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 F2 U2 D2 R2 U2 R2 B2 L2 U2
+
+E090 [10步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[BL→FR BR→FL FR→BL FL→BR]                
+      F2 U2 D2 R2 U2 R2 B2 L2 U2 R2
+
+E091 [10步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 F2 R2 U2 L2 B2 L2 D2 L2
+
+E092 [10步] M[DB→UB UB→DB]                             S[好]                                       E[BR→FL FL→BR]                            
+      U2 F2 U2 R2 U2 L2 D2 L2 F2 U2
+
+E093 [10步] M[DB→UB UB→DB]                             S[好]                                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 F2 U2 R2 D2 R2 D2 R2 B2 D2
+
+E094 [10步] M[DB→UB UB→DB]                             S[好]                                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 U2 D2 R2 D2 R2 B2 D2 R2
+
+E095 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 D2 R2 F2 R2 F2 U2 L2 B2
+
+E096 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BR→FL FL→BR]                            
+      R2 U2 F2 L2 F2 L2 U2 R2 D2 B2
+
+E097 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BL→FR FR→BL]                            
+      R2 U2 F2 L2 F2 L2 D2 L2 U2 B2
+
+E098 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BR→FR FR→BR]                            
+      U2 R2 U2 L2 F2 R2 B2 U2 R2 F2
+
+E099 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 D2 R2 D2 R2 F2 U2 B2
+
+E100 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 F2 D2 R2 D2 R2 F2 U2 L2 B2
+
+E101 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 R2 D2 R2 B2 D2 R2 B2
+
+E102 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BR]                      
+      U2 F2 R2 U2 L2 D2 L2 B2 D2 B2
+
+E103 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 F2 R2 D2 R2 U2 L2 B2 D2 B2
+
+E104 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 F2 D2 R2 U2 L2 B2 D2 L2 B2
+
+E105 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 F2 U2 D2 R2 B2 D2 R2 B2
+
+E106 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BR]                      
+      U2 F2 U2 R2 U2 L2 F2 U2 R2 B2
+
+E107 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[BR→FR FR→BL BL→BR]                      
+      U2 F2 R2 U2 L2 U2 R2 F2 U2 B2
+
+E108 [10步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 R2 U2 F2 R2 B2 U2 R2 F2
+
+E109 [10步] M[DF→UB UB→DF]                             S[DR→UL UL→DR]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 F2 U2 D2 L2 B2 L2 B2 D2
+
+E110 [10步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BR→BL BL→BR]                            
+      R2 F2 U2 L2 U2 L2 F2 R2 B2 D2
+
+E111 [10步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BL→FL FL→BL]                            
+      U2 R2 F2 R2 F2 D2 R2 F2 U2 L2
+
+E112 [10步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[FL→FR FR→FL]                            
+      R2 F2 U2 L2 D2 R2 B2 L2 F2 U2
+
+E113 [10步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BR→FR FR→BR]                            
+      U2 R2 F2 R2 F2 U2 L2 B2 D2 L2
+
+E114 [10步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BR→BL BL→BR]                            
+      U2 F2 R2 F2 R2 D2 F2 R2 U2 B2
+
+E115 [10步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BL→FL FL→BL]                            
+      F2 R2 U2 B2 U2 B2 R2 F2 L2 D2
+
+E116 [10步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL]                            
+      U2 F2 R2 F2 R2 U2 B2 L2 D2 B2
+
+E117 [10步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BR]                            
+      F2 R2 U2 B2 D2 F2 L2 B2 R2 U2
+
+E118 [10步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BR→BL BL→BR]                            
+      U2 F2 R2 F2 R2 D2 R2 U2 B2 L2
+
+E119 [10步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BL→FL FL→BL]                            
+      U2 F2 R2 F2 R2 F2 D2 R2 U2 L2
+
+E120 [10步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[FL→FR FR→FL]                            
+      U2 F2 R2 F2 R2 U2 L2 D2 B2 L2
+
+E121 [10步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BR→FR FR→BR]                            
+      U2 F2 R2 F2 R2 F2 U2 L2 D2 L2
+
+E122 [10步] M[DB→UB UB→DB]                             S[DR→UL UL→DR]                             E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 D2 R2 D2 F2 U2 B2 L2
+
+E123 [10步] M[DB→UB UB→DB]                             S[DR→UL UL→DR]                             E[BR→FL FL→BL BL→BR]                      
+      R2 F2 U2 F2 U2 L2 U2 R2 B2 D2
+
+E124 [10步] M[DB→UB UB→DB]                             S[DR→UL UL→DR]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 F2 U2 D2 R2 F2 U2 L2 F2 R2
+
+E125 [10步] M[DB→UB UB→DB]                             S[DR→UL UL→DR]                             E[FL→FR BL→FL FR→BL]                      
+      R2 F2 U2 F2 D2 R2 U2 L2 F2 U2
+
+E126 [10步] M[DB→UB UB→DB]                             S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BR]                      
+      U2 F2 R2 U2 L2 D2 B2 D2 B2 L2
+
+E127 [10步] M[DB→UB UB→DB]                             S[DR→UL UL→DR]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 F2 R2 U2 D2 B2 D2 L2 B2 L2
+
+E128 [10步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BR→BL BL→BR]                            
+      U2 F2 D2 R2 F2 U2 L2 B2 L2 B2
+
+E129 [10步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BL→FL FL→BL]                            
+      R2 U2 F2 L2 U2 F2 U2 F2 R2 B2
+
+E130 [10步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BR]                            
+      R2 U2 F2 U2 F2 U2 L2 F2 R2 B2
+
+E131 [10步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL]                            
+      U2 F2 U2 R2 F2 U2 L2 F2 R2 B2
+
+E132 [10步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→BL]                            
+      R2 U2 F2 D2 B2 D2 L2 F2 R2 B2
+
+E133 [10步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BR]                            
+      R2 U2 F2 L2 D2 B2 D2 F2 R2 B2
+
+E134 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 F2 R2 F2 R2 D2 F2 U2 B2
+
+E135 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BL→FL FL→BL]                            
+      U2 R2 F2 R2 F2 D2 F2 U2 L2 B2
+
+E136 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 F2 R2 F2 R2 U2 B2 D2 B2
+
+E137 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BR]                            
+      U2 R2 F2 R2 F2 U2 B2 D2 L2 B2
+
+E138 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DL]                             E[BL→FL BR→BL FL→BR]                      
+      F2 R2 U2 R2 U2 B2 U2 F2 L2 D2
+
+E139 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 D2 F2 D2 R2 U2 L2 B2
+
+E140 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 F2 U2 D2 L2 D2 B2 L2 B2
+
+E141 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BR]                      
+      F2 R2 U2 R2 U2 B2 D2 B2 R2 U2
+
+E142 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 D2 F2 U2 L2 D2 L2 B2
+
+E143 [10步] M[DF→UB UB→DF]                             S[DL→UL UL→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 R2 U2 B2 R2 F2
+
+E144 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BR→BL BL→BR]                            
+      R2 F2 U2 L2 U2 L2 U2 F2 R2 B2
+
+E145 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 D2 F2 R2 U2 B2 L2 B2 L2
+
+E146 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BR→FL FL→BR]                            
+      R2 F2 U2 L2 F2 U2 L2 U2 R2 B2
+
+E147 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[FL→FR FR→FL]                            
+      R2 F2 U2 L2 D2 R2 D2 F2 R2 B2
+
+E148 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BL→FR FR→BL]                            
+      R2 F2 U2 L2 F2 D2 R2 D2 R2 B2
+
+E149 [10步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BR→FR FR→BR]                            
+      U2 R2 U2 F2 R2 U2 B2 R2 F2 L2
+
+E150 [10步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BR→BL BL→BR]                            
+      U2 F2 D2 F2 U2 R2 F2 L2 F2 R2
+
+E151 [10步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BL→FL FL→BL]                            
+      U2 F2 R2 D2 F2 U2 B2 L2 B2 L2
+
+E152 [10步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BR]                            
+      R2 F2 U2 F2 U2 L2 F2 U2 R2 B2
+
+E153 [10步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL]                            
+      U2 F2 U2 B2 D2 R2 F2 L2 F2 R2
+
+E154 [10步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→BL]                            
+      R2 F2 U2 F2 D2 R2 B2 D2 R2 B2
+
+E155 [10步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BR]                            
+      U2 F2 R2 U2 B2 D2 B2 L2 B2 L2
+
+E156 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BR→BL BL→BR]                            
+      U2 R2 F2 D2 R2 U2 L2 B2 L2 B2
+
+E157 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 D2 R2 U2 F2 R2 B2 R2 F2
+
+E158 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BR→FL FL→BR]                            
+      R2 F2 L2 F2 U2 L2 U2 R2 D2 B2
+
+E159 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[FL→FR FR→FL]                            
+      U2 R2 F2 U2 L2 D2 L2 B2 L2 B2
+
+E160 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BL→FR FR→BL]                            
+      R2 F2 L2 F2 U2 L2 D2 L2 U2 B2
+
+E161 [10步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BR→FR FR→BR]                            
+      U2 R2 U2 L2 D2 F2 R2 B2 R2 F2
+
+E162 [10步] M[DB→UB UB→DB]                             S[DL→UL UL→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 R2 F2 U2 D2 L2 B2 L2 B2
+
+E163 [10步] M[DB→UB UB→DB]                             S[DL→UL UL→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 D2 F2 U2 D2 R2 F2 L2 F2
+
+E164 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[好]                                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 R2 L2 F2 D2 R2 D2 F2
+
+E165 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[好]                                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 L2 F2 D2 R2 U2 B2 U2 L2
+
+E166 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[好]                                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 R2 L2 F2 U2 R2 L2 U2 F2
+
+E167 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[好]                                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 R2 F2 B2 R2 F2 U2 F2 B2
+
+E168 [10步] M[UB→UF UF→UB]                             S[DL→DR DR→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 L2 F2 D2 R2 F2 D2 F2
+
+E169 [10步] M[UB→UF UF→UB]                             S[DL→DR DR→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 B2 R2 D2 B2 L2 U2 L2
+
+E170 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→DR DR→DL]                             E[BR→BL BL→BR]                            
+      U2 R2 L2 F2 D2 R2 L2 F2 D2 F2
+
+E171 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→DR DR→DL]                             E[BR→FL FL→BR]                            
+      R2 U2 R2 L2 F2 U2 R2 B2 U2 F2
+
+E172 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 R2 D2 B2 U2 F2 B2 L2 F2
+
+E173 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→DR DR→DL]                             E[BL→FR FR→BL]                            
+      R2 U2 R2 L2 F2 D2 L2 F2 D2 F2
+
+E174 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 F2 D2 R2 F2 B2 R2 F2
+
+E175 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[好]                                       E[BL→FL FL→BL]                            
+      U2 R2 L2 F2 R2 U2 L2 B2 U2 L2
+
+E176 [10步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 D2 L2 F2 R2 F2 D2 R2 F2
+
+E177 [10步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BR→FL FL→BR]                            
+      R2 U2 F2 R2 B2 L2 D2 L2 D2 B2
+
+E178 [10步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BL→FR FR→BL]                            
+      R2 U2 F2 R2 B2 L2 U2 R2 U2 B2
+
+E179 [10步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BR→FR FR→BR]                            
+      U2 R2 U2 R2 F2 R2 B2 D2 L2 B2
+
+E180 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[好]                                      
+      R2 U2 R2 L2 F2 L2 F2 D2 L2 F2
+
+E181 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 F2 L2 B2 U2 F2 B2 R2 F2
+
+E182 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[好]                                       E[BR→BL BL→BR]                            
+      R2 F2 U2 R2 D2 R2 U2 R2 B2 L2
+
+E183 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[好]                                       E[BL→FL FL→BL]                            
+      U2 R2 D2 R2 L2 F2 R2 D2 R2 F2
+
+E184 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[好]                                       E[BR→FL FL→BR]                            
+      R2 L2 F2 U2 R2 D2 R2 U2 R2 B2
+
+E185 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[好]                                       E[BR→FR FR→BR]                            
+      U2 R2 U2 R2 L2 F2 R2 D2 L2 B2
+
+E186 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[好]                                      
+      R2 U2 R2 F2 L2 F2 L2 F2 D2 L2
+
+E187 [10步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 D2 F2 L2 B2 R2 B2 D2 R2
+
+E188 [10步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BR→FL FL→BR]                            
+      F2 U2 R2 U2 L2 F2 R2 B2 U2 R2
+
+E189 [10步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BL→FR FR→BL]                            
+      F2 U2 R2 D2 R2 B2 L2 F2 D2 R2
+
+E190 [10步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BR→FR FR→BR]                            
+      U2 R2 U2 F2 L2 F2 R2 B2 U2 R2
+
+E191 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→BL BL→BR]                            
+      U2 R2 L2 F2 D2 R2 F2 D2 F2 L2
+
+E192 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→FL FL→BR]                            
+      R2 U2 R2 L2 F2 U2 B2 U2 F2 L2
+
+E193 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR FR→FL]                            
+      U2 R2 L2 F2 U2 R2 F2 D2 B2 R2
+
+E194 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      F2 R2 U2 F2 U2 B2 U2 F2 R2 B2
+
+E195 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      F2 U2 F2 D2 R2 B2 U2 B2 L2 B2
+
+E196 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      F2 U2 F2 U2 R2 B2 U2 F2 R2 B2
+
+E197 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[好]                                      
+      F2 U2 R2 L2 F2 R2 F2 D2 B2 R2
+
+E198 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 F2 R2 U2 D2 F2 D2 B2 L2 F2
+
+E199 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 F2 U2 D2 R2 B2 U2 F2 R2 F2
+
+E200 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL UL→DR]                             E[好]                                      
+      U2 R2 L2 F2 R2 F2 D2 R2 F2 L2
+
+E201 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 R2 B2 U2 R2 F2 R2 F2 B2
+
+E202 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      F2 U2 F2 R2 B2 U2 L2 B2 L2 B2
+
+E203 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 F2 D2 F2 D2 L2 F2 R2 F2
+
+E204 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      R2 U2 F2 L2 D2 F2 D2 F2 R2 F2
+
+E205 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      R2 U2 F2 L2 U2 B2 U2 F2 R2 F2
+
+E206 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 R2 B2 U2 L2 F2 R2 F2
+
+E207 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 U2 F2 U2 B2 U2 L2 F2 R2 F2
+
+E208 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 D2 R2 B2 U2 L2 B2 L2 F2
+
+E209 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[好]                                      
+      U2 R2 F2 L2 B2 R2 B2 D2 R2 L2
+
+E210 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 R2 B2 R2 F2 U2 F2 B2
+
+E211 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      F2 R2 U2 F2 U2 B2 R2 B2 L2 D2
+
+E212 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      F2 R2 U2 F2 D2 F2 L2 F2 R2 U2
+
+E213 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 R2 B2 R2 U2 B2 L2 D2 F2
+
+E214 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 R2 B2 R2 D2 F2 R2 U2 F2
+
+E215 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[好]                                      
+      R2 F2 U2 R2 L2 B2 L2 B2 D2 B2
+
+E216 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 F2 R2 F2 D2 B2 R2 B2 R2
+
+E217 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 F2 U2 B2 L2 F2 U2 R2 L2 F2
+
+E218 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DL]                             E[BR→BL BL→BR]                            
+      U2 R2 F2 D2 R2 L2 B2 L2 U2 B2
+
+E219 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DL]                             E[BR→FL FL→BR]                            
+      R2 U2 R2 F2 U2 B2 R2 U2 F2 L2
+
+E220 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 F2 U2 B2 D2 R2 B2 D2 R2 F2
+
+E221 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 R2 D2 B2 U2 B2 L2 F2 L2
+
+E222 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 F2 R2 U2 F2 D2 B2 L2 F2 L2
+
+E223 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 F2 D2 R2 F2 L2 B2 R2
+
+E224 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 F2 U2 B2 U2 L2 F2 U2 R2 F2
+
+E225 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 D2 B2 U2 R2 F2 L2 B2 R2
+
+E226 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[好]                                      
+      U2 R2 L2 D2 R2 F2 L2 F2 L2 F2
+
+E227 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 F2 B2 U2 F2 R2 F2 L2 B2
+
+E228 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 B2 U2 R2 F2 R2 F2 L2 B2
+
+E229 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 F2 U2 F2 B2 U2 L2 F2 R2 F2
+
+E230 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 F2 R2 B2 U2 B2 D2 L2 F2
+
+E231 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 F2 R2 B2 D2 F2 U2 L2 F2
+
+E232 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 R2 B2 R2 U2 B2 D2 F2
+
+E233 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 F2 R2 B2 R2 D2 F2 U2 F2
+
+E234 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DL]                             E[好]                                      
+      U2 R2 F2 L2 D2 R2 L2 B2 L2 B2
+
+E235 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 R2 F2 B2 U2 B2 L2 F2
+
+E236 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[好]                                       E[BL→FL BR→BL FL→BR]                      
+      R2 U2 F2 U2 L2 U2 R2 L2 B2 D2
+
+E237 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[好]                                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 D2 R2 D2 R2 L2 B2 D2 R2
+
+E238 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[好]                                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 R2 L2 F2 U2 D2 R2 L2 F2
+
+E239 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[好]                                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 B2 R2 F2 B2 U2 F2 B2
+
+E240 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[好]                                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 R2 U2 D2 R2 F2 R2 L2 B2
+
+E241 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[好]                                       E[BR→BL BL→BR]                            
+      U2 R2 F2 D2 R2 U2 R2 L2 F2 R2
+
+E242 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[好]                                       E[BL→FL FL→BL]                            
+      U2 R2 D2 R2 U2 R2 F2 R2 L2 B2
+
+E243 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[好]                                       E[BR→FL FL→BR]                            
+      R2 U2 R2 F2 U2 L2 D2 R2 L2 F2
+
+E244 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[好]                                       E[BL→FR FR→BL]                            
+      R2 U2 R2 F2 D2 R2 U2 R2 L2 F2
+
+E245 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BR→BL BL→BR]                            
+      U2 F2 D2 R2 L2 B2 D2 R2 L2 B2
+
+E246 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BL→FL FL→BL]                            
+      U2 F2 R2 D2 R2 L2 B2 D2 R2 B2
+
+E247 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BR→FL FL→BR]                            
+      R2 U2 F2 U2 L2 F2 U2 R2 L2 B2
+
+E248 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BL→FR FR→BL]                            
+      R2 U2 F2 D2 R2 B2 D2 R2 L2 B2
+
+E249 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 B2 R2 F2 D2 B2 U2 B2
+
+E250 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      F2 R2 U2 F2 U2 B2 L2 F2 R2 D2
+
+E251 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      F2 R2 U2 F2 D2 F2 R2 B2 L2 U2
+
+E252 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 R2 B2 L2 D2 F2 R2 D2 F2
+
+E253 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 R2 B2 L2 U2 B2 L2 U2 F2
+
+E254 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL UL→DR]                             E[BR→BL BL→BR]                            
+      U2 F2 D2 R2 F2 U2 R2 L2 F2 R2
+
+E255 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL UL→DR]                             E[BL→FL FL→BL]                            
+      R2 U2 F2 R2 D2 B2 D2 L2 B2 L2
+
+E256 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL UL→DR]                             E[BR→FL FL→BR]                            
+      R2 U2 F2 U2 F2 U2 R2 L2 B2 L2
+
+E257 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL UL→DR]                             E[FL→FR FR→FL]                            
+      U2 F2 U2 R2 F2 U2 R2 L2 B2 L2
+
+E258 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      F2 U2 R2 F2 R2 B2 R2 F2 U2 B2
+
+E259 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[好]                                      
+      U2 F2 R2 F2 U2 R2 L2 F2 R2 B2
+
+E260 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 L2 F2 R2 B2 D2 B2 R2 B2
+
+E261 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 F2 L2 B2 U2 B2 U2
+
+E262 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 F2 D2 F2 L2 F2 R2 U2 F2
+
+E263 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 R2 B2 R2 B2 L2 D2 F2
+
+E264 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 U2 F2 U2 B2 R2 B2 L2 D2 F2
+
+E265 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 D2 R2 B2 L2 B2 L2 U2 F2
+
+E266 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 F2 L2 F2 D2 F2 U2 R2 F2
+
+E267 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 F2 L2 F2 U2 B2 D2 R2 F2
+
+E268 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 L2 F2 L2 U2 B2 D2 F2
+
+E269 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 F2 L2 F2 L2 D2 F2 U2 F2
+
+E270 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DL]                             E[好]                                      
+      U2 R2 F2 R2 U2 R2 L2 F2 R2 B2
+
+E271 [10步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 L2 F2 B2 D2 F2 R2 F2
+
+E272 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[好]                                      
+      R2 U2 F2 R2 B2 D2 B2 L2 B2 L2
+
+E273 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 U2 F2 R2 F2 U2 B2 R2 D2
+
+E274 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 F2 U2 F2 R2 F2 D2 F2 L2 U2
+
+E275 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      F2 U2 R2 F2 R2 B2 D2 F2 U2 L2
+
+E276 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 R2 B2 R2 B2 D2 F2
+
+E277 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      F2 U2 R2 F2 R2 B2 U2 B2 D2 L2
+
+E278 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 F2 D2 L2 F2 L2 F2 U2 F2
+
+E279 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 F2 L2 F2 B2 D2 F2
+
+E280 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[好]                                      
+      R2 F2 U2 R2 B2 R2 U2 R2 L2 B2
+
+E281 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 F2 U2 L2 B2 R2 F2 B2 D2 F2
+
+E282 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[好]                                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 F2 D2 L2 D2 R2 L2 B2
+
+E283 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[好]                                       E[BR→FL FL→BL BL→BR]                      
+      F2 U2 R2 U2 R2 L2 B2 U2 R2 D2
+
+E284 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[好]                                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 F2 U2 R2 L2 U2 R2 L2 B2
+
+E285 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[好]                                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 B2 U2 R2 F2 B2 R2 F2 B2
+
+E286 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[好]                                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 F2 R2 U2 R2 L2 U2 R2 B2
+
+E287 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→BL BL→BR]                            
+      U2 R2 L2 F2 D2 B2 U2 R2 L2 F2
+
+E288 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 L2 F2 R2 U2 F2 D2 R2 F2
+
+E289 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 F2 D2 F2 B2 L2 F2 U2 F2
+
+E290 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 R2 F2 B2 R2 B2 D2 F2
+
+E291 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 U2 F2 U2 F2 B2 R2 B2 D2 F2
+
+E292 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL UL→DR]                             E[好]                                      
+      U2 R2 L2 F2 R2 F2 D2 L2 B2 R2
+
+E293 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 F2 R2 B2 U2 L2 B2 L2 F2 B2
+
+E294 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      F2 U2 F2 R2 B2 U2 R2 F2 R2 B2
+
+E295 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 F2 D2 F2 D2 R2 B2 L2 F2
+
+E296 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      R2 U2 F2 R2 U2 B2 U2 B2 L2 F2
+
+E297 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      R2 U2 F2 R2 D2 F2 D2 B2 L2 F2
+
+E298 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 R2 B2 U2 R2 B2 L2 F2
+
+E299 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 U2 F2 U2 B2 U2 R2 B2 L2 F2
+
+E300 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 D2 R2 B2 U2 R2 F2 R2 F2
+
+E301 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 F2 D2 F2 D2 F2 R2 F2 B2
+
+E302 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 R2 B2 U2 F2 R2 F2 B2
+
+E303 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 D2 R2 B2 U2 B2 L2 F2 B2
+
+E304 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 F2 D2 F2 R2 B2 L2 U2 F2
+
+E305 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 R2 B2 L2 F2 R2 D2 F2
+
+E306 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 U2 F2 U2 B2 L2 F2 R2 D2 F2
+
+E307 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 D2 R2 B2 R2 F2 R2 U2 F2
+
+E308 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[好]                                      
+      U2 R2 L2 F2 R2 F2 D2 B2 R2 F2
+
+E309 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 F2 R2 F2 U2 F2 R2 B2 U2 L2
+
+E310 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 F2 U2 F2 R2 F2 U2 B2 R2
+
+E311 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 F2 U2 B2 D2 L2 F2 U2 L2 F2
+
+E312 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 R2 D2 B2 U2 B2 R2 B2 R2
+
+E313 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 F2 R2 U2 F2 D2 B2 R2 B2 R2
+
+E314 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 U2 F2 D2 R2 F2 R2 F2 L2
+
+E315 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 F2 U2 B2 U2 R2 B2 D2 L2 F2
+
+E316 [10步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 D2 B2 U2 R2 F2 R2 F2 L2
+
+E317 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      F2 U2 R2 F2 L2 F2 U2 B2 D2 R2
+
+E318 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 L2 F2 L2 B2 D2 F2
+
+E319 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      F2 U2 R2 F2 L2 F2 D2 F2 U2 R2
+
+E320 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 F2 D2 R2 B2 R2 F2 U2 F2
+
+E321 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[好]                                      
+      F2 R2 B2 U2 R2 L2 F2 L2 F2 D2
+
+E322 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 D2 F2 U2 B2 L2 B2 U2 B2
+
+E323 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 R2 F2 U2 F2 L2 B2 D2 F2
+
+E324 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→BL BL→BR]                            
+      U2 R2 F2 D2 F2 L2 D2 R2 L2 B2
+
+E325 [10步] M[UB→UF UF→UB DB→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[好]                                      
+      U2 R2 L2 F2 B2 U2 R2 L2 F2 B2
+
+E326 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 R2 D2 L2 B2 U2 F2 B2 L2
+
+E327 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      F2 U2 R2 U2 R2 D2 F2 B2 L2 F2
+
+E328 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 D2 F2 R2 D2 F2 B2 R2 B2
+
+E329 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 F2 R2 D2 F2 B2 L2 F2
+
+E330 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      R2 F2 U2 R2 D2 L2 U2 R2 B2 R2
+
+E331 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      F2 R2 U2 L2 U2 B2 U2 F2 R2 U2
+
+E332 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 D2 L2 U2 R2 B2
+
+E333 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 D2 F2 R2 D2 B2 L2 F2
+
+E334 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BR→FL FR→BR]                      
+      F2 R2 U2 L2 U2 B2 D2 B2 L2 D2
+
+E335 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 U2 R2 D2 R2 B2
+
+E336 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 D2 L2 U2 B2 R2 B2
+
+E337 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 U2 R2 D2 B2 U2 F2 L2
+
+E338 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FL FL→BL BL→BR]                      
+      R2 F2 U2 B2 U2 L2 U2 R2 F2 U2
+
+E339 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 F2 R2 U2 D2 B2 U2 L2 F2 L2
+
+E340 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BL→FL FR→BL]                      
+      R2 F2 U2 B2 D2 R2 U2 L2 B2 D2
+
+E341 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BR→FL FR→BR]                      
+      U2 F2 R2 D2 L2 D2 F2 D2 F2 L2
+
+E342 [10步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 F2 U2 D2 R2 F2 D2 L2 B2 R2
+
+E343 [10步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 D2 F2 R2 F2 R2 B2 U2
+
+E344 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[好]                                      
+      U2 R2 U2 D2 F2 U2 D2 F2 R2 D2
+
+E345 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 D2 F2 B2 L2 U2 F2
+
+E346 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FL FL→BL BL→BR]                      
+      R2 U2 R2 U2 F2 U2 L2 U2 B2 R2
+
+E347 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 D2 R2 D2 B2 L2
+
+E348 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FL FL→BL]                            
+      U2 R2 U2 R2 U2 F2 U2 D2 F2 L2
+
+E349 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 L2 F2 D2 F2 B2 L2 D2 B2
+
+E350 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FR FR→FL FL→BL BL→BR]                
+      R2 U2 L2 F2 U2 F2 B2 R2 U2 B2
+
+E351 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 D2 B2 L2 U2 F2
+
+E352 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FL FL→BR]                            
+      U2 R2 U2 F2 D2 F2 U2 F2 R2 D2
+
+E353 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 U2 F2 D2 F2 D2 B2 L2 U2
+
+E354 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 D2 F2 R2 D2 B2 L2
+
+E355 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 D2 F2 R2 D2 L2
+
+E356 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 D2 F2 U2 R2 B2 L2 D2 F2
+
+E357 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 D2 B2 U2 F2 R2 D2 L2
+
+E358 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BR→FL FR→BR]                      
+      U2 R2 D2 F2 U2 B2 R2 D2 F2 L2
+
+E359 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 F2 U2 B2 L2 U2 B2 L2
+
+E360 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 U2 B2 L2 U2 L2
+
+E361 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 R2 F2 U2 L2 F2 L2 U2 B2
+
+E362 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 D2 B2 D2 B2 L2 U2 L2
+
+E363 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FR FR→BL BL→BR]                      
+      U2 R2 D2 F2 D2 F2 L2 U2 F2 L2
+
+E364 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 R2 L2 F2 D2 F2 U2 F2 R2
+
+E365 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 L2 F2 U2 R2 F2 U2 B2 L2
+
+E366 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 L2 F2 D2 R2 F2 U2 F2 R2
+
+E367 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 R2 F2 D2 B2 U2 F2 L2
+
+E368 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 R2 B2 U2 B2 D2 L2
+
+E369 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 D2 L2 F2 D2 B2 D2 L2
+
+E370 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BR→FL FR→BR]                      
+      U2 R2 D2 L2 F2 U2 F2 U2 B2 L2
+
+E371 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 R2 F2 U2 F2 D2 F2 L2
+
+E372 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 R2 B2 D2 F2 U2 L2
+
+E373 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 U2 R2 B2 R2 U2 B2 D2
+
+E374 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 D2 L2 F2 U2 F2 U2 L2
+
+E375 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FR FR→BL BL→BR]                      
+      U2 R2 D2 L2 F2 D2 B2 D2 B2 L2
+
+E376 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 R2 B2 R2 D2 F2 U2
+
+E377 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[好]                                      
+      U2 D2 R2 U2 D2 F2 U2 D2 F2 R2
+
+E378 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      R2 U2 F2 D2 F2 B2 L2 U2 F2 U2
+
+E379 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 R2 D2 B2 U2 F2 B2 L2
+
+E380 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      R2 U2 R2 F2 D2 F2 R2 D2 B2 L2
+
+E381 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 R2 L2 B2 R2 U2 B2
+
+E382 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→BL BL→BR]                            
+      U2 F2 U2 R2 U2 D2 B2 U2 F2 L2
+
+E383 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 F2 D2 F2 U2 F2 R2
+
+E384 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR FR→FL]                            
+      U2 F2 D2 R2 U2 D2 B2 U2 B2 R2
+
+E385 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      R2 U2 F2 R2 U2 F2 D2 L2 F2 L2
+
+E386 [10步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 D2 R2 F2 B2 U2 F2
+
+E387 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BL→FL FL→BL]                            
+      U2 R2 U2 R2 F2 U2 D2 F2 D2 L2
+
+E388 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BR→FL FL→BR]                            
+      U2 R2 U2 R2 F2 D2 R2 U2 F2 D2
+
+E389 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 U2 R2 F2 D2 R2 D2 B2 U2
+
+E390 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BL→FR FR→BL]                            
+      U2 R2 U2 R2 F2 U2 L2 D2 F2 D2
+
+E391 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 R2 F2 B2 U2 B2 L2
+
+E392 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 U2 R2 F2 U2 L2 U2 B2 U2
+
+E393 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 R2 F2 D2 R2 F2 D2 B2
+
+E394 [10步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 F2 R2 D2 F2 R2 D2 L2
+
+E395 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[好]                                      
+      U2 D2 R2 U2 F2 U2 D2 F2 U2 R2
+
+E396 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 L2 F2 D2 R2 F2 U2 F2
+
+E397 [10步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[FL→FR BL→FL FR→BL]                      
+      U2 F2 D2 B2 R2 D2 B2 L2 D2 L2
+
+E398 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BR→BL BL→BR]                            
+      U2 F2 U2 R2 U2 D2 R2 F2 D2 B2
+
+E399 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 F2 D2 R2 F2 U2 F2
+
+E400 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 R2 D2 R2 L2 F2 D2 L2 B2
+
+E401 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BL→FR FR→BL]                            
+      U2 D2 R2 U2 F2 U2 L2 B2 D2 F2
+
+E402 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UR DR→UL UL→DR UR→DL]                 E[好]                                      
+      U2 D2 R2 U2 D2 R2 F2 U2 D2 F2
+
+E403 [10步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UR DR→UL UL→DR UR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 R2 L2 F2 D2 R2 U2 F2
+
+E404 [12步] M[DB→DF DF→DB]                             S[DL→DR DR→DL]                             E[好]                                      
+      R2 U2 R2 F2 U2 L2 F2 R2 D2 B2 U2 R2
+
+E405 [12步] M[DB→DF DF→DB]                             S[DL→DR DR→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 F2 U2 L2 U2 F2 R2 F2 D2 F2 D2 F2
+
+E406 [12步] M[DB→DF DF→DB]                             S[DL→DR DR→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 R2 F2 U2 L2 F2 R2 U2 F2 D2 R2
+
+E407 [12步] M[DF→UB UB→DF]                             S[好]                                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 F2 R2 F2 D2 L2 D2 F2 U2 F2
+
+E408 [12步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 F2 R2 F2 R2 D2 R2 F2 U2 B2
+
+E409 [12步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 D2 F2 D2 R2 U2 B2 L2 B2 L2
+
+E410 [12步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 F2 D2 L2 D2 F2 L2 B2 L2
+
+E411 [12步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 F2 R2 F2 L2 D2 L2 F2 U2 F2
+
+E412 [12步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 D2 F2 R2 F2 R2 U2 L2 B2 D2 B2
+
+E413 [12步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 D2 F2 U2 L2 D2 B2 L2 B2 L2
+
+E414 [12步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 U2 F2 U2 R2 U2 F2 L2 B2 L2
+
+E415 [12步] M[DF→UB DB→DF UB→DB]                       S[好]                                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 F2 R2 F2 L2 U2 R2 B2 D2 F2
+
+E416 [12步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 F2 U2 D2 L2 F2 D2 R2 F2 D2
+
+E417 [12步] M[DF→UB UB→DF]                             S[DL→DR DR→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 F2 U2 D2 L2 F2 U2 L2 B2 U2
+
+E418 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BR→BL BL→BR]                            
+      R2 U2 L2 F2 L2 U2 R2 U2 F2 D2 F2 U2
+
+E419 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[FL→FR FR→FL]                            
+      R2 U2 L2 F2 L2 U2 R2 U2 F2 U2 B2 D2
+
+E420 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 F2 U2 R2 D2 R2 B2 R2 B2 D2 R2
+
+E421 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 F2 U2 D2 L2 F2 L2 B2 U2 L2
+
+E422 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 F2 L2 B2 R2 B2 U2 F2 B2 R2
+
+E423 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      R2 U2 L2 F2 L2 D2 L2 U2 B2 U2 F2 U2
+
+E424 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 F2 U2 R2 U2 L2 F2 L2 F2 U2 R2
+
+E425 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→DR DR→DL]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      R2 U2 L2 F2 L2 D2 L2 U2 B2 D2 B2 D2
+
+E426 [12步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 F2 D2 F2 R2 U2 L2 B2 L2 B2
+
+E427 [12步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 R2 F2 R2 D2 R2 F2 D2 F2 U2 L2
+
+E428 [12步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[FL→FR BL→FL FR→BL]                      
+      U2 F2 R2 F2 R2 U2 L2 B2 U2 F2 U2 L2
+
+E429 [12步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 F2 U2 F2 L2 D2 L2 F2 R2 F2
+
+E430 [12步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 D2 F2 U2 F2 R2 U2 R2 F2 L2 B2
+
+E431 [12步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[BL→FR BR→BL FR→BR]                      
+      U2 F2 R2 F2 R2 D2 R2 F2 U2 B2 D2 L2
+
+E432 [12步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[BR→FR FR→FL FL→BR]                      
+      U2 F2 R2 F2 R2 U2 L2 B2 D2 B2 D2 L2
+
+E433 [12步] M[DB→UB UB→DF DF→DB]                       S[好]                                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 F2 D2 F2 L2 D2 R2 B2 R2 F2
+
+E434 [12步] M[DB→UB UB→DB]                             S[好]                                       E[BR→BL BL→BR]                            
+      U2 R2 F2 U2 R2 D2 R2 U2 L2 F2 R2 U2
+
+E435 [12步] M[DB→UB UB→DB]                             S[好]                                       E[FL→FR FR→FL]                            
+      U2 R2 F2 U2 R2 U2 L2 U2 R2 B2 L2 D2
+
+E436 [12步] M[DB→UB UB→DB]                             S[好]                                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 D2 F2 D2 R2 U2 B2 L2 B2 D2 L2
+
+E437 [12步] M[DB→UB UB→DB]                             S[好]                                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 U2 F2 D2 R2 U2 B2 L2 F2 U2 R2
+
+E438 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BR→BL BL→BR]                            
+      U2 R2 U2 L2 F2 R2 D2 L2 U2 F2 D2 F2
+
+E439 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[FL→FR FR→FL]                            
+      U2 R2 U2 L2 F2 R2 D2 L2 D2 B2 U2 F2
+
+E440 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 F2 R2 B2 R2 U2 R2 U2 F2
+
+E441 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 L2 F2 U2 D2 L2 F2 D2 R2 F2
+
+E442 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 R2 F2 R2 F2 D2 F2 B2 L2 F2
+
+E443 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 L2 F2 R2 U2 R2 U2 B2 U2 F2
+
+E444 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 U2 F2 R2 B2 R2 D2 L2 D2 F2
+
+E445 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→DR DR→DL]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 U2 L2 F2 R2 U2 R2 D2 F2 D2 F2
+
+E446 [12步] M[DB→UB UB→DB]                             S[DL→DR DR→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 R2 U2 F2 U2 D2 L2 F2 D2 R2 F2
+
+E447 [12步] M[DF→UB UB→DF]                             S[DR→UL UL→DR]                             E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 F2 R2 F2 D2 F2 D2 R2 U2 B2
+
+E448 [12步] M[DF→UB UB→DF]                             S[DR→UL UL→DR]                             E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 R2 F2 R2 D2 R2 D2 F2 U2 L2
+
+E449 [12步] M[DF→UB UB→DF]                             S[DR→UL UL→DR]                             E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 R2 F2 R2 U2 R2 D2 B2 D2 R2
+
+E450 [12步] M[DF→UB UB→DF]                             S[DR→UL UL→DR]                             E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 R2 F2 R2 D2 R2 U2 B2 D2 L2
+
+E451 [12步] M[DF→UB UB→DF]                             S[DR→UL UL→DR]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 D2 F2 U2 D2 L2 F2 L2 B2 U2
+
+E452 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BR→FL FL→BR]                            
+      U2 R2 F2 R2 U2 L2 U2 F2 D2 F2 U2 L2
+
+E453 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 F2 R2 D2 R2 U2 B2 U2 F2 U2 L2
+
+E454 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 F2 U2 D2 L2 B2 U2 R2 F2 U2 L2
+
+E455 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 F2 U2 D2 L2 B2 D2 L2 B2 D2 L2
+
+E456 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BL→FR FR→BL]                            
+      U2 R2 F2 R2 U2 L2 U2 F2 U2 B2 D2 L2
+
+E457 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      R2 U2 D2 F2 U2 R2 U2 L2 B2 R2 B2 U2
+
+E458 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 F2 R2 D2 R2 U2 B2 D2 B2 D2 L2
+
+E459 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL UL→DR]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      R2 U2 D2 F2 U2 R2 D2 R2 F2 L2 F2 D2
+
+E460 [12步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BR]                            
+      U2 R2 F2 U2 B2 D2 L2 B2 U2 R2 F2 U2
+
+E461 [12步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 F2 U2 B2 U2 R2 F2 U2 L2 B2 D2
+
+E462 [12步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      R2 U2 R2 F2 L2 B2 D2 F2 D2 L2 B2 L2
+
+E463 [12步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      R2 U2 R2 F2 L2 B2 U2 B2 U2 L2 B2 L2
+
+E464 [12步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→BL]                            
+      U2 R2 F2 U2 B2 U2 R2 F2 D2 R2 F2 U2
+
+E465 [12步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 R2 U2 D2 B2 L2 D2 B2 L2 D2 B2
+
+E466 [12步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 F2 U2 B2 D2 L2 B2 D2 L2 B2 D2
+
+E467 [12步] M[DF→UB UB→DF]                             S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 R2 U2 D2 B2 L2 U2 F2 R2 U2 B2
+
+E468 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[好]                                      
+      U2 R2 U2 F2 R2 B2 D2 F2 D2 R2 F2 L2
+
+E469 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 L2 B2 R2 U2 B2 U2 F2 R2
+
+E470 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 D2 R2 F2 L2 B2 U2 R2
+
+E471 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 F2 L2 B2 U2 B2 U2 R2 F2 R2
+
+E472 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 B2 U2 R2 F2 R2 F2 U2 L2
+
+E473 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 F2 R2 B2 R2 U2 B2 U2 F2 L2
+
+E474 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 F2 L2 B2 R2 D2 F2 D2 F2 R2
+
+E475 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 U2 L2 B2 R2 F2 D2 R2
+
+E476 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 F2 L2 B2 D2 F2 D2 R2 F2 R2
+
+E477 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 U2 B2 D2 L2 B2 L2 B2 D2 L2
+
+E478 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 F2 R2 B2 R2 D2 F2 D2 F2 L2
+
+E479 [12步] M[DF→UB DB→DF UB→DB]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 U2 F2 R2 B2 U2 B2 U2 R2 F2 L2
+
+E480 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BR→FL FL→BR]                            
+      U2 R2 F2 U2 L2 B2 D2 L2 U2 R2 F2 U2
+
+E481 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 F2 U2 L2 B2 U2 R2 U2 L2 B2 D2
+
+E482 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 U2 D2 R2 F2 L2 F2 D2 R2 D2 R2
+
+E483 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 F2 U2 D2 R2 F2 L2 F2 U2 L2 U2 R2
+
+E484 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BL→FR FR→BL]                            
+      U2 R2 F2 U2 L2 B2 U2 R2 D2 R2 F2 U2
+
+E485 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 F2 R2 U2 D2 B2 L2 D2 L2 D2 B2 L2
+
+E486 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 F2 U2 L2 B2 D2 L2 D2 L2 B2 D2
+
+E487 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL UL→DR]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 F2 R2 U2 D2 B2 L2 U2 R2 U2 B2 L2
+
+E488 [12步] M[DB→UB UB→DB]                             S[DR→UL UL→DR]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 L2 F2 R2 B2 D2 L2 B2 R2 F2 B2
+
+E489 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[好]                                      
+      U2 R2 U2 L2 F2 R2 D2 F2 D2 B2 R2 F2
+
+E490 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 R2 F2 D2 F2 D2 R2 B2 L2 F2
+
+E491 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 R2 F2 R2 D2 F2 D2 F2 R2 U2 L2
+
+E492 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 R2 F2 R2 D2 F2 D2 B2 L2 F2
+
+E493 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 F2 R2 F2 R2 U2 B2 U2 F2 R2 U2 L2
+
+E494 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 L2 F2 U2 B2 U2 R2 B2 R2 F2
+
+E495 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 R2 F2 U2 B2 U2 R2 B2 L2 F2
+
+E496 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 F2 R2 F2 R2 D2 F2 U2 B2 L2 D2 L2
+
+E497 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 R2 F2 R2 U2 B2 U2 B2 L2 F2
+
+E498 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 F2 R2 F2 R2 U2 B2 D2 B2 L2 D2 L2
+
+E499 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 L2 F2 D2 F2 D2 R2 B2 R2 F2
+
+E500 [12步] M[DB→UB UB→DF DF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 U2 L2 F2 R2 U2 B2 U2 B2 R2 F2
+
+E501 [12步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 F2 U2 B2 U2 R2 B2 R2 F2
+
+E502 [12步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      R2 U2 R2 L2 F2 L2 U2 F2 U2 F2 L2 B2
+
+E503 [12步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      R2 U2 R2 L2 F2 L2 D2 B2 D2 F2 L2 B2
+
+E504 [12步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 L2 F2 U2 R2 B2 D2 L2 B2 R2 B2
+
+E505 [12步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 U2 F2 D2 F2 D2 R2 B2 R2 F2
+
+E506 [12步] M[DB→UB UB→DB]                             S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 L2 F2 D2 R2 B2 D2 L2 F2 L2 B2
+
+E507 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BR]                            
+      U2 R2 U2 F2 U2 B2 D2 L2 F2 L2 B2 U2
+
+E508 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 U2 F2 U2 B2 U2 R2 B2 R2 F2 D2
+
+E509 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 F2 U2 D2 L2 B2 U2 F2 U2 L2 B2
+
+E510 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 F2 U2 D2 L2 B2 D2 B2 D2 L2 B2
+
+E511 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→BL]                            
+      U2 R2 U2 F2 D2 F2 U2 L2 F2 L2 B2 U2
+
+E512 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 R2 B2 R2 U2 B2 U2 F2
+
+E513 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 U2 F2 D2 F2 D2 R2 B2 R2 F2 D2
+
+E514 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 U2 D2 F2 R2 B2 R2 D2 F2 D2 F2
+
+E515 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[好]                                      
+      U2 R2 F2 R2 U2 L2 U2 F2 R2 F2 U2 B2
+
+E516 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 F2 R2 F2 D2 R2 D2 R2 F2 U2 B2
+
+E517 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 F2 R2 D2 R2 D2 F2 L2 B2 R2
+
+E518 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 F2 R2 D2 R2 U2 B2 L2 B2 D2 B2
+
+E519 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 B2 R2 D2 R2 D2 F2 L2 F2 R2
+
+E520 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 F2 R2 F2 U2 L2 D2 L2 B2 D2 B2
+
+E521 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 F2 R2 F2 D2 R2 U2 L2 B2 D2 B2
+
+E522 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 F2 U2 F2 R2 U2 L2 U2 F2 L2 B2 R2
+
+E523 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 L2 U2 L2 U2 F2 L2 B2 D2 F2
+
+E524 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 F2 U2 B2 R2 U2 L2 U2 F2 L2 F2 R2
+
+E525 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 F2 R2 F2 U2 L2 U2 R2 F2 U2 B2
+
+E526 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 F2 L2 D2 R2 U2 B2 R2 F2 U2 F2
+
+E527 [12步] M[DF→UB UB→DF]                             S[DL→UL UL→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 D2 F2 U2 D2 L2 D2 B2 R2 F2
+
+E528 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 F2 U2 L2 B2 U2 R2 U2 L2 B2
+
+E529 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 F2 U2 D2 L2 D2 B2 R2 F2 L2
+
+E530 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 F2 L2 F2 B2 D2 F2 R2 F2 R2
+
+E531 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      R2 U2 D2 F2 U2 R2 U2 L2 U2 F2 L2 F2
+
+E532 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 F2 U2 L2 B2 D2 L2 D2 L2 B2
+
+E533 [12步] M[DF→UB DB→DF UB→DB]                       S[DL→UL UL→DL]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      R2 U2 D2 F2 U2 R2 D2 R2 D2 F2 L2 F2
+
+E534 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[好]                                      
+      R2 U2 F2 L2 F2 U2 F2 U2 L2 F2 R2 D2
+
+E535 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 U2 F2 L2 U2 F2 L2 D2 B2 R2
+
+E536 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 R2 B2 U2 R2 B2 D2 L2 F2
+
+E537 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 F2 R2 F2 D2 B2 U2 R2 B2 R2 U2
+
+E538 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 L2 B2 U2 R2 F2 U2 L2 B2
+
+E539 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 F2 R2 U2 B2 L2 D2 B2 L2 D2 B2 L2
+
+E540 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 F2 R2 U2 F2 L2 D2 B2 R2 U2 B2 R2
+
+E541 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 R2 B2 D2 L2 F2 U2 L2 F2
+
+E542 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 F2 R2 F2 U2 F2 U2 L2 F2 L2 D2
+
+E543 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 U2 L2 B2 D2 L2 B2 D2 L2 B2
+
+E544 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 F2 R2 U2 B2 L2 U2 F2 R2 U2 B2 L2
+
+E545 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 U2 F2 L2 F2 D2 B2 U2 R2 B2 L2 U2
+
+E546 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 F2 U2 B2 U2 R2 F2 U2 L2 B2
+
+E547 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 L2 F2 R2 U2 B2 D2 B2 R2 B2 L2
+
+E548 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 L2 F2 R2 D2 F2 U2 B2 R2 B2 L2
+
+E549 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 L2 F2 U2 B2 D2 R2 F2 R2 F2 R2
+
+E550 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 F2 U2 B2 D2 L2 B2 D2 L2 B2
+
+E551 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 L2 F2 D2 F2 U2 R2 F2 R2 F2 R2
+
+E552 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 F2 R2 F2 U2 L2 D2 L2 D2 B2
+
+E553 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 L2 U2 F2 U2 D2 L2 B2 L2 B2
+
+E554 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 R2 F2 B2 U2 F2 L2 B2 R2 B2
+
+E555 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 U2 R2 U2 R2 B2 R2 F2
+
+E556 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 F2 R2 F2 U2 L2 U2 R2 U2 B2
+
+E557 [12步] M[DB→UB UB→DF DF→DB]                       S[DL→UL UL→DL]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 U2 D2 F2 D2 L2 D2 R2 B2 R2 F2
+
+E558 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 F2 D2 R2 U2 R2 F2 L2 F2 R2
+
+E559 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 R2 D2 B2 D2 F2 L2 F2 R2 B2
+
+E560 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 F2 U2 R2 U2 R2 B2 R2 F2 L2
+
+E561 [12步] M[DB→UB UB→DB]                             S[DL→UL UL→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 R2 D2 F2 U2 L2 D2 R2 F2 L2 F2 R2
+
+E562 [12步] M[UB→UF UF→UB]                             S[DL→DR DR→DL]                             E[好]                                      
+      R2 U2 R2 U2 R2 F2 R2 U2 B2 D2 L2 B2
+
+E563 [12步] M[UB→UF UF→UB]                             S[DL→DR DR→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 F2 U2 R2 U2 F2 R2 F2 D2 F2 U2 B2
+
+E564 [12步] M[UB→UF UF→UB]                             S[DL→DR DR→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 R2 F2 U2 R2 B2 R2 D2 B2 U2 L2
+
+E565 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→DR DR→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 D2 F2 U2 R2 F2 R2 U2 F2 U2 L2
+
+E566 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 R2 L2 F2 U2 R2 B2 D2 B2
+
+E567 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 U2 R2 L2 F2 D2 L2 F2 U2 B2
+
+E568 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[好]                                       E[BR→BL BL→BR]                            
+      U2 R2 F2 U2 R2 D2 L2 U2 R2 F2 R2 D2
+
+E569 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[好]                                       E[BR→FL FL→BR]                            
+      U2 R2 L2 F2 U2 R2 D2 L2 D2 L2 B2 U2
+
+E570 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[好]                                       E[FL→FR FR→FL]                            
+      U2 R2 F2 U2 R2 U2 R2 U2 L2 B2 L2 U2
+
+E571 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[好]                                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 L2 F2 U2 R2 U2 R2 D2 R2 F2 D2
+
+E572 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[好]                                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 L2 F2 U2 D2 R2 U2 L2 F2 D2 R2
+
+E573 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BR→BL BL→BR]                            
+      U2 R2 U2 R2 F2 R2 U2 R2 D2 F2 U2 B2
+
+E574 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[FL→FR FR→FL]                            
+      U2 R2 U2 R2 F2 R2 U2 R2 U2 B2 D2 B2
+
+E575 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 F2 L2 F2 R2 D2 L2 U2 F2
+
+E576 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 R2 F2 U2 D2 L2 F2 U2 L2 B2
+
+E577 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 L2 F2 R2 F2 U2 F2 B2 R2 B2
+
+E578 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 R2 F2 R2 D2 L2 D2 B2 D2 B2
+
+E579 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 U2 F2 L2 F2 R2 U2 R2 D2 F2
+
+E580 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→DR DR→DL]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 U2 R2 F2 R2 D2 L2 U2 F2 U2 B2
+
+E581 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 R2 F2 L2 B2 R2 U2 L2 U2 B2
+
+E582 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 R2 L2 F2 D2 R2 U2 R2 B2 U2 L2 F2
+
+E583 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 R2 L2 F2 U2 R2 U2 R2 F2 D2 R2 F2
+
+E584 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 R2 F2 R2 B2 R2 U2 R2 D2 B2
+
+E585 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 R2 D2 R2 F2 L2 B2 R2 D2 R2 D2 B2
+
+E586 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 R2 L2 F2 D2 R2 D2 L2 F2 D2 L2 F2
+
+E587 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 R2 U2 F2 R2 F2 U2 F2 B2 R2 B2
+
+E588 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BR]                      
+      U2 R2 L2 F2 U2 R2 D2 L2 B2 U2 R2 F2
+
+E589 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 R2 F2 R2 B2 R2 D2 L2 U2 B2
+
+E590 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 R2 U2 R2 L2 F2 R2 B2 D2 L2 B2
+
+E591 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[好]                                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 L2 F2 U2 R2 U2 R2 D2 R2 F2
+
+E592 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[好]                                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 R2 L2 F2 U2 D2 L2 U2 L2 B2
+
+E593 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[好]                                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 F2 R2 F2 B2 U2 F2 B2 R2 B2
+
+E594 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[好]                                       E[BL→FR BR→FL FL→BL FR→BR]                
+      R2 U2 D2 F2 U2 R2 U2 R2 D2 R2 F2 L2
+
+E595 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 U2 F2 L2 U2 F2 B2 R2 U2 F2
+
+E596 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 F2 R2 D2 L2 U2 F2 B2 L2 F2
+
+E597 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 F2 R2 F2 D2 F2 B2 L2 F2 U2
+
+E598 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 R2 D2 R2 B2 R2 B2 L2 U2 L2
+
+E599 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BR]                      
+      U2 F2 R2 U2 R2 L2 F2 L2 U2 R2 D2 B2
+
+E600 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 F2 R2 U2 F2 L2 D2 F2 B2 L2 D2 F2
+
+E601 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 F2 U2 F2 R2 U2 R2 D2 F2 B2 L2 F2
+
+E602 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 F2 R2 F2 U2 F2 B2 R2 B2 D2
+
+E603 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BR]                      
+      U2 F2 U2 R2 U2 R2 B2 L2 B2 L2 D2 L2
+
+E604 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[BR→FR FR→BL BL→BR]                      
+      U2 F2 R2 U2 R2 L2 F2 L2 D2 L2 U2 B2
+
+E605 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→DR DR→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 R2 U2 R2 F2 R2 B2 R2 F2 U2 R2
+
+E606 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BR→BL BL→BR]                            
+      R2 U2 R2 F2 L2 D2 L2 U2 B2 U2 F2 D2
+
+E607 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[FL→FR FR→FL]                            
+      R2 U2 R2 F2 L2 D2 L2 U2 B2 D2 B2 U2
+
+E608 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 F2 U2 R2 D2 L2 F2 R2 F2 U2 L2
+
+E609 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 F2 U2 D2 R2 B2 L2 F2 D2 R2
+
+E610 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 F2 R2 F2 R2 F2 D2 F2 B2 L2
+
+E611 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      R2 U2 R2 F2 L2 U2 R2 U2 F2 D2 F2 D2
+
+E612 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 F2 U2 R2 U2 R2 B2 L2 B2 D2 L2
+
+E613 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→DR DR→DL]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      R2 U2 R2 F2 L2 U2 R2 U2 F2 U2 B2 U2
+
+E614 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BL→FL FL→BL]                            
+      U2 F2 U2 R2 F2 R2 U2 F2 D2 R2 U2 L2
+
+E615 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 R2 L2 F2 U2 F2 U2 F2 R2
+
+E616 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 R2 F2 D2 F2 L2 B2 L2 U2 B2
+
+E617 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 D2 F2 L2 B2 R2 U2 B2 D2 R2
+
+E618 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 B2 R2 F2 R2 U2 F2 U2 L2
+
+E619 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 R2 F2 U2 F2 L2 F2 R2 D2 B2
+
+E620 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 D2 R2 F2 U2 B2 R2 F2 R2 D2 B2
+
+E621 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 D2 F2 L2 B2 R2 D2 F2 U2 R2
+
+E622 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 U2 B2 R2 F2 R2 D2 B2 D2 L2
+
+E623 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 R2 F2 D2 B2 R2 B2 L2 U2 B2
+
+E624 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 L2 F2 R2 U2 L2 U2 F2 D2 F2 L2
+
+E625 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→FL FL→BL BL→BR]                      
+      R2 F2 U2 R2 L2 B2 D2 R2 U2 R2 B2 D2
+
+E626 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 L2 F2 U2 D2 R2 F2 D2 R2 B2 R2
+
+E627 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BL→FL FR→BL]                      
+      R2 F2 U2 R2 L2 B2 U2 L2 U2 L2 F2 U2
+
+E628 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BR]                      
+      U2 R2 L2 F2 R2 D2 R2 U2 B2 U2 F2 L2
+
+E629 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[好]                                      
+      U2 R2 U2 R2 F2 R2 U2 F2 U2 B2 L2 B2
+
+E630 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 L2 F2 D2 B2 D2 R2 B2 R2 B2
+
+E631 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 R2 F2 R2 D2 F2 D2 F2 L2 D2 R2
+
+E632 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 L2 F2 R2 U2 F2 U2 B2 R2 B2
+
+E633 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 F2 R2 F2 R2 U2 B2 U2 F2 L2 D2 R2
+
+E634 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 R2 F2 U2 F2 U2 R2 B2 L2 B2
+
+E635 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 L2 F2 U2 F2 U2 R2 B2 R2 B2
+
+E636 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 F2 R2 F2 R2 D2 F2 U2 B2 R2 U2 R2
+
+E637 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 L2 F2 R2 D2 B2 D2 B2 R2 B2
+
+E638 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 F2 R2 F2 R2 U2 B2 D2 B2 R2 U2 R2
+
+E639 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 R2 F2 D2 B2 D2 R2 B2 L2 B2
+
+E640 [12步] M[UB→UF DF→UB UF→DF]                       S[DR→UL DL→DR UL→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 U2 R2 F2 R2 D2 B2 D2 B2 L2 B2
+
+E641 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 L2 F2 D2 R2 F2 D2 L2 F2 L2 F2
+
+E642 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL FL→BL]                            
+      R2 U2 R2 L2 F2 L2 D2 F2 D2 F2 L2 F2
+
+E643 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 F2 D2 B2 D2 R2 B2 R2 B2
+
+E644 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 L2 F2 U2 R2 F2 D2 L2 B2 R2 F2
+
+E645 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→BL]                            
+      U2 D2 R2 U2 F2 U2 F2 U2 R2 B2 R2 B2
+
+E646 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BR]                            
+      R2 U2 R2 L2 F2 L2 U2 B2 U2 F2 L2 F2
+
+E647 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 B2 R2 F2 D2 F2 D2 R2 U2 F2
+
+E648 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 L2 B2 R2 U2 R2 U2 B2 D2 R2
+
+E649 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 D2 F2 R2 F2 R2 F2 D2 F2 B2
+
+E650 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 L2 B2 R2 D2 R2 U2 F2 U2 L2
+
+E651 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BR]                      
+      U2 F2 R2 B2 R2 F2 U2 F2 U2 R2 U2 B2
+
+E652 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[BL→FR FR→FL FL→BL]                      
+      U2 F2 R2 B2 R2 F2 D2 F2 U2 L2 D2 F2
+
+E653 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 L2 B2 R2 U2 R2 D2 F2 U2 R2
+
+E654 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 L2 B2 R2 D2 R2 D2 B2 D2 L2
+
+E655 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→FR FR→BL BL→BR]                      
+      U2 F2 R2 B2 R2 F2 U2 F2 D2 L2 D2 B2
+
+E656 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 L2 F2 R2 B2 U2 R2 L2
+
+E657 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→BL BL→BR]                            
+      U2 F2 R2 U2 D2 F2 L2 U2 F2 R2 U2 F2
+
+E658 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL FL→BL]                            
+      R2 U2 R2 F2 L2 F2 D2 F2 D2 L2 F2 L2
+
+E659 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BR]                            
+      U2 R2 F2 U2 F2 D2 L2 B2 D2 L2 F2 D2
+
+E660 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL]                            
+      U2 F2 R2 U2 D2 F2 L2 D2 B2 L2 D2 F2
+
+E661 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 F2 U2 F2 U2 R2 F2 D2 R2 B2 U2
+
+E662 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→BL]                            
+      U2 R2 F2 U2 F2 U2 R2 F2 U2 L2 F2 D2
+
+E663 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 F2 U2 F2 D2 L2 B2 U2 R2 B2 U2
+
+E664 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BR]                            
+      R2 U2 R2 F2 L2 F2 U2 B2 U2 L2 F2 L2
+
+E665 [12步] M[UB→UF DB→UB UF→DB]                       S[DR→UL DL→DR UL→DL]                       E[好]                                      
+      U2 R2 U2 F2 L2 F2 U2 B2 U2 R2 B2 R2
+
+E666 [12步] M[UB→UF DB→UB UF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 R2 F2 R2 D2 F2 D2 B2 L2
+
+E667 [12步] M[UB→UF DB→UB UF→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 F2 R2 F2 D2 F2 D2 R2 B2 L2
+
+E668 [12步] M[UB→UF DB→UB UF→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 B2 U2 L2 B2 R2 B2 D2 R2
+
+E669 [12步] M[UB→UF DB→UB UF→DB]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 F2 L2 F2 R2 D2 F2 D2 B2 R2
+
+E670 [12步] M[UB→UF DB→UB UF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 F2 R2 F2 R2 U2 B2 U2 B2 L2
+
+E671 [12步] M[UB→UF DB→UB UF→DB]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 F2 R2 F2 U2 B2 U2 R2 B2 L2
+
+E672 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 F2 R2 B2 D2 F2 R2 D2 R2 U2 F2
+
+E673 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 R2 D2 R2 F2 D2 F2 L2 B2 R2
+
+E674 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 F2 D2 R2 D2 R2 B2 U2 B2 L2 F2 L2
+
+E675 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 F2 R2 B2 U2 B2 L2 D2 L2 D2 F2
+
+E676 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 F2 R2 B2 D2 F2 R2 U2 L2 D2 F2
+
+E677 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 F2 U2 R2 U2 R2 F2 D2 B2 R2 B2 R2
+
+E678 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 F2 D2 R2 U2 R2 B2 U2 F2 R2 F2 L2
+
+E679 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 F2 R2 B2 U2 B2 L2 U2 R2 U2 F2
+
+E680 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 D2 R2 U2 F2 U2 L2 F2 L2 U2 F2
+
+E681 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 R2 F2 U2 F2 L2 U2 F2 R2
+
+E682 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 R2 D2 F2 U2 R2 F2 L2 U2 F2
+
+E683 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 D2 R2 D2 F2 U2 R2 F2 R2 D2 B2
+
+E684 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 U2 R2 L2 F2 L2 U2 F2
+
+E685 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[DL→UL UL→DL]                             E[BR→FR FR→BR]                            
+      U2 R2 U2 R2 U2 F2 U2 L2 F2 R2 D2 B2
+
+E686 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→UL UL→DR DR→DL]                       E[好]                                      
+      R2 U2 F2 R2 B2 D2 B2 U2 R2 F2 R2 U2
+
+E687 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→UL UL→DR DR→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 U2 F2 L2 U2 F2 R2 U2 F2 L2
+
+E688 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 L2 F2 D2 L2 B2 D2 L2 F2
+
+E689 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 F2 L2 B2 U2 F2 U2 L2 B2 R2 D2
+
+E690 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 R2 F2 D2 L2 F2 U2 L2 B2
+
+E691 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 L2 F2 U2 R2 F2 U2 L2 F2
+
+E692 [12步] M[UB→UF DF→UB UF→DF]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 F2 L2 B2 D2 B2 U2 R2 F2 L2 U2
+
+E693 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 L2 F2 D2 B2 U2 R2 F2 R2 B2 R2
+
+E694 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL FL→BL]                            
+      U2 R2 L2 F2 R2 U2 F2 D2 B2 R2 F2 L2
+
+E695 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BR]                            
+      U2 D2 R2 F2 U2 F2 D2 L2 B2 D2 L2 F2
+
+E696 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 L2 F2 U2 F2 D2 R2 F2 R2 B2 R2
+
+E697 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→BL]                            
+      U2 D2 R2 F2 U2 F2 U2 R2 F2 U2 L2 F2
+
+E698 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BR]                            
+      U2 R2 L2 F2 R2 D2 B2 U2 B2 R2 F2 L2
+
+E699 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 D2 F2 D2 L2 D2 R2 B2 L2 B2 L2
+
+E700 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 R2 D2 F2 D2 F2 R2 F2 L2 B2
+
+E701 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 F2 D2 R2 D2 B2 U2 F2 L2 B2 L2 F2
+
+E702 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 F2 U2 L2 D2 R2 F2 R2 B2 R2
+
+E703 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 R2 D2 F2 U2 R2 U2 R2 B2 L2 B2 L2
+
+E704 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 F2 U2 R2 U2 B2 U2 F2 R2 F2 L2 B2
+
+E705 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FR FR→FL FL→BR]                      
+      U2 F2 D2 R2 U2 F2 D2 F2 L2 B2 L2 F2
+
+E706 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 F2 D2 R2 U2 R2 F2 R2 B2 R2
+
+E707 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 R2 F2 R2 D2 F2 D2 B2
+
+E708 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL FL→BL]                            
+      U2 R2 F2 U2 D2 L2 F2 D2 B2 D2 L2 F2
+
+E709 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BR]                            
+      U2 R2 U2 F2 D2 B2 D2 R2 B2 R2 B2 D2
+
+E710 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 U2 D2 F2 R2 F2 R2 U2 B2 U2 B2
+
+E711 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 U2 F2 D2 B2 U2 L2 F2 L2 F2 U2
+
+E712 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→BL]                            
+      U2 R2 U2 F2 U2 F2 U2 R2 B2 R2 B2 D2
+
+E713 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 U2 F2 U2 F2 D2 L2 F2 L2 F2 U2
+
+E714 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BR]                            
+      U2 R2 F2 U2 D2 L2 F2 U2 F2 U2 L2 F2
+
+E715 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[好]                                      
+      U2 R2 F2 L2 D2 L2 U2 F2 R2 B2 D2 B2
+
+E716 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 F2 R2 B2 D2 L2 U2 L2 F2 U2 F2
+
+E717 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 F2 R2 D2 L2 U2 B2 L2 F2 L2
+
+E718 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 F2 L2 U2 R2 U2 B2 L2 F2 U2 B2
+
+E719 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 B2 R2 D2 L2 U2 B2 L2 B2 L2
+
+E720 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 F2 R2 B2 U2 R2 U2 R2 B2 D2 F2
+
+E721 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 F2 R2 B2 D2 L2 D2 R2 B2 D2 F2
+
+E722 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 F2 U2 F2 R2 U2 R2 D2 B2 L2 F2 L2
+
+E723 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 F2 R2 D2 L2 U2 F2 L2 F2 U2 F2
+
+E724 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 F2 U2 B2 R2 U2 R2 D2 B2 L2 B2 L2
+
+E725 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 F2 R2 B2 U2 R2 D2 L2 F2 U2 F2
+
+E726 [12步] M[UB→UF DB→UB UF→DB]                       S[DL→UL UL→DR DR→DL]                       E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 R2 F2 R2 U2 R2 U2 B2 R2 B2 D2 F2
+
+E727 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DL]                             E[BL→FL BR→BL FL→BR]                      
+      R2 U2 R2 F2 U2 B2 U2 L2 D2 L2 F2 L2
+
+E728 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 D2 L2 F2 B2 D2 L2 F2
+
+E729 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 D2 F2 R2 F2 B2 U2 B2 R2 B2
+
+E730 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BR]                      
+      R2 U2 R2 F2 U2 B2 D2 R2 U2 L2 F2 L2
+
+E731 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 U2 R2 F2 B2 U2 L2 F2
+
+E732 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[DL→UL UL→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 R2 U2 R2 F2 R2 D2 B2 R2 F2 R2
+
+E733 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[好]                                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 R2 F2 U2 L2 U2 R2 L2 B2
+
+E734 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[好]                                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 L2 U2 L2 F2 U2 D2 R2 L2 F2
+
+E735 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[好]                                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 U2 R2 U2 R2 L2 B2 R2
+
+E736 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[好]                                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 U2 R2 F2 D2 R2 D2 R2 L2 B2
+
+E737 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 F2 U2 L2 F2 D2 R2 L2 F2
+
+E738 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 L2 F2 R2 U2 B2 D2 F2 B2 R2 B2
+
+E739 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 D2 R2 U2 F2 D2 R2 B2 U2 R2 L2 F2
+
+E740 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[好]                                      
+      R2 U2 R2 U2 L2 F2 R2 D2 B2 U2 R2 F2
+
+E741 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 R2 F2 D2 F2 B2 L2 F2 U2 F2
+
+E742 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 F2 R2 D2 B2 L2 U2 F2 B2 L2
+
+E743 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 B2 R2 D2 R2 L2 F2 R2 U2 L2
+
+E744 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 R2 F2 U2 F2 B2 R2 B2 D2 F2
+
+E745 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 F2 U2 L2 U2 B2 R2 F2 U2 F2 U2 F2
+
+E746 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 U2 R2 U2 L2 F2 R2 U2 F2 D2 R2 F2
+
+E747 [12步] M[DF→UF UF→UB UB→DF]                       S[DR→UL DL→DR UL→DL]                       E[好]                                      
+      U2 R2 U2 F2 R2 B2 D2 F2 D2 L2 B2 R2
+
+E748 [12步] M[DF→UF UF→UB UB→DF]                       S[DR→UL DL→DR UL→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 L2 B2 L2 D2 F2 D2 B2 L2
+
+E749 [12步] M[DF→UF UF→UB UB→DF]                       S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 D2 R2 F2 R2 F2 D2 L2
+
+E750 [12步] M[DF→UF UF→UB UB→DF]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 F2 L2 B2 U2 B2 U2 L2 B2 L2
+
+E751 [12步] M[DF→UF UF→UB UB→DF]                       S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 B2 U2 R2 F2 L2 B2 D2 R2
+
+E752 [12步] M[DF→UF UF→UB UB→DF]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 U2 L2 B2 L2 B2 U2 L2
+
+E753 [12步] M[DF→UF UF→UB UB→DF]                       S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 R2 U2 F2 L2 B2 D2 F2 D2 L2 B2 L2
+
+E754 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→BL BL→BR]                            
+      U2 F2 R2 U2 D2 F2 R2 D2 B2 L2 U2 F2
+
+E755 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL FL→BL]                            
+      R2 U2 R2 F2 R2 B2 U2 B2 U2 R2 F2 L2
+
+E756 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BR]                            
+      U2 R2 F2 U2 F2 D2 R2 F2 U2 R2 F2 D2
+
+E757 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL]                            
+      U2 F2 R2 U2 D2 F2 R2 U2 F2 R2 D2 F2
+
+E758 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 F2 U2 F2 U2 L2 B2 U2 L2 B2 U2
+
+E759 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→BL]                            
+      U2 R2 F2 U2 F2 U2 L2 B2 D2 R2 F2 D2
+
+E760 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 F2 U2 F2 D2 R2 F2 D2 L2 B2 U2
+
+E761 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BR]                            
+      R2 U2 R2 F2 R2 B2 D2 F2 D2 R2 F2 L2
+
+E762 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL UL→DR]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 D2 R2 U2 F2 U2 B2 U2 R2 L2 B2 R2
+
+E763 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 R2 B2 R2 F2 U2 F2 L2 D2 L2 B2
+
+E764 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 L2 F2 U2 R2 B2 D2 B2 R2 F2 B2
+
+E765 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL UL→DR]                             E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 L2 F2 D2 R2 B2 D2 F2 L2 F2 B2
+
+E766 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[好]                                      
+      U2 R2 U2 L2 F2 R2 D2 F2 D2 L2 B2 R2
+
+E767 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 R2 F2 D2 F2 D2 F2 R2 F2 B2
+
+E768 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 R2 B2 U2 F2 U2 R2 F2 B2
+
+E769 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 F2 U2 L2 B2 R2 U2 R2 L2 B2 D2
+
+E770 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 L2 B2 U2 R2 L2 B2 D2 R2
+
+E771 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 L2 F2 U2 B2 U2 R2 L2 B2 R2
+
+E772 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 R2 F2 U2 B2 U2 F2 R2 F2 B2
+
+E773 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 R2 B2 D2 B2 D2 R2 F2 B2
+
+E774 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 F2 U2 R2 F2 R2 F2 L2 B2 D2 F2
+
+E775 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 U2 L2 B2 D2 R2 L2 F2 U2 R2
+
+E776 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 L2 F2 D2 F2 D2 R2 L2 B2 R2
+
+E777 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 R2 F2 D2 F2 R2 B2 L2 U2 F2
+
+E778 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 L2 B2 R2 U2 B2 U2 R2
+
+E779 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 F2 U2 B2 R2 F2 U2 R2 L2 B2 L2
+
+E780 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 D2 B2 R2 F2 R2 U2 F2 D2 L2
+
+E781 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 D2 R2 F2 U2 F2 R2 F2 R2 D2 F2
+
+E782 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 R2 F2 U2 B2 L2 F2 R2 D2 F2
+
+E783 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 L2 B2 R2 D2 F2 D2 R2
+
+E784 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 D2 B2 R2 F2 R2 D2 B2 U2 L2
+
+E785 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 D2 R2 F2 D2 B2 L2 B2 L2 U2 F2
+
+E786 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→BL BL→BR]                            
+      U2 F2 U2 R2 U2 D2 F2 L2 F2 R2 U2 F2
+
+E787 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL FL→BL]                            
+      R2 U2 R2 D2 R2 F2 R2 B2 D2 B2 L2 B2
+
+E788 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 F2 D2 B2 R2 B2 R2 D2 B2
+
+E789 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL]                            
+      U2 F2 U2 R2 F2 R2 B2 R2 U2 R2 L2 B2
+
+E790 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      R2 U2 L2 D2 R2 F2 R2 B2 D2 B2 R2 B2
+
+E791 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      R2 U2 L2 U2 L2 F2 R2 F2 D2 B2 L2 F2
+
+E792 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→BL]                            
+      U2 D2 R2 U2 F2 U2 F2 L2 F2 L2 U2 B2
+
+E793 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BR]                            
+      R2 U2 R2 U2 L2 F2 R2 F2 D2 B2 R2 F2
+
+E794 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 L2 B2 L2 D2 F2 D2 B2
+
+E795 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL FL→BL]                            
+      U2 R2 F2 U2 D2 R2 B2 U2 F2 U2 R2 F2
+
+E796 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BR]                            
+      U2 R2 U2 F2 D2 B2 D2 L2 F2 L2 B2 D2
+
+E797 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 U2 D2 F2 L2 B2 L2 U2 B2 U2 B2
+
+E798 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 U2 F2 D2 B2 U2 R2 B2 R2 F2 U2
+
+E799 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→BL]                            
+      U2 R2 U2 F2 U2 F2 U2 L2 F2 L2 B2 D2
+
+E800 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BL BL→BR]                
+      U2 R2 U2 F2 U2 F2 D2 R2 B2 R2 F2 U2
+
+E801 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BR]                            
+      U2 R2 F2 U2 D2 R2 B2 D2 B2 D2 R2 F2
+
+E802 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DL]                             E[BL→FL BR→BL FL→BR]                      
+      R2 U2 R2 F2 U2 B2 U2 R2 U2 R2 F2 L2
+
+E803 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 D2 R2 F2 B2 U2 R2 F2
+
+E804 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 D2 F2 L2 F2 B2 D2 F2 L2 B2
+
+E805 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BR]                      
+      R2 U2 R2 F2 U2 B2 D2 L2 D2 R2 F2 L2
+
+E806 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 U2 L2 F2 B2 D2 R2 F2
+
+E807 [12步] M[DF→UF UF→UB DB→DF UB→DB]                 S[DL→UL UL→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      U2 D2 R2 U2 R2 F2 L2 U2 F2 L2 F2 R2
+
+E808 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 F2 R2 B2 D2 F2 L2 U2 L2 U2 F2
+
+E809 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 D2 R2 D2 R2 F2 U2 B2 R2 F2 R2
+
+E810 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 R2 F2 U2 B2 R2 F2 U2 R2 L2 B2
+
+E811 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 R2 D2 R2 B2 D2 F2 R2 B2 L2
+
+E812 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 F2 R2 B2 U2 B2 R2 U2 R2 D2 F2
+
+E813 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 F2 R2 B2 D2 F2 L2 D2 R2 D2 F2
+
+E814 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 F2 D2 R2 U2 R2 F2 U2 F2 L2 F2 R2
+
+E815 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 F2 U2 R2 U2 R2 B2 D2 B2 L2 B2 L2
+
+E816 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 F2 R2 B2 U2 B2 R2 D2 L2 U2 F2
+
+E817 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 D2 R2 F2 R2 F2 D2 B2
+
+E818 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL FL→BL]                            
+      U2 R2 U2 R2 U2 F2 U2 B2 R2 B2 D2 F2
+
+E819 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BR]                            
+      U2 D2 F2 U2 R2 B2 L2 F2 U2 B2 U2 R2
+
+E820 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 U2 D2 F2 U2 L2 B2 L2 B2 U2 B2
+
+E821 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 D2 L2 U2 F2 U2 B2 L2 B2 U2 B2
+
+E822 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 R2 D2 F2 U2 B2 L2 B2 U2 B2
+
+E823 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→BL]                            
+      U2 D2 F2 U2 R2 B2 L2 F2 D2 F2 D2 R2
+
+E824 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BR]                            
+      U2 R2 U2 L2 F2 R2 B2 U2 B2 L2 B2 R2
+
+E825 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DL]                             E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 D2 B2 L2 F2 B2 D2 B2
+
+E826 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DL]                             E[BL→FL FL→BL]                            
+      U2 F2 R2 D2 R2 F2 U2 F2 L2 F2 L2 F2
+
+E827 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DL]                             E[BR→FL FL→BR]                            
+      U2 R2 U2 F2 D2 B2 D2 F2 L2 F2 B2 D2
+
+E828 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 U2 F2 D2 B2 U2 B2 R2 F2 B2 U2
+
+E829 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DL]                             E[BR→FR FR→BR]                            
+      U2 F2 R2 U2 R2 F2 U2 F2 L2 F2 R2 B2
+
+E830 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 D2 B2 L2 F2 B2 D2 B2 L2
+
+E831 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 D2 B2 L2 F2 B2 D2 L2
+
+E832 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 D2 R2 F2 U2 R2 F2 L2 U2 R2 L2 B2
+
+E833 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 B2 U2 R2 L2 B2 R2 D2 R2
+
+E834 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BR]                      
+      U2 R2 U2 F2 U2 B2 R2 U2 R2 L2 B2 R2
+
+E835 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 F2 U2 F2 R2 F2 B2 U2 B2 L2
+
+E836 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 U2 F2 R2 F2 B2 U2 L2
+
+E837 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      U2 D2 R2 F2 U2 L2 F2 L2 F2 B2 D2 F2
+
+E838 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 U2 B2 D2 R2 L2 F2 L2 U2 R2
+
+E839 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FR FR→BL BL→BR]                      
+      U2 R2 U2 F2 D2 F2 L2 D2 R2 L2 B2 R2
+
+E840 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[好]                                      
+      R2 U2 L2 U2 L2 F2 R2 D2 B2 D2 L2 B2
+
+E841 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 L2 F2 D2 F2 B2 L2 F2 D2 B2
+
+E842 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 F2 R2 D2 B2 R2 D2 F2 B2 R2
+
+E843 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[FL→FR BL→FL FR→BL]                      
+      U2 F2 U2 B2 R2 D2 R2 L2 F2 L2 D2 R2
+
+E844 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 L2 F2 U2 F2 B2 R2 B2 U2 B2
+
+E845 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 F2 U2 R2 U2 B2 R2 F2 U2 F2 D2 B2
+
+E846 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[BR→FR BL→FL FL→BL FR→BR]                
+      R2 U2 L2 U2 L2 F2 R2 U2 F2 U2 L2 B2
+
+E847 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 F2 D2 F2 B2 L2 F2 D2 B2
+
+E848 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 L2 F2 U2 D2 R2 U2 B2 U2 L2 F2
+
+E849 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[BL→FR FR→BL]                            
+      U2 D2 R2 U2 F2 U2 F2 B2 R2 B2 U2 B2
+
+E850 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BL→FL BR→BL FL→BR]                      
+      U2 R2 L2 F2 R2 U2 R2 D2 B2 U2 B2 R2
+
+E851 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL UL→DR]                             E[BR→FL FL→BL BL→BR]                      
+      R2 F2 U2 R2 L2 B2 D2 L2 D2 L2 B2 D2
+
+E852 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 L2 F2 U2 D2 R2 F2 D2 L2 F2 L2
+
+E853 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BL→FL FR→BL]                      
+      R2 F2 U2 R2 L2 B2 U2 R2 D2 R2 F2 U2
+
+E854 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BR]                      
+      U2 R2 L2 F2 R2 D2 L2 D2 F2 D2 B2 R2
+
+E855 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 L2 F2 D2 R2 F2 D2 R2 B2 R2 F2
+
+E856 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL FL→BL]                            
+      R2 U2 R2 L2 F2 R2 U2 B2 U2 B2 R2 F2
+
+E857 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 F2 D2 B2 D2 L2 F2 L2 B2
+
+E858 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 L2 F2 U2 R2 F2 D2 R2 F2 L2 F2
+
+E859 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→BL]                            
+      U2 D2 R2 U2 F2 U2 F2 U2 L2 F2 L2 B2
+
+E860 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BR]                            
+      R2 U2 R2 L2 F2 R2 D2 F2 D2 B2 R2 F2
+
+E861 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→BL BL→BR]                            
+      U2 R2 L2 F2 D2 R2 F2 D2 R2 L2 B2 R2
+
+E862 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BL→FL FL→BL]                            
+      U2 F2 R2 F2 R2 F2 D2 F2 L2 D2 R2 B2
+
+E863 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 F2 D2 B2 D2 F2 L2 F2 B2
+
+E864 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR FR→FL]                            
+      U2 R2 L2 F2 U2 R2 F2 D2 R2 L2 F2 L2
+
+E865 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL UL→DR]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      R2 U2 F2 R2 U2 B2 U2 R2 F2 R2 F2 B2
+
+E866 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→BL BL→BR]                            
+      U2 F2 U2 R2 U2 D2 F2 R2 B2 L2 U2 F2
+
+E867 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL FL→BL]                            
+      R2 U2 R2 U2 F2 U2 F2 L2 B2 U2 B2 U2
+
+E868 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 F2 D2 B2 L2 F2 L2 D2 B2
+
+E869 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR FR→FL]                            
+      U2 F2 U2 R2 F2 L2 F2 L2 U2 R2 L2 B2
+
+E870 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      R2 U2 R2 U2 L2 F2 R2 B2 D2 B2 R2 B2
+
+E871 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      R2 U2 R2 D2 R2 F2 R2 F2 D2 B2 L2 F2
+
+E872 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→BL]                            
+      U2 D2 R2 U2 F2 U2 F2 R2 B2 R2 U2 B2
+
+E873 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BR]                            
+      R2 U2 R2 D2 F2 U2 F2 R2 B2 U2 B2 D2
+
+E874 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 R2 F2 D2 F2 L2 F2 R2 U2 F2
+
+E875 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 U2 F2 R2 F2 R2 D2 F2 D2 L2
+
+E876 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 D2 B2 L2 B2 R2 D2 B2 U2 R2
+
+E877 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 D2 R2 F2 U2 F2 L2 B2 L2 D2 F2
+
+E878 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 R2 F2 U2 B2 R2 B2 L2 D2 F2
+
+E879 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 U2 F2 R2 F2 R2 U2 B2 U2 L2
+
+E880 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 R2 F2 D2 B2 L2 B2 R2 U2 F2 D2 R2
+
+E881 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UL DL→DR UL→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 D2 R2 F2 D2 B2 R2 F2 R2 U2 F2
+
+E882 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 L2 F2 D2 B2 U2 R2 F2 L2 F2 L2
+
+E883 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL FL→BL]                            
+      U2 R2 L2 F2 R2 U2 F2 D2 B2 L2 B2 R2
+
+E884 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BR]                            
+      U2 D2 R2 F2 U2 F2 D2 R2 F2 U2 R2 F2
+
+E885 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 L2 F2 U2 F2 D2 R2 F2 L2 F2 L2
+
+E886 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→BL]                            
+      U2 D2 R2 F2 U2 F2 U2 L2 B2 D2 R2 F2
+
+E887 [12步] M[DB→UF UF→UB UB→DF DF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BR]                            
+      U2 R2 L2 F2 R2 D2 B2 U2 B2 L2 B2 R2
+
+E888 [12步] M[DB→UF UF→UB UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[好]                                      
+      R2 U2 F2 L2 F2 U2 F2 U2 R2 B2 L2 D2
+
+E889 [12步] M[DB→UF UF→UB UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 U2 F2 R2 D2 B2 R2 D2 B2 R2
+
+E890 [12步] M[DB→UF UF→UB UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 F2 R2 F2 D2 B2 U2 L2 F2 L2 U2
+
+E891 [12步] M[DB→UF UF→UB UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 U2 R2 F2 D2 R2 B2 D2 R2 B2
+
+E892 [12步] M[DB→UF UF→UB UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 F2 R2 U2 B2 R2 U2 F2 R2 D2 B2 L2
+
+E893 [12步] M[DB→UF UF→UB UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 F2 R2 U2 F2 R2 U2 F2 L2 U2 B2 R2
+
+E894 [12步] M[DB→UF UF→UB UB→DB]                       S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 F2 R2 F2 U2 F2 U2 R2 B2 R2 D2
+
+E895 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 D2 L2 B2 L2 F2 D2 B2
+
+E896 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL FL→BL]                            
+      U2 R2 U2 L2 D2 F2 U2 F2 R2 B2 U2 B2
+
+E897 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BR]                            
+      U2 D2 F2 U2 R2 B2 R2 B2 D2 F2 D2 L2
+
+E898 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR FR→FL]                            
+      U2 R2 U2 D2 F2 U2 R2 F2 R2 B2 U2 B2
+
+E899 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 D2 R2 D2 F2 U2 F2 L2 B2 D2 F2
+
+E900 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 L2 U2 F2 U2 F2 L2 B2 D2 F2
+
+E901 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→BL]                            
+      U2 D2 F2 U2 R2 B2 R2 B2 U2 B2 U2 L2
+
+E902 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BR]                            
+      U2 R2 U2 R2 F2 R2 B2 D2 B2 L2 B2 L2
+
+E903 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FL BR→BL FL→BR]                      
+      U2 R2 F2 R2 F2 D2 F2 L2 U2 L2 U2 B2
+
+E904 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FL FL→BL BL→BR]                      
+      U2 F2 U2 R2 D2 R2 F2 D2 F2 R2 F2 L2
+
+E905 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BL→FL FR→BL]                      
+      U2 F2 D2 R2 D2 R2 B2 U2 B2 R2 B2 R2
+
+E906 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[FL→FR BR→FL FR→BR]                      
+      U2 R2 F2 R2 F2 U2 B2 R2 U2 R2 D2 B2
+
+E907 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR FR→FL FL→BL]                      
+      U2 R2 F2 R2 F2 D2 F2 L2 D2 R2 D2 B2
+
+E908 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BL→FR BR→BL FR→BR]                      
+      U2 F2 U2 R2 U2 R2 F2 D2 B2 L2 F2 L2
+
+E909 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→FL FL→BR]                      
+      U2 F2 D2 R2 U2 R2 B2 U2 F2 L2 B2 R2
+
+E910 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DR DR→DL]                       E[BR→FR FR→BL BL→BR]                      
+      U2 R2 F2 R2 F2 U2 B2 R2 D2 L2 U2 B2
+
+E911 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FL FL→BL]                            
+      U2 R2 U2 F2 R2 D2 F2 U2 R2 F2 L2 U2
+
+E912 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FL FL→BR]                            
+      U2 R2 U2 F2 U2 B2 D2 R2 L2 F2 L2 U2
+
+E913 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 R2 U2 F2 U2 B2 U2 R2 L2 B2 R2 D2
+
+E914 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 R2 D2 R2 B2 U2 F2 R2 F2 R2 F2
+
+E915 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 F2 R2 U2 R2 B2 U2 F2 R2 F2 L2 B2
+
+E916 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 U2 B2 L2 D2 R2 L2 F2
+
+E917 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DL→UL UL→DL]                             E[BR→FR FR→BR]                            
+      U2 R2 U2 F2 R2 U2 B2 U2 L2 B2 R2 D2
+
+E918 [12步] M[UB→UF UF→UB DB→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 D2 L2 U2 R2 F2 B2 R2 F2
+
+E919 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FL FL→BL]                            
+      U2 R2 L2 F2 R2 U2 L2 F2 D2 R2 F2 B2
+
+E920 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FL FL→BR]                            
+      U2 F2 U2 R2 D2 R2 U2 F2 B2 L2 B2 D2
+
+E921 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR BL→FL BR→BL FR→BR]                
+      U2 F2 U2 R2 U2 L2 U2 F2 B2 R2 F2 U2
+
+E922 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 F2 U2 R2 D2 R2 U2 R2 F2 L2 D2
+
+E923 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 F2 U2 R2 U2 L2 U2 L2 B2 R2 U2
+
+E924 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→BL BL→BR]                            
+      R2 U2 D2 F2 U2 R2 U2 L2 D2 R2 F2 R2
+
+E925 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FL FL→BL]                            
+      U2 R2 U2 F2 U2 D2 L2 U2 F2 B2 L2 F2
+
+E926 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FL FL→BR]                            
+      U2 D2 F2 U2 R2 D2 R2 U2 F2 B2 L2 B2
+
+E927 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FR FR→BR]                            
+      U2 R2 U2 R2 L2 F2 R2 F2 B2 U2 R2 F2
+
+E928 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[好]                                      
+      U2 D2 R2 U2 D2 F2 U2 D2 L2 B2 L2 F2
+
+E929 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 R2 U2 F2 D2 L2 U2 R2 B2 R2 F2 R2
+
+E930 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BL→FL FR→BL]                      
+      U2 F2 D2 R2 D2 F2 D2 F2 R2 B2 R2 B2
+
+E931 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BR→FL FR→BR]                      
+      U2 R2 D2 F2 U2 L2 U2 R2 F2 L2 F2 L2
+
+E932 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR FR→FL FL→BL]                      
+      U2 R2 U2 F2 U2 R2 D2 R2 B2 R2 F2 R2
+
+E933 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[好]                                      
+      U2 R2 U2 D2 F2 U2 D2 L2 U2 B2 L2 F2
+
+E934 [12步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[好]                                      
+      U2 R2 L2 F2 R2 B2 U2 L2 F2 R2 F2 B2
+
+E935 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[好]                                      
+      U2 R2 U2 D2 F2 U2 D2 L2 B2 L2 F2 D2
+
+E936 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FL BR→BL FL→BR]                      
+      U2 F2 R2 F2 L2 F2 U2 F2 U2 L2 D2 B2
+
+E937 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FL FL→BL BL→BR]                      
+      U2 R2 F2 R2 B2 R2 U2 R2 U2 B2 D2 L2
+
+E938 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BL→FL FR→BL]                      
+      U2 R2 F2 R2 B2 R2 D2 R2 U2 F2 U2 R2
+
+E939 [12步] M[UB→UF DB→UB UF→DF DF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FR BR→BL FR→BR]                      
+      U2 R2 F2 R2 B2 R2 U2 R2 D2 F2 U2 L2
+
+E940 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 L2 F2 D2 F2 B2 L2 U2 F2
+
+E941 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BL→FR FR→BL]                            
+      U2 D2 R2 U2 L2 F2 U2 F2 B2 R2 D2 F2
+
+E942 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FL FL→BL]                            
+      U2 R2 U2 R2 U2 F2 U2 R2 F2 L2 U2 B2
+
+E943 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 F2 R2 U2 B2 U2 R2 B2 L2 U2
+
+E944 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 R2 D2 F2 U2 L2 F2 R2 D2 F2
+
+E945 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FR FR→BR]                            
+      U2 R2 D2 R2 U2 F2 U2 R2 F2 R2 D2 F2
+
+E946 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[好]                                      
+      U2 D2 R2 U2 D2 F2 U2 R2 F2 R2 D2 F2
+
+E947 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 R2 F2 D2 R2 B2 U2 F2 L2
+
+E948 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FL FL→BL]                            
+      U2 F2 U2 R2 F2 R2 D2 F2 D2 L2 U2 R2
+
+E949 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 R2 L2 F2 D2 B2 U2 F2 L2
+
+E950 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR FR→FL]                            
+      U2 R2 U2 D2 R2 F2 U2 R2 B2 U2 B2 R2
+
+E951 [12步] M[DF→UF DB→UB UF→DF UB→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 F2 U2 R2 F2 R2 U2 B2 U2 L2 U2 R2
+
+E952 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[好]                                      
+      U2 R2 U2 D2 F2 U2 L2 B2 L2 D2 F2 D2
+
+E953 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      U2 R2 U2 D2 F2 U2 L2 B2 L2 U2 B2 U2
+
+E954 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 D2 R2 L2 F2 R2 U2 F2
+
+E955 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FL FL→BL]                            
+      U2 R2 U2 R2 U2 F2 U2 L2 B2 R2 U2 B2
+
+E956 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FL FL→BR]                            
+      U2 D2 R2 U2 R2 F2 D2 B2 L2 D2 B2 R2
+
+E957 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 D2 R2 D2 F2 U2 R2 B2 R2 U2 B2
+
+E958 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 R2 D2 F2 U2 R2 B2 L2 D2 F2
+
+E959 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DR→UL DL→DR UR→DL]                 E[BR→FR FR→BR]                            
+      U2 R2 D2 R2 U2 F2 U2 L2 B2 L2 D2 F2
+
+E960 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[UL→UR DL→UL UR→DR DR→DL]                 E[BL→FL FL→BL]                            
+      U2 F2 U2 R2 F2 R2 D2 F2 D2 R2 D2 L2
+
+E961 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UR→DR UL→DL]                 E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 D2 R2 F2 B2 U2 F2 L2
+
+E962 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 R2 F2 U2 R2 B2 R2 U2 B2 D2 R2
+
+E963 [12步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 L2 U2 L2 F2 R2 U2 B2 U2 R2 B2
+
+E964 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 R2 U2 L2 F2 R2 D2 F2 U2 L2 F2
+
+E965 [12步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BL→FR BR→FL FR→BL FL→BR]                
+      R2 U2 R2 U2 L2 F2 R2 U2 B2 D2 L2 F2
+
+E966 [12步] M[DB→UF DF→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[BL→FL FL→BL]                            
+      U2 R2 U2 F2 U2 R2 B2 R2 D2 F2 U2 R2
+
+E967 [14步] M[UB→UF DF→UB DB→DF UF→DB]                 S[好]                                       E[BL→FR BR→FL FL→BL FR→BR]                
+      U2 R2 U2 D2 F2 U2 R2 U2 L2 U2 L2 F2 L2 U2
+
+E968 [14步] M[UB→UF DF→UB DB→DF UF→DB]                 S[好]                                       E[BR→FR BL→FL FR→BL FL→BR]                
+      U2 R2 U2 D2 F2 U2 R2 D2 R2 U2 R2 B2 R2 D2
+
+E969 [14步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DL→DR DR→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 D2 F2 U2 R2 U2 B2 L2 F2 D2 B2 U2 B2
+
+E970 [14步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DL]                             E[FL→FR BR→FL FR→BL BL→BR]                
+      U2 R2 U2 R2 D2 F2 U2 R2 F2 R2 D2 R2 L2 F2
+
+E971 [14步] M[DF→UF DB→UB UF→DF UB→DB]                 S[DL→UL UL→DL]                             E[BL→FR FR→FL BR→BL FL→BR]                
+      U2 R2 U2 R2 D2 F2 U2 L2 F2 R2 F2 B2 U2 B2
+
+E972 [14步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DL→DR DR→DL]                             E[FL→FR FR→FL BR→BL BL→BR]                
+      R2 U2 D2 F2 U2 R2 F2 L2 F2 R2 B2 U2 B2 L2
+
+E973 [14步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[BR→BL BL→BR]                            
+      U2 R2 U2 D2 F2 U2 R2 U2 R2 U2 L2 F2 R2 U2
+
+E974 [14步] M[UB→UF DF→UB DB→DF UF→DB]                 S[UL→UR UR→UL DL→DR DR→DL]                 E[FL→FR FR→FL]                            
+      U2 R2 U2 D2 F2 U2 R2 D2 L2 U2 R2 B2 L2 D2
+
+E975 [14步] M[DF→UF DB→UB UB→DF UF→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[好]                                      
+      U2 D2 R2 U2 R2 F2 U2 R2 B2 R2 D2 F2 D2 L2
+
+E976 [14步] M[DB→UF DF→UB UF→DF UB→DB]                 S[DR→UR DL→UL UL→DR UR→DL]                 E[好]                                      
+      U2 D2 R2 U2 R2 F2 U2 L2 F2 R2 U2 B2 U2 R2
+

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# NumPy binary files (large)
+*.npy
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/

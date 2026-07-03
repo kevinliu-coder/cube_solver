@@ -1,0 +1,44 @@
+[OK ] x, z rotations; M, E, S slice moves; Ua & H cross-checks
+打乱: R' L U' R' B D B' L D' U D' F' B L' U F B' F' L F B' D' L B' R
+
+① 解8角(对齐中心) [9步]: R F' R F' U' F R B2 R2
+   -> 8角全对 ✓  剩余棱的状态:
+  中层棱在外: BL(在UB位), FL(在DR位)
+  反色棱: UR, UF, UL, UB, DB, FR, FL, BR (共8条)
+  顶底跑错层: DR, DB, UB, UL
+
+② 凑 · 子目标B: 中层棱归中层(带定向), 允许欠E账
+   E'           -> 角✓ 欠E×3
+  中层棱在外: BL(在UB位), FL(在DR位)
+  反色棱: UR, UF, UL, UB, DB, BR (共6条)
+  顶底跑错层: DR, DB, UB, UL
+   R' E R       -> 角✓ 账清
+  中层棱在外: BL(在UB位)
+  反色棱: UR, UF, UL, UB, DB, FL, BL, BR (共8条)
+  顶底跑错层: DF, DB, UB, UL
+   B' E' B      -> 角✓ 欠E×3
+  中层棱在外: 无
+  反色棱: UR, UF, UL, DB, FR, FL, BL, BR (共8条)
+  顶底跑错层: DF, DB, UB, UF
+   E            -> 角✓ 账清
+  中层棱在外: 无
+  反色棱: UR, UF, UL, DB (共4条)
+  顶底跑错层: DF, DB, UB, UF
+
+② 凑 · 子目标A+C: 清翻棱 + 顶底分层
+   U2 M U M' U                  -> 角✓中心✓
+  中层棱在外: 无
+  反色棱: 无 (共0条)
+  顶底跑错层: DB, UB
+   U2 S U2 S'                   -> 角✓中心✓
+  中层棱在外: 无
+  反色棱: 无 (共0条)
+  顶底跑错层: 无
+
+   ★ 前置达成: 角全对 + 全棱定向 + 全棱回本层
+
+③ 识别三层: U层[UR->UL->UB->UR] D层[DF->DL->DB->DF] E层[FR->BR->BL->FR]
+   查表 -> C080 [11步]: D L2 F2 U2 D' L2 R2 D' R2 B2 U'
+
+完全还原 ✓
+步数: 角9 + 凑(8+9) + 公式11 = 37

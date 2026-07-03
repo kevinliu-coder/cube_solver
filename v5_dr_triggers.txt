@@ -1,0 +1,20 @@
+V5 DR触发词典 — EO后凑角定向+中层, 全部EO安全
+签名: 哪些角位被拧(+顺/-逆), 中层位怎么动
+================================================================================
+
+R U R'           拧角: URF- UFL- DFR-                           中层交换: FR→UF UB→FR
+R U' R'          拧角: URF+ ULB+ DFR+                           中层交换: FR→UB UF→FR
+R U2 R'          拧角: URF- UFL+ ULB- DFR+                      中层交换: FR→UL UL→FR
+L' U' L          拧角: URF+ UFL+ DLF+                           中层交换: FL→UF UB→FL
+L' U L           拧角: UFL- UBR- DLF-                           中层交换: FL→UB UF→FL
+L' U2 L          拧角: URF- UFL+ UBR+ DLF-                      中层交换: FL→UR UR→FL
+R D R'           拧角: UBR- DBL- DRB-                           中层交换: BR→DB DF→BR
+R D' R'          拧角: UBR+ DLF+ DRB+                           中层交换: BR→DF DB→BR
+L' D L           拧角: ULB- DFR- DBL-                           中层交换: BL→DF DB→BL
+R U2 R' U2 R     拧角: ULB- DFR+                                中层交换: BR→DR DR→FR FR→BR
+R' U R           拧角: UFL- UBR- DRB-                           中层交换: BR→UF UB→BR
+F2 R F2          拧角: UFL+ UBR+ DLF- DRB-                      中层交换: FL→UR BR→DR DR→FL UR→BR
+R                拧角: URF- UBR+ DFR+ DRB-                      中层交换: FR→UR BR→DR DR→FR UR→BR
+R'               拧角: URF- UBR+ DFR+ DRB-                      中层交换: BR→UR FR→DR UR→FR DR→BR
+L                拧角: UFL+ ULB- DLF- DBL+                      中层交换: BL→UL FL→DL UL→FL DL→BL
+L'               拧角: UFL+ ULB- DLF- DBL+                      中层交换: FL→UL BL→DL DL→FL UL→BL

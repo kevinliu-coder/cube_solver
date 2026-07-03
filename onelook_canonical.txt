@@ -1,0 +1,2827 @@
+角先一看收 (corners-first one-look) 公式表 — 核心视角类
+前置: 8角全对 + 12棱全定向 + 每棱回本层
+识别: 每层各看4条棱的排列 (角是参照系, 无AUF)
+其余7个视角 = 整体y转/上下翻后按同一条公式的字母映射执行
+共 940 条核心公式, 平均 12.6 步
+==============================================================================
+
+C001 [ 0步] U层: OK                                 D层: OK                                 E层: OK                                
+      公式: 
+
+C002 [ 6步] U层: OK                                 D层: OK                                 E层: FL->BL->BR->FL                    
+      公式: U D' B2 U' D L2
+
+C003 [ 6步] U层: OK                                 D层: OK                                 E层: FR<->FL BL<->BR                   
+      公式: U2 F2 U2 D2 B2 D2
+
+C004 [ 6步] U层: OK                                 D层: DF<->DB                            E层: FL<->BL                           
+      公式: U2 R2 D2 R2 U2 L2
+
+C005 [ 6步] U层: UF<->UB                            D层: DF<->DB                            E层: OK                                
+      公式: U2 R2 L2 D2 R2 L2
+
+C006 [ 7步] U层: OK                                 D层: DF<->DB                            E层: BL<->BR                           
+      公式: D F2 U2 B2 U2 F2 D
+
+C007 [ 7步] U层: UF<->UB                            D层: DR<->DL                            E层: OK                                
+      公式: U F2 B2 D2 F2 B2 U
+
+C008 [ 8步] U层: OK                                 D层: OK                                 E层: FR<->BL FL<->BR                   
+      公式: U R2 L2 U' D F2 B2 D'
+
+C009 [ 8步] U层: OK                                 D层: DF<->DB                            E层: FL<->BR                           
+      公式: R2 U D F2 U' D' R2 D2
+
+C010 [ 8步] U层: OK                                 D层: DF<->DB                            E层: FR->FL->BL->BR->FR                
+      公式: U2 R2 U' D' B2 U' D' L2
+
+C011 [ 8步] U层: OK                                 D层: DF<->DB                            E层: FR->FL->BR->BL->FR                
+      公式: U D F2 U2 B2 U D R2
+
+C012 [ 8步] U层: OK                                 D层: DF<->DB                            E层: FR<->BL                           
+      公式: R2 U2 L2 F2 D2 L2 U2 B2
+
+C013 [ 8步] U层: OK                                 D层: DF<->DB                            E层: FR->BL->FL->BR->FR                
+      公式: U R2 U2 L2 U D B2 D
+
+C014 [ 8步] U层: OK                                 D层: DF<->DB                            E层: FR->BR->BL->FL->FR                
+      公式: U2 R2 U D F2 U D L2
+
+C015 [ 8步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: OK                                
+      公式: F2 R2 U R2 L2 D' L2 F2
+
+C016 [ 8步] U层: UF<->UB                            D层: DF<->DB                            E层: FR<->FL BL<->BR                   
+      公式: R2 U D F2 B2 U D L2
+
+C017 [ 8步] U层: UF<->UB                            D层: DF<->DB                            E层: FR<->BL FL<->BR                   
+      公式: U D F2 B2 U D R2 L2
+
+C018 [ 8步] U层: UF<->UB                            D层: DF<->DB                            E层: FR<->BR FL<->BL                   
+      公式: U2 R2 U2 R2 L2 U2 R2 D2
+
+C019 [ 8步] U层: UF<->UB                            D层: DR<->DL                            E层: FR<->BL FL<->BR                   
+      公式: U F2 B2 U D R2 L2 D
+
+C020 [ 8步] U层: UR<->UL UF<->UB                    D层: DR<->DL DF<->DB                    E层: FR<->FL BL<->BR                   
+      公式: R2 U2 D2 F2 R2 L2 F2 R2
+
+C021 [ 8步] U层: UR<->UL UF<->UB                    D层: DR<->DL DF<->DB                    E层: FR<->BL FL<->BR                   
+      公式: U2 R2 F2 R2 L2 F2 L2 D2
+
+C022 [ 9步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR<->FL BL<->BR                   
+      公式: F2 R2 U2 D' F2 B2 U' L2 F2
+
+C023 [ 9步] U层: UF<->UB                            D层: DF<->DB                            E层: FL->BL->BR->FL                    
+      公式: U D F2 B2 U2 F2 U' D L2
+
+C024 [ 9步] U层: UF<->UB                            D层: DF<->DB                            E层: FL->BR->BL->FL                    
+      公式: U2 R2 U' D F2 U D R2 L2
+
+C025 [ 9步] U层: UF<->UB                            D层: DR<->DL                            E层: FL->BL->BR->FL                    
+      公式: U F2 U2 F2 B2 U' D' L2 D'
+
+C026 [ 9步] U层: UF<->UB                            D层: DR<->DL                            E层: FR<->FL BL<->BR                   
+      公式: U F2 U2 F2 B2 U2 F2 U D2
+
+C027 [ 9步] U层: UF<->UB                            D层: DR<->DL                            E层: FR->FL->BL->FR                    
+      公式: D R2 L2 U2 R2 U' D F2 U
+
+C028 [10步] U层: OK                                 D层: DR<->DL DF<->DB                    E层: OK                                
+      公式: R2 F2 B2 L2 U R2 F2 B2 L2 D'
+
+C029 [10步] U层: OK                                 D层: DR<->DL DF<->DB                    E层: FL->BL->BR->FL                    
+      公式: U2 R2 D2 R2 F2 D2 R2 F2 U2 B2
+
+C030 [10步] U层: OK                                 D层: DR<->DL DF<->DB                    E层: FL->BR->BL->FL                    
+      公式: U2 F2 D2 F2 R2 D2 F2 R2 U2 L2
+
+C031 [10步] U层: UL<->UB                            D层: DF<->DL                            E层: OK                                
+      公式: L2 U' R2 F2 R2 B2 L2 B2 U L2
+
+C032 [10步] U层: UL<->UB                            D层: DR<->DB                            E层: OK                                
+      公式: B2 U R2 F2 L2 B2 L2 F2 U' B2
+
+C033 [10步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: OK                                
+      公式: U2 F2 R2 D' R2 L2 U L2 F2 U2
+
+C034 [10步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR<->BL FL<->BR                   
+      公式: U2 F2 R2 U' F2 B2 D R2 B2 D2
+
+C035 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: OK                                
+      公式: U R2 B2 D' F2 B2 U F2 R2 U'
+
+C036 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FL->BL->BR->FL                    
+      公式: U R2 B2 D' F2 B2 D R2 B2 D'
+
+C037 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR->FL->BR->FR                    
+      公式: U R2 B2 U' R2 L2 U R2 B2 D'
+
+C038 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FL->BL->BR->FL                    
+      公式: U D' R2 B2 D' F2 B2 D R2 B2
+
+C039 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FL->BR->BL->FL                    
+      公式: F2 R2 U L2 U D' F2 U' L2 F2
+
+C040 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR->FL->BL->FR                    
+      公式: F2 R2 D F2 B2 D' F2 R2 U D'
+
+C041 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR->FL->BR->FR                    
+      公式: U D' R2 B2 U' R2 L2 U R2 B2
+
+C042 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR->BL->FL->FR                    
+      公式: F2 R2 U R2 L2 U' F2 U D' F2
+
+C043 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR->BL->BR->FR                    
+      公式: F2 U D' F2 U F2 B2 U' L2 F2
+
+C044 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR<->BL FL<->BR                   
+      公式: U2 D2 F2 R2 U' F2 B2 D R2 B2
+
+C045 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR->BR->FL->FR                    
+      公式: F2 U D' F2 D R2 L2 D' L2 F2
+
+C046 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR->BR->BL->FR                    
+      公式: F2 R2 D F2 U D' R2 D' L2 F2
+
+C047 [10步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DR                     E层: FR<->BR FL<->BL                   
+      公式: F2 U2 D2 L2 D F2 B2 U' L2 F2
+
+C048 [10步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: OK                                
+      公式: U' R2 B2 U F2 B2 D' F2 R2 U
+
+C049 [10步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR->FL->BL->FR                    
+      公式: D' F2 R2 D F2 B2 D' F2 R2 U
+
+C050 [10步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR->BL->BR->FR                    
+      公式: D' F2 R2 U R2 L2 U' F2 R2 U
+
+C051 [10步] U层: UF<->UB                            D层: DR->DF->DL->DB->DR                 E层: OK                                
+      公式: F2 R2 L2 F2 U R2 L2 D' F2 B2
+
+C052 [10步] U层: UF<->UB                            D层: DR<->DL DF<->DB                    E层: BL<->BR                           
+      公式: U2 R2 L2 F2 D2 R2 L2 F2 D2 F2
+
+C053 [10步] U层: UF<->UB                            D层: DR<->DL DF<->DB                    E层: FL<->BR                           
+      公式: R2 U2 R2 L2 F2 U2 R2 B2 U2 F2
+
+C054 [10步] U层: UF<->UB                            D层: DR<->DL DF<->DB                    E层: FR->FL->BR->BL->FR                
+      公式: U2 F2 R2 F2 B2 U2 B2 D2 L2 F2
+
+C055 [10步] U层: UF<->UB                            D层: DR<->DL DF<->DB                    E层: FR<->BL                           
+      公式: R2 U2 R2 L2 F2 D2 L2 F2 D2 F2
+
+C056 [10步] U层: UF<->UB                            D层: DR<->DL DF<->DB                    E层: FR->BL->FL->BR->FR                
+      公式: U2 F2 U2 F2 D2 R2 F2 B2 R2 F2
+
+C057 [10步] U层: UF<->UB                            D层: DR->DB->DL->DF->DR                 E层: OK                                
+      公式: F2 R2 L2 F2 U' R2 L2 D F2 B2
+
+C058 [10步] U层: UR->UF->UL->UB->UR                 D层: DR->DB->DL->DF->DR                 E层: OK                                
+      公式: U R2 L2 F2 B2 U' R2 L2 F2 B2
+
+C059 [10步] U层: UR<->UL UF<->UB                    D层: DR<->DL DF<->DB                    E层: OK                                
+      公式: U R2 F2 R2 U D' B2 L2 B2 D'
+
+C060 [10步] U层: UR<->UL UF<->UB                    D层: DR<->DL DF<->DB                    E层: FL->BL->BR->FL                    
+      公式: U R2 F2 R2 L2 U D' L2 B2 D'
+
+C061 [10步] U层: UR->UB->UL->UF->UR                 D层: DR->DF->DL->DB->DR                 E层: OK                                
+      公式: U' R2 L2 F2 B2 U R2 L2 F2 B2
+
+C062 [11步] U层: OK                                 D层: DL<->DB                            E层: BL<->BR                           
+      公式: B2 U R2 F2 D2 F2 R2 U2 B2 U B2
+
+C063 [11步] U层: OK                                 D层: DL<->DB                            E层: FL<->BL                           
+      公式: L2 U R2 D2 F2 L2 D2 R2 B2 U L2
+
+C064 [11步] U层: OK                                 D层: DL<->DB                            E层: FL<->BR                           
+      公式: L2 D F2 U2 R2 B2 U2 F2 L2 D L2
+
+C065 [11步] U层: OK                                 D层: DL<->DB                            E层: FR<->FL                           
+      公式: B2 U R2 F2 U2 B2 L2 D2 B2 U B2
+
+C066 [11步] U层: OK                                 D层: DL<->DB                            E层: FR<->BL                           
+      公式: L2 D F2 D2 R2 B2 U2 B2 R2 D L2
+
+C067 [11步] U层: OK                                 D层: DL<->DB                            E层: FR<->BR                           
+      公式: L2 U R2 U2 F2 L2 D2 L2 F2 U L2
+
+C068 [11步] U层: OK                                 D层: DF->DL->DB->DF                     E层: OK                                
+      公式: F2 U F2 R2 B2 D' R2 F2 L2 U2 F2
+
+C069 [11步] U层: OK                                 D层: DF->DB->DL->DF                     E层: OK                                
+      公式: F2 U2 R2 F2 L2 D F2 R2 B2 U' F2
+
+C070 [11步] U层: OK                                 D层: DR<->DL DF<->DB                    E层: FR<->BL FL<->BR                   
+      公式: U R2 F2 B2 L2 U2 D F2 R2 L2 B2
+
+C071 [11步] U层: UL<->UB                            D层: DL<->DB                            E层: OK                                
+      公式: L2 U R2 F2 L2 D2 F2 R2 B2 U L2
+
+C072 [11步] U层: UL<->UB                            D层: DF<->DB                            E层: OK                                
+      公式: B2 U R2 F2 L2 D' R2 B2 L2 U2 B2
+
+C073 [11步] U层: UL<->UB                            D层: DR<->DL                            E层: OK                                
+      公式: L2 U2 F2 L2 B2 D' F2 R2 B2 U L2
+
+C074 [11步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FL->BL->BR->FL                    
+      公式: U D R2 B2 D' F2 B2 D R2 B2 D2
+
+C075 [11步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR<->FL BL<->BR                   
+      公式: U2 F2 R2 U D2 F2 B2 D L2 F2 U2
+
+C076 [11步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR->FL->BL->FR                    
+      公式: U2 F2 R2 U' F2 B2 U F2 R2 U' D'
+
+C077 [11步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR->FL->BR->FR                    
+      公式: U D R2 B2 U' R2 L2 U R2 B2 D2
+
+C078 [11步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR->BL->BR->FR                    
+      公式: U2 F2 R2 D' R2 L2 D F2 R2 U' D'
+
+C079 [11步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR<->BR FL<->BL                   
+      公式: U2 F2 R2 U2 D R2 L2 U R2 B2 D2
+
+C080 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FL->BR->BL->FL                    
+      公式: D F2 R2 U2 D' F2 B2 D' B2 L2 U'
+
+C081 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR<->FL BL<->BR                   
+      公式: D F2 R2 U2 D' F2 B2 U' L2 F2 D'
+
+C082 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR->FL->BL->FR                    
+      公式: U2 D' F2 R2 U' F2 B2 U F2 R2 U'
+
+C083 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR->BL->BR->FR                    
+      公式: U2 D' F2 R2 D' R2 L2 D F2 R2 U'
+
+C084 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR<->BL FL<->BR                   
+      公式: U R2 B2 U' R2 L2 D B2 L2 U D2
+
+C085 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR->BR->FL->FR                    
+      公式: D F2 R2 U R2 L2 U D2 B2 L2 U'
+
+C086 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR<->BR FL<->BL                   
+      公式: U R2 B2 U D2 R2 L2 D F2 R2 U'
+
+C087 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FL<->BL                           
+      公式: F2 R2 U R2 L2 D F2 D2 L2 F2 D2
+
+C088 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->FL->BR->BL->FR                
+      公式: F2 R2 D F2 B2 U F2 U2 R2 B2 U2
+
+C089 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->BL->BR->FL->FR                
+      公式: F2 R2 D F2 B2 U F2 D2 L2 F2 D2
+
+C090 [11步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR<->BR                           
+      公式: F2 R2 U R2 L2 D F2 U2 R2 B2 U2
+
+C091 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FL<->BL                           
+      公式: U2 F2 R2 D' R2 L2 U' B2 D2 R2 B2
+
+C092 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->BL->BR->FL->FR                
+      公式: U2 F2 R2 U' F2 B2 D' B2 D2 R2 B2
+
+C093 [11步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FL<->BR                           
+      公式: R2 U2 B2 D' F2 L2 B2 U R2 U2 F2
+
+C094 [11步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR<->BL                           
+      公式: R2 U2 B2 U' R2 F2 L2 D L2 D2 F2
+
+C095 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FL->BL->BR->FL                    
+      公式: U D2 R2 B2 D' F2 B2 D R2 B2 D
+
+C096 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR<->FL BL<->BR                   
+      公式: D' F2 R2 U2 D' F2 B2 U' L2 F2 D
+
+C097 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR->FL->BR->FR                    
+      公式: U D2 R2 B2 U' R2 L2 U R2 B2 D
+
+C098 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR->BL->FL->FR                    
+      公式: U' R2 B2 U2 D' R2 L2 D' L2 F2 D
+
+C099 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR<->BL FL<->BR                   
+      公式: U D2 R2 B2 U' R2 L2 D B2 L2 U
+
+C100 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR->BR->BL->FR                    
+      公式: U' R2 B2 U F2 B2 U D2 L2 F2 D
+
+C101 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR<->BR FL<->BL                   
+      公式: U' R2 B2 U2 D' R2 L2 U' F2 R2 U
+
+C102 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FL<->BL                           
+      公式: D2 F2 R2 U2 B2 U' R2 L2 D' L2 F2
+
+C103 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->FL->BR->BL->FR                
+      公式: D2 F2 R2 U2 B2 D' F2 B2 U' L2 F2
+
+C104 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->BL->BR->FL->FR                
+      公式: U2 F2 R2 U2 B2 U F2 B2 D R2 B2
+
+C105 [11步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR<->BR                           
+      公式: U2 F2 R2 U2 B2 D R2 L2 U R2 B2
+
+C106 [11步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FL<->BL                           
+      公式: F2 R2 U2 B2 U' R2 L2 D' L2 F2 D2
+
+C107 [11步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->FL->BR->BL->FR                
+      公式: F2 R2 U2 B2 D' F2 B2 U' L2 F2 D2
+
+C108 [11步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FL<->BL                           
+      公式: F2 L2 U2 B2 D' R2 L2 U' L2 B2 U2
+
+C109 [11步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->FL->BR->BL->FR                
+      公式: F2 L2 U2 B2 U' F2 B2 D' L2 B2 U2
+
+C110 [11步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FL<->BL                           
+      公式: D2 F2 L2 D2 F2 D' R2 L2 U' R2 F2
+
+C111 [11步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->FL->BR->BL->FR                
+      公式: D2 F2 L2 D2 F2 U' F2 B2 D' R2 F2
+
+C112 [11步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->BL->BR->FL->FR                
+      公式: U2 F2 L2 D2 F2 D F2 B2 U L2 B2
+
+C113 [11步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR<->BR                           
+      公式: U2 F2 L2 D2 F2 U R2 L2 D L2 B2
+
+C114 [11步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FL<->BR                           
+      公式: R2 U2 F2 U R2 B2 L2 D' L2 D2 B2
+
+C115 [11步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR<->BL                           
+      公式: R2 U2 F2 D B2 L2 F2 U' R2 U2 B2
+
+C116 [11步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FL<->BL                           
+      公式: U2 F2 L2 U' R2 L2 D' F2 U2 L2 B2
+
+C117 [11步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->BL->BR->FL->FR                
+      公式: U2 F2 L2 D' F2 B2 U' F2 U2 L2 B2
+
+C118 [11步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FL<->BL                           
+      公式: F2 L2 D R2 L2 U B2 U2 R2 F2 D2
+
+C119 [11步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->FL->BR->BL->FR                
+      公式: F2 L2 U F2 B2 D B2 D2 L2 B2 U2
+
+C120 [11步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->BL->BR->FL->FR                
+      公式: F2 L2 U F2 B2 D B2 U2 R2 F2 D2
+
+C121 [11步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR<->BR                           
+      公式: F2 L2 D R2 L2 U B2 D2 L2 B2 U2
+
+C122 [11步] U层: UF<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR<->BL FL<->BR                   
+      公式: U2 F2 B2 U F2 R2 L2 F2 U F2 B2
+
+C123 [11步] U层: UF<->UB                            D层: DR<->DL DF<->DB                    E层: FL<->BL                           
+      公式: U R2 D2 R2 F2 B2 D2 R2 F2 B2 U
+
+C124 [11步] U层: UF<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR<->BL FL<->BR                   
+      公式: U2 F2 B2 U' F2 R2 L2 F2 U' F2 B2
+
+C125 [11步] U层: UR<->UF UL<->UB                    D层: DR<->DF DL<->DB                    E层: OK                                
+      公式: U R2 L2 D2 F2 B2 U R2 L2 F2 B2
+
+C126 [11步] U层: UR<->UF UL<->UB                    D层: DR<->DF DL<->DB                    E层: FR<->FL BL<->BR                   
+      公式: F2 L2 U F2 B2 U2 R2 L2 U L2 F2
+
+C127 [11步] U层: UR<->UF UL<->UB                    D层: DR<->DF DL<->DB                    E层: FR<->BL FL<->BR                   
+      公式: R2 L2 U F2 B2 U2 R2 L2 U R2 L2
+
+C128 [11步] U层: UR<->UF UL<->UB                    D层: DR<->DL DF<->DB                    E层: OK                                
+      公式: R2 F2 B2 R2 D F2 B2 U R2 L2 D2
+
+C129 [11步] U层: UR<->UF UL<->UB                    D层: DR<->DL DF<->DB                    E层: FR<->BL FL<->BR                   
+      公式: R2 F2 B2 R2 U R2 L2 D R2 L2 D2
+
+C130 [11步] U层: UR<->UF UL<->UB                    D层: DR<->DB DF<->DL                    E层: OK                                
+      公式: U R2 L2 F2 B2 U F2 B2 D2 R2 L2
+
+C131 [11步] U层: UR<->UF UL<->UB                    D层: DR<->DB DF<->DL                    E层: FR<->BL FL<->BR                   
+      公式: R2 L2 U R2 L2 F2 B2 U D2 R2 L2
+
+C132 [11步] U层: UR->UF->UL->UB->UR                 D层: DR->DB->DL->DF->DR                 E层: FR<->BL FL<->BR                   
+      公式: U2 R2 L2 U' R2 L2 F2 B2 U' R2 L2
+
+C133 [11步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DB->DF->DR                 E层: OK                                
+      公式: R2 F2 U' F2 B2 D' R2 L2 U2 F2 L2
+
+C134 [11步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DB->DF->DR                 E层: FR<->FL BL<->BR                   
+      公式: F2 R2 U' F2 B2 D' F2 B2 D2 R2 B2
+
+C135 [11步] U层: UR->UB->UL->UF->UR                 D层: DR->DF->DL->DB->DR                 E层: FR<->BL FL<->BR                   
+      公式: U2 R2 L2 U R2 L2 F2 B2 U R2 L2
+
+C136 [12步] U层: OK                                 D层: DL<->DB                            E层: FR->FL->BL->BR->FR                
+      公式: L2 U R2 U2 B2 R2 U' D' F2 R2 D L2
+
+C137 [12步] U层: OK                                 D层: DL<->DB                            E层: FR->FL->BR->BL->FR                
+      公式: L2 U R2 U D R2 F2 U2 B2 L2 D L2
+
+C138 [12步] U层: OK                                 D层: DL<->DB                            E层: FR->BL->BR->FL->FR                
+      公式: L2 U L2 U D R2 B2 U2 F2 L2 D L2
+
+C139 [12步] U层: OK                                 D层: DL<->DB                            E层: FR->BL->FL->BR->FR                
+      公式: B2 U R2 F2 U' D' R2 B2 D2 R2 D B2
+
+C140 [12步] U层: OK                                 D层: DL<->DB                            E层: FR->BR->BL->FL->FR                
+      公式: L2 U R2 D2 B2 R2 U' D' B2 L2 D L2
+
+C141 [12步] U层: OK                                 D层: DL<->DB                            E层: FR->BR->FL->BL->FR                
+      公式: B2 U R2 B2 U' D' L2 B2 D2 L2 D B2
+
+C142 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FL->BL->BR->FL                    
+      公式: F2 R2 L2 D L2 U' F2 B2 U F2 D' F2
+
+C143 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FL->BR->BL->FL                    
+      公式: F2 R2 L2 U B2 D' F2 B2 D L2 U' F2
+
+C144 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR<->FL BL<->BR                   
+      公式: L2 U R2 B2 R2 U' D' B2 L2 B2 D L2
+
+C145 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR->FL->BL->FR                    
+      公式: R2 B2 U' L2 U B2 R2 F2 U L2 U' F2
+
+C146 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR->FL->BR->FR                    
+      公式: U L2 D B2 U R2 D B2 U R2 U L2
+
+C147 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR->BL->FL->FR                    
+      公式: R2 B2 D' B2 D B2 R2 F2 D F2 D' F2
+
+C148 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR->BL->BR->FR                    
+      公式: U L2 U R2 U F2 D R2 U F2 D L2
+
+C149 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR<->BL FL<->BR                   
+      公式: U L2 D B2 U R2 U R2 U F2 D L2
+
+C150 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR->BR->FL->FR                    
+      公式: U L2 U R2 D R2 D B2 U R2 U L2
+
+C151 [12步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR->BR->BL->FR                    
+      公式: U L2 U R2 U F2 U F2 D F2 D L2
+
+C152 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FL->BL->BR->FL                    
+      公式: R2 F2 D F2 D' F2 R2 B2 D' B2 D B2
+
+C153 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FL->BR->BL->FL                    
+      公式: R2 F2 U L2 U' F2 R2 B2 U' L2 U B2
+
+C154 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR<->FL BL<->BR                   
+      公式: L2 U' R2 F2 R2 U D F2 L2 F2 D' L2
+
+C155 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR->FL->BL->FR                    
+      公式: F2 D F2 D' R2 L2 D L2 D' R2 L2 F2
+
+C156 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR->FL->BR->FR                    
+      公式: U' L2 U' R2 U' B2 U' B2 D' B2 D' L2
+
+C157 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR->BL->FL->FR                    
+      公式: F2 U L2 U' R2 L2 U B2 U' R2 L2 F2
+
+C158 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR->BL->BR->FR                    
+      公式: U' L2 U' R2 D' R2 D' F2 U' R2 U' L2
+
+C159 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR<->BL FL<->BR                   
+      公式: U' L2 D' F2 U' R2 U' R2 U' B2 D' L2
+
+C160 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR->BR->FL->FR                    
+      公式: U' L2 U' R2 U' B2 D' R2 U' B2 D' L2
+
+C161 [12步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR->BR->BL->FR                    
+      公式: U' L2 D' F2 U' R2 D' F2 U' R2 U' L2
+
+C162 [12步] U层: OK                                 D层: DR<->DF DL<->DB                    E层: OK                                
+      公式: R2 U F2 U' R2 B2 R2 U' L2 U R2 B2
+
+C163 [12步] U层: OK                                 D层: DR<->DF DL<->DB                    E层: FL->BL->BR->FL                    
+      公式: R2 U L2 D B2 R2 F2 D B2 L2 D' R2
+
+C164 [12步] U层: OK                                 D层: DR<->DF DL<->DB                    E层: FL->BR->BL->FL                    
+      公式: R2 D F2 U B2 R2 F2 U R2 B2 U' R2
+
+C165 [12步] U层: OK                                 D层: DR<->DF DL<->DB                    E层: FR->FL->BL->FR                    
+      公式: R2 U F2 D' F2 R2 F2 U' B2 D R2 B2
+
+C166 [12步] U层: OK                                 D层: DR<->DF DL<->DB                    E层: FR->BL->FL->FR                    
+      公式: R2 D R2 U' B2 L2 B2 D' L2 U R2 B2
+
+C167 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: BL<->BR                           
+      公式: F2 U F2 B2 D B2 D' F2 B2 U' F2 D2
+
+C168 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FL<->BL                           
+      公式: D2 R2 U' R2 L2 D' L2 D R2 L2 U R2
+
+C169 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FL<->BR                           
+      公式: U2 F2 U F2 B2 U R2 D' R2 L2 D' B2
+
+C170 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR<->FL                           
+      公式: F2 D R2 L2 U B2 U' R2 L2 D' F2 D2
+
+C171 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR->FL->BR->BL->FR                
+      公式: D2 R2 U' R2 L2 D' L2 U F2 B2 D R2
+
+C172 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR->BL->BR->FL->FR                
+      公式: D2 R2 D' F2 B2 U' L2 D R2 L2 U R2
+
+C173 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR<->BL                           
+      公式: F2 U F2 B2 U R2 U' F2 B2 U' F2 D2
+
+C174 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR->BL->FL->BR->FR                
+      公式: F2 D R2 L2 U B2 D' F2 B2 U' F2 D2
+
+C175 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR<->BR                           
+      公式: D2 R2 D' F2 B2 U' L2 U F2 B2 D R2
+
+C176 [12步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR->BR->FL->BL->FR                
+      公式: F2 U F2 B2 D B2 U' R2 L2 D' F2 D2
+
+C177 [12步] U层: OK                                 D层: DR<->DL DF<->DB                    E层: FR<->FL BL<->BR                   
+      公式: U R2 U2 D2 F2 B2 R2 D' F2 R2 L2 B2
+
+C178 [12步] U层: UL<->UB                            D层: DL<->DB                            E层: FL->BL->BR->FL                    
+      公式: U B2 U' R2 F2 L2 F2 R2 B2 D L2 D'
+
+C179 [12步] U层: UL<->UB                            D层: DL<->DB                            E层: FR<->FL BL<->BR                   
+      公式: L2 U R2 B2 R2 U' D' L2 B2 L2 D L2
+
+C180 [12步] U层: UL<->UB                            D层: DL<->DB                            E层: FR->FL->BL->FR                    
+      公式: B2 U F2 B2 U' L2 B2 U F2 B2 U' L2
+
+C181 [12步] U层: UL<->UB                            D层: DL<->DB                            E层: FR->FL->BR->FR                    
+      公式: L2 U F2 B2 U' B2 L2 D R2 L2 D' B2
+
+C182 [12步] U层: UL<->UB                            D层: DL<->DB                            E层: FR->BL->FL->FR                    
+      公式: L2 U F2 B2 U' B2 L2 U F2 B2 U' B2
+
+C183 [12步] U层: UL<->UB                            D层: DF<->DL                            E层: FL->BL->BR->FL                    
+      公式: U D' B2 U' R2 F2 L2 F2 R2 B2 D L2
+
+C184 [12步] U层: UL<->UB                            D层: DF<->DL                            E层: FL->BR->BL->FL                    
+      公式: L2 D' R2 F2 U' D F2 R2 B2 L2 U L2
+
+C185 [12步] U层: UL<->UB                            D层: DF<->DL                            E层: FR<->FL BL<->BR                   
+      公式: L2 U' R2 F2 R2 U D' R2 B2 R2 D L2
+
+C186 [12步] U层: UL<->UB                            D层: DF<->DL                            E层: FR->FL->BR->FR                    
+      公式: L2 D' R2 U' D R2 F2 R2 B2 L2 U L2
+
+C187 [12步] U层: UL<->UB                            D层: DF<->DL                            E层: FR->BL->BR->FR                    
+      公式: F2 U R2 F2 D L2 F2 R2 D L2 D' F2
+
+C188 [12步] U层: UL<->UB                            D层: DF<->DB                            E层: FR->FL->BR->FR                    
+      公式: B2 U F2 R2 U' F2 L2 B2 U' F2 D' B2
+
+C189 [12步] U层: UL<->UB                            D层: DF<->DB                            E层: FR->BR->FL->FR                    
+      公式: B2 D R2 B2 D' F2 L2 B2 D' L2 U' B2
+
+C190 [12步] U层: UL<->UB                            D层: DR<->DF                            E层: OK                                
+      公式: U R2 U R2 F2 R2 F2 R2 F2 U' R2 U'
+
+C191 [12步] U层: UL<->UB                            D层: DR<->DF                            E层: FR->FL->BL->FR                    
+      公式: F2 U' F2 D' B2 R2 F2 D' R2 B2 D F2
+
+C192 [12步] U层: UL<->UB                            D层: DR<->DF                            E层: FR->BL->BR->FR                    
+      公式: U R2 D R2 F2 L2 B2 L2 F2 U' B2 D'
+
+C193 [12步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: OK                                
+      公式: L2 U R2 D' B2 R2 B2 D' R2 B2 U' L2
+
+C194 [12步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR->FL->BR->FR                    
+      公式: L2 U R2 U' L2 B2 L2 D' B2 L2 D' L2
+
+C195 [12步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR->BL->FL->FR                    
+      公式: L2 U R2 D' B2 R2 B2 U' B2 L2 D' L2
+
+C196 [12步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR->BR->BL->FR                    
+      公式: B2 D' B2 L2 U' L2 F2 L2 D' F2 U B2
+
+C197 [12步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: OK                                
+      公式: R2 B2 R2 D R2 U R2 F2 L2 D F2 D
+
+C198 [12步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FL->BR->BL->FL                    
+      公式: R2 B2 R2 U F2 D R2 F2 L2 D F2 D
+
+C199 [12步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->FL->BL->FR                    
+      公式: U L2 D L2 F2 R2 D R2 D F2 L2 F2
+
+C200 [12步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->FL->BR->FR                    
+      公式: U F2 D R2 F2 L2 D F2 D F2 L2 F2
+
+C201 [12步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->BL->FL->FR                    
+      公式: R2 B2 R2 U L2 D L2 F2 R2 D R2 D
+
+C202 [12步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->BL->BR->FR                    
+      公式: R2 B2 R2 D F2 D F2 R2 B2 D B2 U
+
+C203 [12步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->BR->BL->FR                    
+      公式: D F2 D F2 R2 B2 D B2 U F2 L2 F2
+
+C204 [12步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: OK                                
+      公式: F2 L2 F2 D' R2 U' B2 R2 F2 D' F2 D'
+
+C205 [12步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FL->BL->BR->FL                    
+      公式: F2 L2 F2 U' R2 D' F2 R2 B2 D' R2 D'
+
+C206 [12步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR->FL->BL->FR                    
+      公式: D' R2 D' R2 F2 L2 D' L2 U' R2 B2 R2
+
+C207 [12步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR->BL->FL->FR                    
+      公式: F2 L2 F2 D' R2 D' R2 F2 L2 D' L2 U'
+
+C208 [12步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR->BL->BR->FR                    
+      公式: F2 L2 F2 U' B2 D' B2 R2 F2 D' F2 D'
+
+C209 [12步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR->BR->FL->FR                    
+      公式: U' R2 D' F2 R2 B2 D' R2 D' R2 B2 R2
+
+C210 [12步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR->BR->BL->FR                    
+      公式: U' B2 D' B2 R2 F2 D' F2 D' R2 B2 R2
+
+C211 [12步] U层: UL<->UB                            D层: DR<->DL                            E层: FR->FL->BR->FR                    
+      公式: L2 D' R2 U' L2 B2 R2 U' F2 R2 U L2
+
+C212 [12步] U层: UL<->UB                            D层: DR<->DL                            E层: FR->BR->FL->FR                    
+      公式: L2 U' R2 F2 U R2 B2 L2 U R2 D L2
+
+C213 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: OK                                
+      公式: R2 U R2 F2 L2 D F2 D F2 L2 F2 D
+
+C214 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FL->BL->BR->FL                    
+      公式: F2 D' L2 F2 R2 D' F2 U' R2 B2 R2 D'
+
+C215 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FL->BR->BL->FL                    
+      公式: R2 D B2 R2 F2 D R2 U F2 L2 F2 D
+
+C216 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->FL->BL->FR                    
+      公式: R2 D' R2 F2 L2 D' L2 U' R2 B2 R2 D'
+
+C217 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->FL->BR->FR                    
+      公式: F2 D F2 R2 B2 D B2 D R2 F2 R2 U
+
+C218 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->BL->FL->FR                    
+      公式: F2 D' L2 F2 R2 D' F2 D' F2 R2 F2 U'
+
+C219 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->BL->BR->FR                    
+      公式: R2 D B2 R2 F2 D R2 D R2 F2 R2 U
+
+C220 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->BR->FL->FR                    
+      公式: R2 D' R2 F2 L2 D' L2 D' F2 R2 F2 U'
+
+C221 [12步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->BR->BL->FR                    
+      公式: F2 D F2 R2 B2 D B2 U F2 L2 F2 D
+
+C222 [12步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: OK                                
+      公式: L2 U B2 R2 D B2 R2 B2 D R2 U' L2
+
+C223 [12步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR->FL->BL->FR                    
+      公式: L2 D L2 B2 U B2 R2 B2 D R2 U' L2
+
+C224 [12步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR->BL->BR->FR                    
+      公式: B2 U' F2 D L2 F2 L2 U L2 B2 D B2
+
+C225 [12步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR->BR->FL->FR                    
+      公式: L2 D L2 B2 D L2 B2 L2 U R2 U' L2
+
+C226 [12步] U层: UL<->UB                            D层: DR<->DB                            E层: FL->BL->BR->FL                    
+      公式: B2 D R2 F2 L2 F2 U D' F2 R2 U' B2
+
+C227 [12步] U层: UL<->UB                            D层: DR<->DB                            E层: FL->BR->BL->FL                    
+      公式: U' D L2 U R2 F2 L2 F2 R2 B2 D' B2
+
+C228 [12步] U层: UL<->UB                            D层: DR<->DB                            E层: FR->FL->BL->FR                    
+      公式: R2 D' L2 F2 U' B2 R2 F2 U' L2 U R2
+
+C229 [12步] U层: UL<->UB                            D层: DR<->DB                            E层: FR->FL->BR->FR                    
+      公式: L2 D' R2 D F2 L2 B2 D F2 R2 U L2
+
+C230 [12步] U层: UL<->UB                            D层: DR<->DB                            E层: FR<->BR FL<->BL                   
+      公式: B2 U R2 B2 R2 U' D L2 B2 L2 D' B2
+
+C231 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: OK                                
+      公式: D R2 B2 R2 D R2 U R2 F2 L2 D F2
+
+C232 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FL->BL->BR->FL                    
+      公式: D' F2 L2 F2 U' R2 D' F2 R2 B2 D' R2
+
+C233 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FL->BR->BL->FL                    
+      公式: D R2 B2 R2 U F2 D R2 F2 L2 D F2
+
+C234 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR->FL->BL->FR                    
+      公式: U F2 R2 F2 D F2 D R2 F2 L2 D F2
+
+C235 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR->FL->BR->FR                    
+      公式: U F2 R2 F2 D L2 D L2 F2 R2 D R2
+
+C236 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR->BL->FL->FR                    
+      公式: D R2 B2 R2 U L2 D L2 F2 R2 D R2
+
+C237 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR->BL->BR->FR                    
+      公式: D' F2 L2 F2 U' B2 D' B2 R2 F2 D' F2
+
+C238 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR->BR->FL->FR                    
+      公式: U' R2 F2 R2 D' B2 D' B2 R2 F2 D' F2
+
+C239 [12步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR->BR->BL->FR                    
+      公式: U' R2 F2 R2 D' R2 D' F2 R2 B2 D' R2
+
+C240 [12步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FL->BR->BL->FL                    
+      公式: U2 F2 R2 U D2 F2 B2 U B2 L2 U D
+
+C241 [12步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR->BL->FL->FR                    
+      公式: U D R2 B2 U D2 R2 L2 U L2 F2 U2
+
+C242 [12步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR->BR->FL->FR                    
+      公式: U2 F2 U D' F2 U' R2 L2 U L2 F2 U2
+
+C243 [12步] U层: UF->UL->UB->UF                     D层: DF->DL->DB->DF                     E层: FR->BR->BL->FR                    
+      公式: U D R2 B2 U2 D F2 B2 D L2 F2 U2
+
+C244 [12步] U层: UF->UL->UB->UF                     D层: DF->DB->DL->DF                     E层: OK                                
+      公式: U' F2 U' R2 L2 D R2 F2 U' L2 F2 L2
+
+C245 [12步] U层: UF->UL->UB->UF                     D层: DF->DB->DL->DF                     E层: FR<->FL BL<->BR                   
+      公式: F2 R2 U2 L2 D' F2 B2 U R2 U2 L2 F2
+
+C246 [12步] U层: UF->UL->UB->UF                     D层: DF->DB->DL->DF                     E层: FR<->BR FL<->BL                   
+      公式: F2 U2 L2 D' F2 B2 U R2 U2 R2 L2 F2
+
+C247 [12步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: OK                                
+      公式: B2 U F2 B2 D' L2 U' B2 R2 B2 U' L2
+
+C248 [12步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FL->BR->BL->FL                    
+      公式: B2 U F2 B2 U' F2 U' L2 B2 L2 D' L2
+
+C249 [12步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR->FL->BL->FR                    
+      公式: B2 U F2 B2 U' F2 D' B2 R2 B2 U' L2
+
+C250 [12步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR->BL->BR->FR                    
+      公式: B2 D R2 L2 D' F2 U' L2 B2 L2 D' L2
+
+C251 [12步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR->BR->FL->FR                    
+      公式: B2 D R2 L2 D' F2 D' B2 R2 B2 U' L2
+
+C252 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR->BL->FL->FR                    
+      公式: U R2 B2 U D2 R2 L2 U L2 F2 U2 D
+
+C253 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DR                     E层: FR->BR->BL->FR                    
+      公式: U R2 U D' R2 U' F2 B2 U F2 R2 U'
+
+C254 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: BL<->BR                           
+      公式: F2 R2 U R2 L2 D' L2 U2 B2 U2 F2 D2
+
+C255 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FL<->BR                           
+      公式: F2 R2 D F2 B2 D R2 U' D' R2 B2 U2
+
+C256 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR<->FL                           
+      公式: U' R2 B2 D2 R2 U' F2 B2 D' B2 L2 U'
+
+C257 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->FL->BL->BR->FR                
+      公式: F2 R2 U R2 L2 U L2 U D R2 B2 U2
+
+C258 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR<->BL                           
+      公式: F2 R2 U R2 L2 U L2 U' D' L2 F2 D2
+
+C259 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U' R2 B2 D2 R2 D' R2 L2 U' B2 L2 U'
+
+C260 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->BR->BL->FL->FR                
+      公式: F2 R2 D F2 B2 D R2 U D L2 F2 D2
+
+C261 [12步] U层: UF->UL->UB->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->BR->FL->BL->FR                
+      公式: F2 R2 D F2 B2 U' R2 U2 F2 D2 F2 D2
+
+C262 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DR                     E层: OK                                
+      公式: U R2 F2 R2 U F2 R2 U' F2 B2 D B2
+
+C263 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DR                     E层: FL->BL->BR->FL                    
+      公式: U R2 B2 R2 D B2 R2 U' R2 L2 U R2
+
+C264 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DR                     E层: FL->BR->BL->FL                    
+      公式: D B2 R2 B2 U R2 B2 U' R2 L2 U B2
+
+C265 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DR                     E层: FR->FL->BL->FR                    
+      公式: U R2 F2 R2 D R2 B2 U' R2 L2 U B2
+
+C266 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DR                     E层: FR->BL->BR->FR                    
+      公式: U R2 F2 R2 D R2 B2 D' F2 B2 D B2
+
+C267 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: BL<->BR                           
+      公式: U R2 B2 U2 L2 D F2 B2 U B2 L2 U
+
+C268 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FL<->BR                           
+      公式: U2 B2 L2 D F2 B2 D L2 U' D' L2 F2
+
+C269 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR<->FL                           
+      公式: U D L2 F2 U F2 B2 U B2 U2 L2 F2
+
+C270 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 B2 L2 U R2 L2 U R2 U D L2 F2
+
+C271 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->FL->BR->BL->FR                
+      公式: U L2 F2 U2 R2 U' F2 B2 U' L2 F2 D
+
+C272 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR<->BL                           
+      公式: U2 F2 R2 U' F2 B2 U' L2 U D R2 B2
+
+C273 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U D R2 B2 U' R2 L2 U' F2 U2 R2 B2
+
+C274 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 F2 R2 D' R2 L2 D' R2 U' D' R2 B2
+
+C275 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR<->BR                           
+      公式: U R2 B2 U2 L2 U R2 L2 U R2 B2 D
+
+C276 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U R2 B2 U2 L2 U R2 L2 D B2 L2 U
+
+C277 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: BL<->BR                           
+      公式: U2 F2 D2 R2 U F2 L2 B2 D L2 U2 B2
+
+C278 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FL<->BL                           
+      公式: U2 R2 D2 F2 U' B2 R2 F2 D' B2 D2 R2
+
+C279 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR<->FL                           
+      公式: U2 F2 U2 L2 U B2 R2 F2 D R2 D2 B2
+
+C280 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR->FL->BR->BL->FR                
+      公式: R2 U' D' R2 U' F2 L2 B2 U R2 U2 F2
+
+C281 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR->BL->BR->FL->FR                
+      公式: L2 U' D' L2 U' R2 F2 L2 U L2 U2 B2
+
+C282 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR->BL->FL->BR->FR                
+      公式: R2 D2 F2 U' L2 B2 R2 U F2 U D F2
+
+C283 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR<->BR                           
+      公式: U2 R2 U2 B2 U' F2 L2 B2 D' F2 U2 R2
+
+C284 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR->BR->FL->BL->FR                
+      公式: F2 U D F2 U F2 L2 B2 U' F2 D2 L2
+
+C285 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FL->BR->BL->FL                    
+      公式: U2 D F2 R2 U D2 F2 B2 U B2 L2 U
+
+C286 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DB->DR                     E层: FR->BR->FL->FR                    
+      公式: U2 D F2 R2 U2 D R2 L2 D B2 L2 U
+
+C287 [12步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: OK                                
+      公式: R2 U2 L2 B2 U' R2 F2 L2 D' F2 D2 L2
+
+C288 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: BL<->BR                           
+      公式: U2 F2 D2 F2 U2 L2 D' R2 L2 U R2 B2
+
+C289 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FL<->BR                           
+      公式: U2 B2 L2 U D R2 U' F2 B2 U' L2 F2
+
+C290 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR<->FL                           
+      公式: U2 F2 U2 B2 D2 L2 D' R2 L2 U R2 B2
+
+C291 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 F2 R2 U D L2 U R2 L2 U R2 B2
+
+C292 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR<->BL                           
+      公式: U2 F2 R2 U' D' R2 D F2 B2 D R2 B2
+
+C293 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U2 F2 U2 B2 U2 R2 U' F2 B2 D R2 B2
+
+C294 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 B2 L2 U' D' L2 D' R2 L2 D' L2 F2
+
+C295 [12步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U2 F2 D2 F2 D2 R2 U' F2 B2 D R2 B2
+
+C296 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DR                     E层: OK                                
+      公式: U F2 D R2 L2 U' R2 F2 U F2 L2 F2
+
+C297 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DR                     E层: FL->BL->BR->FL                    
+      公式: U F2 U F2 B2 U' F2 L2 D F2 L2 F2
+
+C298 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DR                     E层: FL->BR->BL->FL                    
+      公式: D R2 D F2 B2 D' R2 F2 U F2 L2 F2
+
+C299 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DR                     E层: FR<->FL BL<->BR                   
+      公式: R2 U2 F2 R2 L2 U' F2 B2 D B2 D2 R2
+
+C300 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DR                     E层: FR->FL->BL->FR                    
+      公式: U L2 D R2 L2 D' L2 F2 D F2 R2 F2
+
+C301 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DR                     E层: FR->FL->BR->FR                    
+      公式: U F2 D R2 L2 D' F2 L2 D F2 L2 F2
+
+C302 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DR                     E层: OK                                
+      公式: R2 U R2 L2 D' F2 L2 D F2 L2 F2 D
+
+C303 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DR                     E层: FL->BL->BR->FL                    
+      公式: F2 U R2 L2 U' F2 R2 D R2 B2 R2 U
+
+C304 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DR                     E层: FR->FL->BL->FR                    
+      公式: R2 U R2 L2 U' R2 F2 D R2 F2 R2 U
+
+C305 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DR                     E层: FR->FL->BR->FR                    
+      公式: F2 D F2 B2 D' F2 R2 D R2 B2 R2 U
+
+C306 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DR                     E层: FR->BL->FL->FR                    
+      公式: F2 U R2 L2 U' F2 R2 U F2 R2 F2 D
+
+C307 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: BL<->BR                           
+      公式: U L2 F2 D R2 L2 D F2 D2 L2 F2 D
+
+C308 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FL<->BR                           
+      公式: F2 R2 U D L2 U' F2 B2 U' R2 B2 U2
+
+C309 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR<->FL                           
+      公式: U R2 B2 D' F2 B2 U' L2 D2 B2 L2 U
+
+C310 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->FL->BL->BR->FR                
+      公式: F2 R2 U' D' R2 U' F2 B2 U' L2 F2 D2
+
+C311 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->BL->BR->FL->FR                
+      公式: F2 R2 U2 B2 U2 D F2 B2 U' R2 B2 U2
+
+C312 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR<->BL                           
+      公式: F2 R2 U D L2 D' R2 L2 D' L2 F2 D2
+
+C313 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U R2 B2 U' R2 L2 U' F2 U2 R2 B2 D
+
+C314 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->BR->BL->FL->FR                
+      公式: F2 R2 U' D' R2 D' R2 L2 D' R2 B2 U2
+
+C315 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR<->BR                           
+      公式: F2 R2 U2 B2 U D2 R2 L2 D' R2 B2 U2
+
+C316 [12步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U R2 B2 U' R2 L2 D' L2 D2 B2 L2 U
+
+C317 [12步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: OK                                
+      公式: L2 U' F2 R2 F2 U' L2 D' F2 B2 U F2
+
+C318 [12步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FL->BL->BR->FL                    
+      公式: L2 U' F2 R2 F2 D' B2 U' F2 B2 U F2
+
+C319 [12步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR->FL->BR->FR                    
+      公式: L2 D' L2 F2 L2 U' B2 D' R2 L2 D F2
+
+C320 [12步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR->BL->FL->FR                    
+      公式: L2 D' L2 F2 L2 U' B2 U' F2 B2 U F2
+
+C321 [12步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR->BR->BL->FR                    
+      公式: L2 U' F2 R2 F2 D' B2 D' R2 L2 D F2
+
+C322 [12步] U层: UF->UB->UL->UF                     D层: DF->DL->DB->DF                     E层: OK                                
+      公式: U L2 U R2 L2 D' B2 R2 U L2 F2 L2
+
+C323 [12步] U层: UF->UB->UL->UF                     D层: DF->DL->DB->DF                     E层: FR<->FL BL<->BR                   
+      公式: F2 R2 U2 R2 U F2 B2 D' L2 U2 L2 F2
+
+C324 [12步] U层: UF->UB->UL->UF                     D层: DF->DL->DB->DF                     E层: FR<->BR FL<->BL                   
+      公式: F2 U2 R2 U F2 B2 D' L2 U2 R2 L2 F2
+
+C325 [12步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: OK                                
+      公式: L2 U B2 R2 B2 U L2 D F2 B2 U' B2
+
+C326 [12步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FL->BL->BR->FL                    
+      公式: L2 D L2 B2 L2 U F2 U F2 B2 U' B2
+
+C327 [12步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR->FL->BR->FR                    
+      公式: L2 U B2 R2 B2 D F2 D R2 L2 D' B2
+
+C328 [12步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR->BL->FL->FR                    
+      公式: L2 U B2 R2 B2 D F2 U F2 B2 U' B2
+
+C329 [12步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR->BR->BL->FR                    
+      公式: L2 D L2 B2 L2 U F2 D R2 L2 D' B2
+
+C330 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DR                     E层: OK                                
+      公式: R2 U' R2 L2 D B2 L2 D' B2 L2 B2 D'
+
+C331 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DR                     E层: FL->BL->BR->FL                    
+      公式: B2 U' R2 L2 U B2 R2 U' B2 R2 B2 D'
+
+C332 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DR                     E层: FL->BR->BL->FL                    
+      公式: R2 U' R2 L2 U R2 B2 D' R2 B2 R2 U'
+
+C333 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DR                     E层: FR->FL->BL->FR                    
+      公式: R2 D' F2 B2 D R2 B2 U' B2 L2 B2 D'
+
+C334 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DR                     E层: FR->BL->BR->FR                    
+      公式: R2 U' R2 L2 U R2 B2 U' B2 L2 B2 D'
+
+C335 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: BL<->BR                           
+      公式: U' R2 F2 D F2 B2 U L2 D2 F2 L2 U'
+
+C336 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FL<->BR                           
+      公式: F2 L2 U D L2 D' F2 B2 D' L2 B2 U2
+
+C337 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR<->FL                           
+      公式: U' L2 B2 D' R2 L2 D' B2 D2 L2 B2 D'
+
+C338 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->FL->BL->BR->FR                
+      公式: F2 L2 U' D' R2 D' F2 B2 D' R2 F2 D2
+
+C339 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->BL->BR->FL->FR                
+      公式: F2 L2 U2 B2 U D2 F2 B2 D' R2 F2 D2
+
+C340 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR<->BL                           
+      公式: F2 L2 U D L2 U' R2 L2 U' R2 F2 D2
+
+C341 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U' R2 F2 U R2 L2 D L2 D2 F2 L2 U'
+
+C342 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->BR->BL->FL->FR                
+      公式: F2 L2 U' D' R2 U' R2 L2 U' L2 B2 U2
+
+C343 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR<->BR                           
+      公式: F2 L2 U2 B2 U2 D R2 L2 U' R2 F2 D2
+
+C344 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DL->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U' R2 F2 U R2 L2 U B2 U2 R2 F2 D'
+
+C345 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DR                     E层: OK                                
+      公式: U' L2 D' R2 L2 U B2 R2 U' B2 R2 B2
+
+C346 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DR                     E层: FL->BL->BR->FL                    
+      公式: F2 L2 F2 U' F2 R2 D F2 B2 D' R2 D'
+
+C347 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DR                     E层: FL->BR->BL->FL                    
+      公式: U' L2 D' R2 L2 D L2 B2 D' B2 R2 B2
+
+C348 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DR                     E层: FR<->FL BL<->BR                   
+      公式: R2 U2 F2 D' F2 B2 U R2 L2 B2 D2 R2
+
+C349 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DR                     E层: FR->FL->BL->FR                    
+      公式: F2 R2 F2 U' R2 F2 U R2 L2 U' F2 D'
+
+C350 [12步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DR                     E层: FR->FL->BR->FR                    
+      公式: F2 L2 F2 U' F2 R2 U R2 L2 U' R2 D'
+
+C351 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: BL<->BR                           
+      公式: U L2 B2 D F2 B2 D B2 U2 R2 F2 D
+
+C352 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FL<->BR                           
+      公式: U2 B2 R2 U D R2 D' F2 B2 D' R2 F2
+
+C353 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR<->FL                           
+      公式: U R2 F2 U' F2 B2 D' R2 U2 F2 L2 U
+
+C354 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 F2 L2 U D L2 D R2 L2 D L2 B2
+
+C355 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR<->BL                           
+      公式: U2 F2 L2 U' D' R2 U F2 B2 U L2 B2
+
+C356 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U R2 F2 U' F2 B2 U' B2 D2 L2 B2 D
+
+C357 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 B2 R2 U' D' L2 U' R2 L2 U' R2 F2
+
+C358 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DF->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U R2 F2 D' R2 L2 U' R2 U2 F2 L2 U
+
+C359 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: BL<->BR                           
+      公式: U2 F2 D2 L2 U' L2 F2 R2 D' R2 U2 B2
+
+C360 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FL<->BL                           
+      公式: U2 R2 D2 B2 U F2 R2 B2 D F2 D2 R2
+
+C361 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR<->FL                           
+      公式: U2 F2 U2 R2 U' R2 B2 L2 D' L2 D2 B2
+
+C362 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR->FL->BR->BL->FR                
+      公式: R2 U D R2 U B2 L2 F2 U' R2 U2 B2
+
+C363 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR->BL->BR->FL->FR                
+      公式: F2 U2 R2 U' B2 L2 F2 U R2 U D R2
+
+C364 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR->BL->FL->BR->FR                
+      公式: L2 D2 F2 U B2 L2 F2 U' F2 U' D' F2
+
+C365 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR<->BR                           
+      公式: U2 R2 U2 F2 U B2 L2 F2 D B2 U2 R2
+
+C366 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR->BR->FL->BL->FR                
+      公式: R2 D2 B2 U L2 F2 R2 U' B2 U' D' B2
+
+C367 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DR                     E层: OK                                
+      公式: U B2 R2 B2 U F2 L2 D' F2 B2 U B2
+
+C368 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DR                     E层: FL->BL->BR->FL                    
+      公式: D' F2 L2 F2 U' F2 R2 D F2 B2 D' R2
+
+C369 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DR                     E层: FR->FL->BL->FR                    
+      公式: D' F2 R2 F2 U' R2 F2 U R2 L2 U' F2
+
+C370 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DR                     E层: FR->FL->BR->FR                    
+      公式: D' F2 L2 F2 U' F2 R2 U R2 L2 U' R2
+
+C371 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DR                     E层: FR->BL->FL->FR                    
+      公式: U' R2 F2 R2 D' F2 R2 U R2 L2 U' R2
+
+C372 [12步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: OK                                
+      公式: R2 U2 F2 U R2 B2 L2 D B2 L2 D2 L2
+
+C373 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: BL<->BR                           
+      公式: U D L2 B2 D F2 B2 D B2 U2 R2 F2
+
+C374 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FL<->BR                           
+      公式: U2 B2 R2 U F2 B2 U L2 U' D' R2 F2
+
+C375 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR<->FL                           
+      公式: U D L2 B2 U R2 L2 U F2 D2 R2 F2
+
+C376 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 B2 R2 D R2 L2 D R2 U D R2 F2
+
+C377 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->FL->BR->BL->FR                
+      公式: U2 F2 L2 U2 D F2 B2 U' B2 D2 L2 B2
+
+C378 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR<->BL                           
+      公式: U2 F2 L2 D' F2 B2 D' L2 U D L2 B2
+
+C379 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U D R2 F2 U' F2 B2 U' B2 D2 L2 B2
+
+C380 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 F2 L2 U' R2 L2 U' R2 U' D' L2 B2
+
+C381 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR<->BR                           
+      公式: U2 F2 L2 U D2 R2 L2 D' B2 D2 L2 B2
+
+C382 [12步] U层: UF->UB->UL->UF                     D层: DR->DL->DF->DB->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U D R2 F2 D' R2 L2 D' F2 U2 L2 B2
+
+C383 [12步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: BL<->BR                           
+      公式: U R2 F2 D2 R2 U F2 B2 D F2 L2 U
+
+C384 [12步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FL<->BR                           
+      公式: F2 L2 U F2 B2 U R2 U' D' L2 B2 U2
+
+C385 [12步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR<->FL                           
+      公式: F2 L2 D R2 L2 U' R2 U2 B2 D2 B2 U2
+
+C386 [12步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->FL->BL->BR->FR                
+      公式: F2 L2 D R2 L2 D L2 U D L2 B2 U2
+
+C387 [12步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR<->BL                           
+      公式: F2 L2 D R2 L2 D L2 U' D' R2 F2 D2
+
+C388 [12步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->BL->FL->BR->FR                
+      公式: F2 L2 U F2 B2 D' L2 U2 F2 U2 B2 U2
+
+C389 [12步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->BR->BL->FL->FR                
+      公式: F2 L2 U F2 B2 U R2 U D R2 F2 D2
+
+C390 [12步] U层: UF->UB->UL->UF                     D层: DR->DB->DF->DL->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U R2 F2 D2 R2 D R2 L2 U F2 L2 U
+
+C391 [12步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: OK                                
+      公式: F2 U' F2 B2 D L2 U F2 R2 F2 U L2
+
+C392 [12步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FL->BR->BL->FL                    
+      公式: F2 U' F2 B2 U B2 D F2 R2 F2 U L2
+
+C393 [12步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR->FL->BL->FR                    
+      公式: F2 U' F2 B2 U B2 U L2 F2 L2 D L2
+
+C394 [12步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR->BL->BR->FR                    
+      公式: F2 D' R2 L2 D B2 D F2 R2 F2 U L2
+
+C395 [12步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR->BR->FL->FR                    
+      公式: F2 D' R2 L2 D B2 U L2 F2 L2 D L2
+
+C396 [12步] U层: UF<->UB                            D层: DR->DF->DL->DB->DR                 E层: FL->BL->BR->FL                    
+      公式: F2 U D' R2 U' R2 L2 U F2 R2 L2 F2
+
+C397 [12步] U层: UF<->UB                            D层: DR->DF->DL->DB->DR                 E层: FL->BR->BL->FL                    
+      公式: F2 R2 U D' B2 L2 D R2 L2 D' F2 B2
+
+C398 [12步] U层: UF<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR<->FL BL<->BR                   
+      公式: F2 R2 U2 D2 R2 B2 D F2 B2 U' F2 B2
+
+C399 [12步] U层: UF<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR->FL->BL->FR                    
+      公式: F2 R2 L2 F2 U R2 L2 U' R2 U D' B2
+
+C400 [12步] U层: UF<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR->BL->FL->FR                    
+      公式: F2 U D' R2 D' F2 B2 D F2 R2 L2 F2
+
+C401 [12步] U层: UF<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR<->BR FL<->BL                   
+      公式: F2 U2 D2 R2 L2 B2 D F2 B2 U' F2 B2
+
+C402 [12步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: OK                                
+      公式: R2 U2 F2 U L2 F2 R2 D B2 L2 D2 L2
+
+C403 [12步] U层: UF<->UB                            D层: DR<->DL DF<->DB                    E层: FR->FL->BL->BR->FR                
+      公式: U2 R2 U2 R2 L2 F2 U2 R2 B2 D2 B2 D2
+
+C404 [12步] U层: UF<->UB                            D层: DR<->DL DF<->DB                    E层: FR->BR->BL->FL->FR                
+      公式: U2 R2 U2 R2 L2 F2 D2 L2 F2 U2 B2 D2
+
+C405 [12步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: OK                                
+      公式: R2 U2 L2 F2 U L2 F2 R2 D B2 D2 L2
+
+C406 [12步] U层: UF<->UB                            D层: DR->DB->DL->DF->DR                 E层: FL->BL->BR->FL                    
+      公式: F2 R2 L2 U' D R2 D' R2 L2 D F2 B2
+
+C407 [12步] U层: UF<->UB                            D层: DR->DB->DL->DF->DR                 E层: FL->BR->BL->FL                    
+      公式: F2 R2 L2 F2 U' R2 L2 U R2 U' D F2
+
+C408 [12步] U层: UF<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR<->FL BL<->BR                   
+      公式: F2 R2 U2 D2 R2 B2 D' F2 B2 U F2 B2
+
+C409 [12步] U层: UF<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR->FL->BL->FR                    
+      公式: F2 R2 U' D F2 R2 D' R2 L2 D F2 B2
+
+C410 [12步] U层: UF<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR->BL->FL->FR                    
+      公式: F2 R2 L2 U' D R2 U' F2 B2 U F2 B2
+
+C411 [12步] U层: UF<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR<->BR FL<->BL                   
+      公式: F2 U2 D2 R2 L2 B2 D' F2 B2 U F2 B2
+
+C412 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DL DF<->DB                    E层: FL->BL->BR->FL                    
+      公式: R2 U R2 D' R2 F2 B2 R2 U B2 D' R2
+
+C413 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DL DF<->DB                    E层: FL->BR->BL->FL                    
+      公式: R2 D B2 U' R2 F2 B2 R2 D R2 U' R2
+
+C414 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DL DF<->DB                    E层: FR<->FL BL<->BR                   
+      公式: R2 U2 D2 R2 U F2 R2 L2 F2 U' R2 L2
+
+C415 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DL DF<->DB                    E层: FR->FL->BL->FR                    
+      公式: R2 L2 D R2 U' D R2 L2 B2 U' R2 L2
+
+C416 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DL DF<->DB                    E层: FR->BL->FL->FR                    
+      公式: R2 L2 U F2 U D' F2 B2 L2 D' R2 L2
+
+C417 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DL DF<->DB                    E层: FR<->BR FL<->BL                   
+      公式: R2 L2 U F2 U2 D2 R2 L2 B2 U' R2 L2
+
+C418 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DB DF<->DL                    E层: FL->BL->BR->FL                    
+      公式: R2 L2 D R2 L2 F2 B2 U' F2 U' D L2
+
+C419 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DB DF<->DL                    E层: FL->BR->BL->FL                    
+      公式: R2 L2 U R2 U D' B2 R2 L2 D' R2 L2
+
+C420 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DB DF<->DL                    E层: FR<->FL BL<->BR                   
+      公式: R2 U2 F2 U' R2 L2 F2 B2 U B2 D2 R2
+
+C421 [12步] U层: UR<->UF UL<->UB                    D层: DR<->DB DF<->DL                    E层: FR<->BR FL<->BL                   
+      公式: R2 L2 U R2 L2 F2 U2 D2 F2 U' R2 L2
+
+C422 [12步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DL->DB->DR                 E层: OK                                
+      公式: U R2 L2 U2 F2 B2 U' F2 B2 U2 R2 L2
+
+C423 [12步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DL->DB->DR                 E层: FR<->BL FL<->BR                   
+      公式: U2 R2 L2 U R2 L2 D2 F2 B2 U' R2 L2
+
+C424 [12步] U层: UR->UF->UL->UB->UR                 D层: DR->DB->DL->DF->DR                 E层: FL->BL->BR->FL                    
+      公式: U R2 L2 F2 B2 D' R2 L2 F2 U' D L2
+
+C425 [12步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DB->DL->DR                 E层: OK                                
+      公式: U2 R2 F2 D F2 B2 U' B2 L2 D2 R2 L2
+
+C426 [12步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DB->DL->DR                 E层: FR<->BL FL<->BR                   
+      公式: U2 R2 F2 U R2 L2 D' F2 R2 U2 R2 L2
+
+C427 [12步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DB->DF->DR                 E层: FR<->BL FL<->BR                   
+      公式: U2 R2 L2 U2 R2 F2 D R2 L2 U' F2 R2
+
+C428 [12步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DF->DB->DR                 E层: OK                                
+      公式: R2 U2 B2 U' F2 R2 L2 F2 U B2 D2 L2
+
+C429 [12步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DF->DB->DR                 E层: FR<->FL BL<->BR                   
+      公式: F2 R2 U2 B2 U F2 B2 D' F2 D2 R2 B2
+
+C430 [12步] U层: UR->UF->UB->UL->UR                 D层: DR->DB->DF->DL->DR                 E层: OK                                
+      公式: R2 F2 U2 L2 U F2 B2 D' L2 U2 F2 L2
+
+C431 [12步] U层: UR->UF->UB->UL->UR                 D层: DR->DB->DF->DL->DR                 E层: FR<->BR FL<->BL                   
+      公式: R2 F2 U2 L2 D R2 L2 U' R2 D2 F2 L2
+
+C432 [12步] U层: UR->UB->UL->UF->UR                 D层: DR->DF->DL->DB->DR                 E层: FL->BL->BR->FL                    
+      公式: R2 L2 F2 B2 U R2 L2 F2 U' D L2 D'
+
+C433 [13步] U层: OK                                 D层: DF->DL->DB->DF                     E层: FR<->BR FL<->BL                   
+      公式: U L2 U R2 U F2 U F2 U L2 U' D2 L2
+
+C434 [13步] U层: OK                                 D层: DF->DB->DL->DF                     E层: FR<->BR FL<->BL                   
+      公式: U D2 R2 U' L2 D' L2 D' B2 D' B2 D' L2
+
+C435 [13步] U层: OK                                 D层: DR<->DF DL<->DB                    E层: FR<->FL BL<->BR                   
+      公式: R2 U F2 D' F2 R2 F2 D' R2 U' D2 R2 B2
+
+C436 [13步] U层: OK                                 D层: DR<->DF DL<->DB                    E层: FR<->BL FL<->BR                   
+      公式: R2 F2 R2 L2 B2 L2 U F2 B2 D R2 L2 D2
+
+C437 [13步] U层: OK                                 D层: DR<->DF DL<->DB                    E层: FR<->BR FL<->BL                   
+      公式: R2 U F2 U2 D B2 L2 B2 D' L2 U R2 B2
+
+C438 [13步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 F2 U F2 B2 U' D2 L2 U' F2 B2 U' B2
+
+C439 [13步] U层: OK                                 D层: DR->DF->DB->DL->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 F2 U F2 B2 U R2 U D2 F2 B2 U' B2
+
+C440 [13步] U层: UL<->UB                            D层: DL<->DB                            E层: FR<->BL FL<->BR                   
+      公式: L2 U R2 F2 U2 D2 R2 U2 F2 R2 B2 U L2
+
+C441 [13步] U层: UL<->UB                            D层: DF<->DL                            E层: FR<->BL FL<->BR                   
+      公式: L2 U D2 R2 F2 U2 D2 R2 F2 R2 B2 U L2
+
+C442 [13步] U层: UL<->UB                            D层: DF<->DL                            E层: FR<->BR FL<->BL                   
+      公式: U2 D2 R2 U D2 R2 F2 R2 B2 L2 B2 U L2
+
+C443 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: BL<->BR                           
+      公式: R2 F2 U2 R2 D R2 L2 U R2 L2 B2 L2 D2
+
+C444 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FL<->BL                           
+      公式: L2 U R2 D2 F2 L2 D2 F2 R2 B2 L2 U L2
+
+C445 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FL<->BR                           
+      公式: L2 U' F2 R2 B2 L2 U2 L2 D2 F2 L2 U' L2
+
+C446 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR<->FL                           
+      公式: R2 B2 R2 L2 U2 L2 U' R2 L2 D' B2 R2 U2
+
+C447 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR->FL->BL->BR->FR                
+      公式: F2 U2 R2 U F2 B2 D R2 L2 B2 L2 D2 R2
+
+C448 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR<->BL                           
+      公式: F2 U2 R2 D R2 L2 U R2 L2 B2 L2 D2 R2
+
+C449 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR->BL->FL->BR->FR                
+      公式: R2 B2 R2 L2 U2 L2 D' F2 B2 U' B2 R2 U2
+
+C450 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR->BR->BL->FL->FR                
+      公式: F2 L2 U2 R2 U F2 B2 D F2 L2 U2 F2 L2
+
+C451 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR<->BR                           
+      公式: L2 U R2 U2 F2 L2 D2 F2 L2 F2 L2 U L2
+
+C452 [13步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR->BR->FL->BL->FR                
+      公式: R2 F2 U2 R2 U F2 B2 D R2 L2 B2 L2 D2
+
+C453 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: BL<->BR                           
+      公式: U2 R2 F2 R2 L2 U' R2 L2 D' L2 D2 F2 R2
+
+C454 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FL<->BL                           
+      公式: U2 R2 D2 R2 U R2 F2 R2 B2 L2 B2 U L2
+
+C455 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FL<->BR                           
+      公式: R2 U2 R2 B2 D R2 L2 U L2 U2 R2 L2 B2
+
+C456 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR<->FL                           
+      公式: U2 R2 B2 D R2 L2 U L2 U2 R2 L2 B2 R2
+
+C457 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR->FL->BL->BR->FR                
+      公式: R2 U2 R2 B2 U F2 B2 D L2 U2 R2 L2 B2
+
+C458 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR<->BL                           
+      公式: R2 U2 R2 F2 R2 L2 U' R2 L2 D' L2 D2 F2
+
+C459 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR->BL->FL->BR->FR                
+      公式: U2 R2 F2 R2 L2 D' F2 B2 U' L2 D2 F2 R2
+
+C460 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR->BR->BL->FL->FR                
+      公式: R2 U2 R2 F2 R2 L2 D' F2 B2 U' L2 D2 F2
+
+C461 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR<->BR                           
+      公式: U2 R2 U2 L2 D R2 F2 L2 F2 R2 B2 D L2
+
+C462 [13步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR->BR->FL->BL->FR                
+      公式: U2 R2 B2 U F2 B2 D L2 U2 R2 L2 B2 R2
+
+C463 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FL->BL->BR->FL                    
+      公式: U B2 U2 R2 B2 L2 U' B2 R2 F2 U L2 D'
+
+C464 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FL->BR->BL->FL                    
+      公式: U2 F2 D F2 L2 B2 U' R2 B2 U2 B2 D2 R2
+
+C465 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FR<->FL BL<->BR                   
+      公式: U2 F2 U R2 B2 L2 D' R2 F2 L2 D2 B2 D2
+
+C466 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FR->FL->BL->FR                    
+      公式: U2 F2 U R2 B2 L2 D' R2 F2 U2 F2 U2 L2
+
+C467 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FR->BL->FL->FR                    
+      公式: U2 R2 D2 F2 U2 F2 R2 U B2 R2 F2 D' B2
+
+C468 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FR->BL->BR->FR                    
+      公式: U D' R2 U F2 L2 B2 U' R2 B2 L2 U2 B2
+
+C469 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FR<->BL FL<->BR                   
+      公式: F2 U2 R2 U D2 B2 R2 F2 D' R2 B2 D2 F2
+
+C470 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FR->BR->BL->FR                    
+      公式: U2 R2 U2 F2 D R2 F2 L2 U' R2 B2 D2 F2
+
+C471 [13步] U层: UL<->UB                            D层: DF<->DB                            E层: FR<->BR FL<->BL                   
+      公式: L2 U2 D R2 U2 F2 R2 B2 U2 R2 F2 D L2
+
+C472 [13步] U层: UL<->UB                            D层: DR<->DF                            E层: FL->BL->BR->FL                    
+      公式: U D2 B2 U' R2 F2 L2 F2 R2 B2 D L2 D
+
+C473 [13步] U层: UL<->UB                            D层: DR<->DF                            E层: FL->BR->BL->FL                    
+      公式: U' D2 L2 U R2 F2 L2 F2 R2 B2 D' B2 D'
+
+C474 [13步] U层: UL<->UB                            D层: DR<->DF                            E层: FR<->FL BL<->BR                   
+      公式: U2 F2 U R2 F2 R2 D2 B2 L2 B2 U B2 D2
+
+C475 [13步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: BL<->BR                           
+      公式: B2 U2 F2 D' R2 F2 R2 F2 R2 F2 D' F2 U2
+
+C476 [13步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FL<->BL                           
+      公式: F2 R2 F2 B2 D' F2 B2 U' F2 D2 L2 B2 D2
+
+C477 [13步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR<->FL                           
+      公式: B2 U2 F2 U' R2 F2 L2 B2 L2 F2 U' B2 D2
+
+C478 [13步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR->FL->BR->BL->FR                
+      公式: F2 R2 F2 B2 U' R2 L2 D' F2 U2 R2 F2 U2
+
+C479 [13步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR->BL->BR->FL->FR                
+      公式: F2 R2 F2 B2 U' R2 L2 D' F2 D2 L2 B2 D2
+
+C480 [13步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR<->BR                           
+      公式: F2 R2 F2 B2 D' F2 B2 U' F2 U2 R2 F2 U2
+
+C481 [13步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FL->BR->BL->FL                    
+      公式: L2 U2 D' F2 D' R2 F2 R2 U' R2 B2 U' L2
+
+C482 [13步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR<->FL BL<->BR                   
+      公式: L2 U R2 U' L2 B2 L2 U' L2 F2 U D2 L2
+
+C483 [13步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR->FL->BL->FR                    
+      公式: L2 D B2 U2 D R2 F2 R2 U' R2 B2 U' L2
+
+C484 [13步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR->BL->BR->FR                    
+      公式: L2 U2 D' F2 U' B2 R2 B2 D' R2 B2 U' L2
+
+C485 [13步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR<->BL FL<->BR                   
+      公式: L2 U R2 U D2 R2 F2 R2 U' R2 B2 U' L2
+
+C486 [13步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR->BR->FL->FR                    
+      公式: L2 D B2 U D2 B2 R2 B2 D' R2 B2 U' L2
+
+C487 [13步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FR<->BR FL<->BL                   
+      公式: L2 D B2 U D2 B2 R2 B2 U' B2 L2 D' L2
+
+C488 [13步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FL->BL->BR->FL                    
+      公式: R2 B2 R2 U' D2 R2 U F2 R2 B2 U R2 D
+
+C489 [13步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR<->FL BL<->BR                   
+      公式: U L2 U B2 L2 F2 U2 D' B2 U F2 L2 F2
+
+C490 [13步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR<->BL FL<->BR                   
+      公式: U F2 U F2 L2 B2 D L2 U' D2 F2 L2 F2
+
+C491 [13步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->BR->FL->FR                    
+      公式: U' D2 R2 U F2 R2 B2 U R2 D F2 L2 F2
+
+C492 [13步] U层: UL<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR<->BR FL<->BL                   
+      公式: U F2 U F2 L2 B2 U2 D' R2 U F2 L2 F2
+
+C493 [13步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: BL<->BR                           
+      公式: U2 R2 B2 R2 L2 D2 R2 D R2 L2 U B2 R2
+
+C494 [13步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FL<->BL                           
+      公式: U2 R2 D' R2 F2 R2 F2 R2 F2 D' R2 U2 L2
+
+C495 [13步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR<->FL                           
+      公式: U2 R2 F2 U2 R2 U' R2 L2 D' R2 L2 F2 R2
+
+C496 [13步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR->BL->FL->BR->FR                
+      公式: U2 R2 F2 U2 R2 D' F2 B2 U' R2 L2 F2 R2
+
+C497 [13步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR<->BR                           
+      公式: U2 R2 U' R2 F2 L2 B2 L2 F2 U' L2 D2 L2
+
+C498 [13步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR->BR->FL->BL->FR                
+      公式: U2 R2 B2 R2 L2 D2 R2 U F2 B2 D B2 R2
+
+C499 [13步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: BL<->BR                           
+      公式: U2 F2 D R2 F2 R2 F2 R2 F2 D F2 U2 B2
+
+C500 [13步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FL<->BL                           
+      公式: U2 F2 L2 F2 B2 D2 F2 D' F2 B2 U' L2 F2
+
+C501 [13步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR<->FL                           
+      公式: U2 F2 U R2 F2 R2 B2 L2 B2 U B2 D2 B2
+
+C502 [13步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR->FL->BR->BL->FR                
+      公式: U2 F2 L2 F2 B2 D2 F2 U' R2 L2 D' L2 F2
+
+C503 [13步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR->BL->BR->FL->FR                
+      公式: U2 F2 R2 U2 F2 D R2 L2 U F2 B2 R2 F2
+
+C504 [13步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR<->BR                           
+      公式: U2 F2 R2 U2 F2 U F2 B2 D F2 B2 R2 F2
+
+C505 [13步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FL->BR->BL->FL                    
+      公式: F2 L2 F2 U D2 F2 U' R2 F2 L2 U' F2 D'
+
+C506 [13步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR<->FL BL<->BR                   
+      公式: U' R2 U D2 L2 F2 R2 D' F2 U' R2 B2 R2
+
+C507 [13步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR->FL->BR->FR                    
+      公式: U D2 F2 U' R2 F2 L2 U' F2 D' R2 B2 R2
+
+C508 [13步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR<->BL FL<->BR                   
+      公式: U D2 F2 U' R2 F2 L2 D' L2 U' R2 B2 R2
+
+C509 [13步] U层: UL<->UB                            D层: DR->DL->DB->DF->DR                 E层: FR<->BR FL<->BL                   
+      公式: U' B2 U D2 R2 F2 L2 D' L2 U' R2 B2 R2
+
+C510 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FL->BL->BR->FL                    
+      公式: U D' B2 U2 R2 B2 L2 U' B2 R2 F2 U L2
+
+C511 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FL->BR->BL->FL                    
+      公式: U2 F2 D2 R2 D2 L2 B2 D' F2 R2 B2 U L2
+
+C512 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FR<->FL BL<->BR                   
+      公式: B2 U2 D' R2 F2 U2 L2 B2 L2 D2 B2 D' B2
+
+C513 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FR->FL->BL->FR                    
+      公式: U2 F2 U2 R2 D' F2 R2 B2 U F2 L2 D2 R2
+
+C514 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FR->BL->FL->FR                    
+      公式: U2 R2 D2 L2 F2 U' L2 B2 R2 D R2 U2 F2
+
+C515 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FR->BL->BR->FR                    
+      公式: U R2 U F2 L2 B2 U' R2 B2 L2 U2 B2 D'
+
+C516 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FR<->BL FL<->BR                   
+      公式: R2 U2 R2 B2 U D2 B2 R2 F2 D' B2 D2 R2
+
+C517 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FR->BR->BL->FR                    
+      公式: U2 R2 U2 R2 B2 U' R2 F2 L2 D L2 D2 F2
+
+C518 [13步] U层: UL<->UB                            D层: DR<->DL                            E层: FR<->BR FL<->BL                   
+      公式: U2 R2 U2 F2 R2 B2 U' R2 F2 L2 D L2 D2
+
+C519 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: BL<->BR                           
+      公式: U2 F2 D2 F2 U' R2 F2 L2 B2 L2 F2 U' B2
+
+C520 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FL<->BL                           
+      公式: U2 F2 R2 F2 B2 U F2 B2 D B2 D2 R2 F2
+
+C521 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FL<->BR                           
+      公式: F2 U2 F2 L2 D' F2 B2 U' B2 U2 F2 B2 L2
+
+C522 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR<->FL                           
+      公式: U2 F2 U2 B2 D' R2 F2 L2 F2 R2 B2 D' B2
+
+C523 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR->FL->BL->BR->FR                
+      公式: F2 U2 F2 R2 F2 B2 D R2 L2 U B2 D2 R2
+
+C524 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR->FL->BR->BL->FR                
+      公式: U2 F2 L2 U' R2 L2 D' B2 U2 F2 B2 L2 F2
+
+C525 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR->BL->BR->FL->FR                
+      公式: U2 F2 R2 F2 B2 D R2 L2 U B2 D2 R2 F2
+
+C526 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR<->BL                           
+      公式: F2 U2 F2 R2 F2 B2 U F2 B2 D B2 D2 R2
+
+C527 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR->BR->BL->FL->FR                
+      公式: F2 U2 F2 L2 U' R2 L2 D' B2 U2 F2 B2 L2
+
+C528 [13步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR<->BR                           
+      公式: U2 F2 L2 D' F2 B2 U' B2 U2 F2 B2 L2 F2
+
+C529 [13步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: BL<->BR                           
+      公式: U2 F2 D F2 L2 B2 U' R2 B2 L2 F2 U2 B2
+
+C530 [13步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FL<->BL                           
+      公式: U2 R2 D2 R2 F2 L2 B2 D' F2 R2 B2 U L2
+
+C531 [13步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FL<->BR                           
+      公式: R2 U2 R2 L2 B2 D' L2 B2 R2 U R2 D2 B2
+
+C532 [13步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR<->FL                           
+      公式: U2 F2 U R2 B2 L2 D' R2 F2 L2 B2 D2 B2
+
+C533 [13步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR->FL->BL->BR->FR                
+      公式: R2 B2 U2 F2 U' L2 B2 L2 U L2 U2 R2 B2
+
+C534 [13步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR<->BL                           
+      公式: R2 U2 R2 L2 B2 U' F2 L2 B2 D L2 U2 B2
+
+C535 [13步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR->BR->BL->FL->FR                
+      公式: R2 F2 U2 F2 D F2 R2 F2 D' R2 D2 L2 B2
+
+C536 [13步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR<->BR                           
+      公式: U2 R2 U2 L2 F2 R2 B2 U' R2 F2 L2 D L2
+
+C537 [13步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR<->FL BL<->BR                   
+      公式: R2 U R2 F2 L2 U2 D' B2 U R2 F2 R2 U
+
+C538 [13步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR<->BL FL<->BR                   
+      公式: U L2 B2 L2 U' R2 U' B2 R2 F2 D' F2 D2
+
+C539 [13步] U层: UL<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR<->BR FL<->BL                   
+      公式: F2 U D2 B2 L2 F2 D' L2 U' F2 R2 F2 U'
+
+C540 [13步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FL->BL->BR->FL                    
+      公式: L2 U B2 R2 U R2 F2 R2 D F2 U2 D L2
+
+C541 [13步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR<->FL BL<->BR                   
+      公式: L2 U B2 R2 U R2 F2 R2 U L2 U D2 L2
+
+C542 [13步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR->FL->BR->FR                    
+      公式: L2 U B2 R2 U2 D' F2 L2 F2 U B2 D' L2
+
+C543 [13步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR->BL->FL->FR                    
+      公式: L2 U B2 R2 U R2 F2 R2 U2 D' B2 D' L2
+
+C544 [13步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR<->BL FL<->BR                   
+      公式: L2 U B2 R2 U R2 F2 R2 U' D2 R2 U' L2
+
+C545 [13步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR->BR->BL->FR                    
+      公式: L2 U B2 R2 D B2 R2 B2 U F2 U2 D L2
+
+C546 [13步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FR<->BR FL<->BL                   
+      公式: L2 D L2 B2 U B2 R2 B2 U' D2 B2 D' L2
+
+C547 [13步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: BL<->BR                           
+      公式: R2 F2 R2 L2 D R2 L2 U R2 D2 B2 L2 D2
+
+C548 [13步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FL<->BL                           
+      公式: L2 U2 R2 D R2 F2 R2 F2 R2 F2 D R2 U2
+
+C549 [13步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR<->FL                           
+      公式: R2 F2 R2 L2 D R2 L2 U R2 U2 F2 R2 U2
+
+C550 [13步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR->BL->FL->BR->FR                
+      公式: R2 F2 R2 L2 U F2 B2 D R2 D2 B2 L2 D2
+
+C551 [13步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR<->BR                           
+      公式: L2 U2 R2 U R2 F2 R2 B2 L2 B2 U L2 D2
+
+C552 [13步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR->BR->FL->BL->FR                
+      公式: R2 F2 R2 L2 U F2 B2 D R2 U2 F2 R2 U2
+
+C553 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: BL<->BR                           
+      公式: B2 U R2 F2 L2 B2 L2 F2 U F2 D2 F2 U2
+
+C554 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FL<->BL                           
+      公式: F2 R2 U2 F2 D' F2 B2 U' F2 B2 L2 B2 D2
+
+C555 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FL<->BR                           
+      公式: L2 U2 B2 U' F2 B2 D' F2 B2 L2 B2 U2 B2
+
+C556 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR<->FL                           
+      公式: B2 U R2 F2 L2 B2 L2 U2 B2 D2 B2 U B2
+
+C557 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR->FL->BL->BR->FR                
+      公式: R2 B2 U2 F2 U' R2 L2 D' R2 B2 U2 R2 B2
+
+C558 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR->FL->BR->BL->FR                
+      公式: F2 R2 U2 F2 U' R2 L2 D' F2 B2 L2 B2 D2
+
+C559 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR->BL->BR->FL->FR                
+      公式: F2 L2 F2 B2 U2 B2 D R2 L2 U L2 F2 U2
+
+C560 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR<->BL                           
+      公式: R2 U2 F2 D' F2 B2 U' F2 B2 L2 B2 D2 F2
+
+C561 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR->BR->BL->FL->FR                
+      公式: R2 U2 F2 U' R2 L2 D' F2 B2 L2 B2 D2 F2
+
+C562 [13步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR<->BR                           
+      公式: F2 L2 F2 B2 U2 B2 U F2 B2 D L2 F2 U2
+
+C563 [13步] U层: UL<->UB                            D层: DR<->DB                            E层: FR<->FL BL<->BR                   
+      公式: U2 D2 F2 U R2 F2 R2 B2 L2 B2 U D2 B2
+
+C564 [13步] U层: UL<->UB                            D层: DR<->DB                            E层: FR<->BL FL<->BR                   
+      公式: B2 U R2 U2 D2 F2 L2 F2 L2 F2 U D2 B2
+
+C565 [13步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR<->FL BL<->BR                   
+      公式: U F2 R2 F2 U B2 U R2 B2 L2 U2 D' R2
+
+C566 [13步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR<->BL FL<->BR                   
+      公式: U F2 R2 F2 U' D2 R2 U R2 F2 L2 D F2
+
+C567 [13步] U层: UL<->UB                            D层: DR->DB->DF->DL->DR                 E层: FR<->BR FL<->BL                   
+      公式: U F2 R2 F2 U L2 U L2 B2 R2 U2 D' F2
+
+C568 [13步] U层: UF->UL->UB->UF                     D层: DF->DB->DL->DF                     E层: FL->BL->BR->FL                    
+      公式: U D2 B2 U' R2 L2 U B2 R2 D' L2 F2 L2
+
+C569 [13步] U层: UF->UL->UB->UF                     D层: DF->DB->DL->DF                     E层: FL->BR->BL->FL                    
+      公式: U2 R2 F2 U2 B2 U' F2 B2 D' R2 D2 L2 B2
+
+C570 [13步] U层: UF->UL->UB->UF                     D层: DF->DB->DL->DF                     E层: FR->FL->BR->FR                    
+      公式: U D2 B2 D' F2 B2 D B2 R2 D' L2 F2 L2
+
+C571 [13步] U层: UF->UL->UB->UF                     D层: DF->DB->DL->DF                     E层: FR->BL->BR->FR                    
+      公式: U D2 R2 U' R2 L2 U R2 B2 D' L2 B2 L2
+
+C572 [13步] U层: UF->UL->UB->UF                     D层: DF->DB->DL->DF                     E层: FR<->BL FL<->BR                   
+      公式: U D2 R2 D' F2 B2 U F2 R2 U' L2 B2 L2
+
+C573 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: BL<->BR                           
+      公式: U F2 D2 L2 U' B2 R2 F2 D' R2 D2 F2 U
+
+C574 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FL<->BL                           
+      公式: U R2 D2 B2 U R2 F2 L2 D F2 U2 L2 U
+
+C575 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FL<->BR                           
+      公式: U R2 U2 F2 U L2 B2 R2 D' L2 U2 F2 U'
+
+C576 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR<->FL                           
+      公式: U F2 U2 R2 U' F2 L2 B2 D' L2 U2 F2 U
+
+C577 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR->FL->BL->BR->FR                
+      公式: U R2 U2 F2 D F2 L2 B2 D L2 U2 B2 D
+
+C578 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR->FL->BR->BL->FR                
+      公式: U R2 D2 B2 U R2 F2 L2 U' B2 D2 R2 D'
+
+C579 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR->BL->BR->FL->FR                
+      公式: U R2 U2 F2 U L2 B2 R2 U' F2 U2 R2 D'
+
+C580 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR<->BL                           
+      公式: U R2 U2 F2 D F2 L2 B2 U' R2 D2 F2 U'
+
+C581 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR->BL->FL->BR->FR                
+      公式: U F2 D2 L2 U' B2 R2 F2 U L2 D2 F2 D'
+
+C582 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR->BR->BL->FL->FR                
+      公式: U R2 U2 F2 U L2 B2 R2 U R2 D2 B2 D
+
+C583 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR<->BR                           
+      公式: U R2 U2 F2 U L2 B2 R2 D B2 D2 L2 U
+
+C584 [13步] U层: UF->UL->UB->UF                     D层: DF<->DB                            E层: FR->BR->FL->BL->FR                
+      公式: U F2 U2 R2 U' F2 L2 B2 U R2 U2 F2 D'
+
+C585 [13步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR<->FL BL<->BR                   
+      公式: B2 U F2 B2 D' L2 U2 D L2 B2 L2 D' L2
+
+C586 [13步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR<->BR FL<->BL                   
+      公式: B2 U F2 B2 U2 D R2 D' L2 B2 L2 D' L2
+
+C587 [13步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FL<->BR                           
+      公式: R2 U2 B2 D' R2 B2 R2 F2 B2 U R2 U2 F2
+
+C588 [13步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR<->BL                           
+      公式: R2 U2 B2 U' R2 L2 F2 L2 F2 D L2 D2 F2
+
+C589 [13步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DR                     E层: FR<->FL BL<->BR                   
+      公式: U R2 B2 R2 U R2 F2 U2 D R2 L2 U R2
+
+C590 [13步] U层: UF->UL->UB->UF                     D层: DR->DL->DF->DR                     E层: FR<->BL FL<->BR                   
+      公式: U R2 F2 R2 U' D2 B2 L2 D' R2 L2 U B2
+
+C591 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR->FL->BL->BR->FR                
+      公式: U D R2 U2 F2 D F2 L2 B2 D L2 U2 B2
+
+C592 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL                            E层: FR->BR->BL->FL->FR                
+      公式: U D R2 U2 F2 U L2 B2 R2 U R2 D2 B2
+
+C593 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FL->BL->BR->FL                    
+      公式: U2 R2 D2 R2 F2 D' R2 F2 L2 U L2 U2 B2
+
+C594 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FL->BR->BL->FL                    
+      公式: U2 F2 D2 R2 D R2 F2 L2 U' B2 R2 D2 R2
+
+C595 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR<->FL BL<->BR                   
+      公式: R2 U2 F2 R2 F2 D R2 F2 L2 U' F2 B2 R2
+
+C596 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR->FL->BL->FR                    
+      公式: U2 F2 U2 L2 U B2 R2 F2 D' B2 R2 D2 R2
+
+C597 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR->FL->BR->FR                    
+      公式: U2 R2 U2 L2 B2 D' L2 B2 R2 U R2 D2 B2
+
+C598 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR->BL->FL->FR                    
+      公式: U2 R2 D2 R2 F2 U' B2 R2 F2 D R2 D2 B2
+
+C599 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR->BL->BR->FR                    
+      公式: U2 F2 D2 R2 U F2 L2 B2 D' F2 L2 U2 R2
+
+C600 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR<->BL FL<->BR                   
+      公式: R2 U2 L2 B2 U D2 L2 B2 R2 D' B2 U2 L2
+
+C601 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR->BR->FL->FR                    
+      公式: U2 F2 U2 L2 D L2 B2 R2 U' F2 L2 U2 R2
+
+C602 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR->BR->BL->FR                    
+      公式: U2 R2 U2 L2 B2 U' F2 L2 B2 D L2 U2 B2
+
+C603 [13步] U层: UF->UL->UB->UF                     D层: DR<->DL DF<->DB                    E层: FR<->BR FL<->BL                   
+      公式: F2 L2 D R2 U2 D F2 B2 U R2 U' R2 F2
+
+C604 [13步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DR                     E层: FR<->BL FL<->BR                   
+      公式: U R2 D' F2 B2 U F2 R2 U' L2 B2 L2 D2
+
+C605 [13步] U层: UF->UL->UB->UF                     D层: DR->DB->DF->DR                     E层: FR<->BR FL<->BL                   
+      公式: U F2 U F2 B2 U2 D R2 F2 U F2 L2 F2
+
+C606 [13步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DR                     E层: FR<->FL BL<->BR                   
+      公式: R2 U R2 L2 U2 D B2 R2 U R2 F2 R2 U
+
+C607 [13步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DR                     E层: FR<->BL FL<->BR                   
+      公式: U B2 R2 B2 U' R2 F2 U R2 L2 D' L2 D2
+
+C608 [13步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR<->FL BL<->BR                   
+      公式: L2 U D2 B2 L2 B2 U' R2 U' R2 L2 D F2
+
+C609 [13步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR<->BR FL<->BL                   
+      公式: L2 U' F2 R2 F2 U' L2 U D2 R2 L2 D F2
+
+C610 [13步] U层: UF->UB->UL->UF                     D层: DF->DL->DB->DF                     E层: FL->BL->BR->FL                    
+      公式: U B2 U R2 L2 U D2 F2 R2 D L2 B2 L2
+
+C611 [13步] U层: UF->UB->UL->UF                     D层: DF->DL->DB->DF                     E层: FL->BR->BL->FL                    
+      公式: U R2 U' F2 B2 U R2 F2 D' F2 L2 F2 U2
+
+C612 [13步] U层: UF->UB->UL->UF                     D层: DF->DL->DB->DF                     E层: FR->FL->BR->FR                    
+      公式: U B2 U2 D' F2 B2 D' F2 R2 D L2 B2 L2
+
+C613 [13步] U层: UF->UB->UL->UF                     D层: DF->DL->DB->DF                     E层: FR->BL->BR->FR                    
+      公式: U L2 U2 D' F2 B2 D' R2 F2 D L2 F2 L2
+
+C614 [13步] U层: UF->UB->UL->UF                     D层: DF->DL->DB->DF                     E层: FR<->BL FL<->BR                   
+      公式: U R2 U' F2 B2 D B2 R2 U' B2 R2 B2 D2
+
+C615 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: BL<->BR                           
+      公式: U F2 D2 R2 U B2 L2 F2 D L2 D2 F2 U
+
+C616 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FL<->BL                           
+      公式: U R2 D2 F2 U' F2 R2 B2 D' B2 U2 L2 U
+
+C617 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FL<->BR                           
+      公式: U R2 U2 B2 U' B2 L2 F2 U' R2 U2 B2 D
+
+C618 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR<->FL                           
+      公式: U F2 U2 L2 U F2 R2 B2 D R2 U2 F2 U
+
+C619 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR->FL->BL->BR->FR                
+      公式: U F2 U2 L2 D R2 B2 L2 D B2 D2 L2 D
+
+C620 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR->FL->BR->BL->FR                
+      公式: U R2 U2 B2 U' B2 L2 F2 U B2 D2 L2 D'
+
+C621 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR->BL->BR->FL->FR                
+      公式: U R2 D2 F2 U' F2 R2 B2 U F2 U2 L2 D'
+
+C622 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR<->BL                           
+      公式: U R2 U2 B2 U' B2 L2 F2 D L2 U2 B2 U'
+
+C623 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR->BL->FL->BR->FR                
+      公式: U F2 U2 L2 U F2 R2 B2 U' L2 D2 B2 D'
+
+C624 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR->BR->BL->FL->FR                
+      公式: U F2 U2 L2 U F2 R2 B2 U F2 U2 L2 D
+
+C625 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR<->BR                           
+      公式: U R2 U2 B2 U' B2 L2 F2 D' F2 D2 L2 U
+
+C626 [13步] U层: UF->UB->UL->UF                     D层: DF<->DB                            E层: FR->BR->FL->BL->FR                
+      公式: U F2 D2 R2 U B2 L2 F2 U' R2 U2 B2 D'
+
+C627 [13步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR<->FL BL<->BR                   
+      公式: L2 U B2 R2 B2 U' D2 R2 U R2 L2 D' B2
+
+C628 [13步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR<->BR FL<->BL                   
+      公式: L2 U B2 R2 B2 U L2 U R2 L2 U2 D B2
+
+C629 [13步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DR                     E层: FR<->FL BL<->BR                   
+      公式: R2 U D2 R2 L2 D F2 R2 U' R2 B2 R2 U'
+
+C630 [13步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DR                     E层: FR<->BL FL<->BR                   
+      公式: U L2 F2 L2 U' F2 L2 D R2 L2 U' F2 D2
+
+C631 [13步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DR                     E层: FR<->BL FL<->BR                   
+      公式: U D2 R2 U' F2 B2 D B2 R2 U' B2 R2 B2
+
+C632 [13步] U层: UF->UB->UL->UF                     D层: DR->DF->DB->DR                     E层: FR<->BR FL<->BL                   
+      公式: U' B2 U D2 F2 B2 D R2 B2 U' B2 L2 B2
+
+C633 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR->FL->BL->BR->FR                
+      公式: U D F2 U2 L2 D R2 B2 L2 D B2 D2 L2
+
+C634 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL                            E层: FR->BR->BL->FL->FR                
+      公式: U D F2 U2 L2 U F2 R2 B2 U F2 U2 L2
+
+C635 [13步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DR                     E层: FR<->FL BL<->BR                   
+      公式: U B2 L2 B2 U L2 F2 U D2 R2 L2 D L2
+
+C636 [13步] U层: UF->UB->UL->UF                     D层: DR->DL->DB->DR                     E层: FR<->BL FL<->BR                   
+      公式: U D2 L2 F2 L2 U' F2 L2 D R2 L2 U' F2
+
+C637 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FL->BL->BR->FL                    
+      公式: U2 R2 D2 R2 B2 U F2 R2 B2 D' R2 D2 F2
+
+C638 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FL->BR->BL->FL                    
+      公式: U2 F2 D2 L2 U' L2 F2 R2 D F2 R2 U2 L2
+
+C639 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR<->FL BL<->BR                   
+      公式: R2 U2 F2 R2 F2 D' L2 B2 R2 U F2 B2 R2
+
+C640 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR->FL->BL->FR                    
+      公式: U2 F2 U2 R2 D' F2 R2 B2 U F2 R2 U2 L2
+
+C641 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR->FL->BR->FR                    
+      公式: U2 R2 U2 L2 F2 U B2 L2 F2 D' L2 U2 F2
+
+C642 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR->BL->FL->FR                    
+      公式: U2 R2 D2 R2 B2 D R2 B2 L2 U' L2 U2 F2
+
+C643 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR->BL->BR->FR                    
+      公式: U2 F2 D2 L2 D' B2 L2 F2 U B2 L2 D2 L2
+
+C644 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR<->BL FL<->BR                   
+      公式: R2 U2 F2 U R2 B2 L2 U2 D' F2 R2 U2 L2
+
+C645 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR->BR->FL->FR                    
+      公式: U2 F2 U2 R2 U' R2 B2 L2 D B2 L2 D2 L2
+
+C646 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR->BR->BL->FR                    
+      公式: U2 R2 U2 L2 F2 D L2 F2 R2 U' R2 D2 F2
+
+C647 [13步] U层: UF->UB->UL->UF                     D层: DR<->DL DF<->DB                    E层: FR<->BR FL<->BL                   
+      公式: F2 R2 U R2 U D2 F2 B2 D R2 D' L2 F2
+
+C648 [13步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FL<->BR                           
+      公式: R2 U2 F2 U R2 L2 B2 L2 B2 D' L2 D2 B2
+
+C649 [13步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR<->BL                           
+      公式: R2 U2 F2 D R2 F2 R2 F2 B2 U' R2 U2 B2
+
+C650 [13步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR<->FL BL<->BR                   
+      公式: F2 U' F2 B2 D L2 U2 D' L2 F2 L2 D L2
+
+C651 [13步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR<->BR FL<->BL                   
+      公式: F2 U D2 F2 B2 D R2 D L2 F2 L2 D L2
+
+C652 [13步] U层: UF<->UB                            D层: DR<->DF DL<->DB                    E层: BL<->BR                           
+      公式: F2 R2 L2 U2 F2 U2 F2 U R2 L2 D F2 B2
+
+C653 [13步] U层: UF<->UB                            D层: DR<->DF DL<->DB                    E层: FL<->BL                           
+      公式: F2 R2 D2 B2 D2 L2 F2 U R2 L2 D F2 B2
+
+C654 [13步] U层: UF<->UB                            D层: DR<->DF DL<->DB                    E层: FR->FL->BR->BL->FR                
+      公式: F2 R2 U2 F2 U2 L2 F2 D F2 B2 U F2 B2
+
+C655 [13步] U层: UF<->UB                            D层: DR<->DF DL<->DB                    E层: FR->BL->FL->BR->FR                
+      公式: F2 U2 B2 U2 B2 D' R2 F2 B2 R2 D' F2 B2
+
+C656 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FL->BL->BR->FL                    
+      公式: U2 R2 D2 R2 F2 D' L2 B2 R2 U L2 U2 B2
+
+C657 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FL->BR->BL->FL                    
+      公式: U2 F2 D2 L2 U' R2 B2 L2 D F2 R2 U2 L2
+
+C658 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR<->FL BL<->BR                   
+      公式: R2 U D2 R2 D' F2 B2 U B2 R2 U' R2 B2
+
+C659 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->FL->BL->FR                    
+      公式: U2 F2 U2 R2 D' B2 L2 F2 U F2 R2 U2 L2
+
+C660 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->FL->BR->FR                    
+      公式: U2 R2 U2 L2 B2 D' R2 F2 L2 U R2 D2 B2
+
+C661 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->BL->FL->FR                    
+      公式: U2 R2 D2 R2 F2 U' F2 L2 B2 D R2 D2 B2
+
+C662 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->BL->BR->FR                    
+      公式: U2 F2 D2 L2 D' F2 R2 B2 U B2 L2 D2 L2
+
+C663 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR<->BL FL<->BR                   
+      公式: R2 U2 F2 U L2 F2 R2 U2 D' F2 R2 U2 L2
+
+C664 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->BR->FL->FR                    
+      公式: U2 F2 U2 R2 U' L2 F2 R2 D B2 L2 D2 L2
+
+C665 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR->BR->BL->FR                    
+      公式: U2 R2 U2 L2 B2 U' B2 R2 F2 D L2 U2 B2
+
+C666 [13步] U层: UF<->UB                            D层: DR->DF->DB->DL->DR                 E层: FR<->BR FL<->BL                   
+      公式: R2 D' B2 U D2 F2 B2 D L2 B2 D' R2 B2
+
+C667 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FL->BL->BR->FL                    
+      公式: U2 R2 D2 R2 B2 U R2 B2 L2 D' R2 D2 F2
+
+C668 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FL->BR->BL->FL                    
+      公式: U2 F2 D2 R2 D F2 L2 B2 U' B2 R2 D2 R2
+
+C669 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR<->FL BL<->BR                   
+      公式: R2 U R2 L2 D L2 U' F2 B2 D L2 U2 L2
+
+C670 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->FL->BL->FR                    
+      公式: U2 F2 U2 L2 U R2 F2 L2 D' B2 R2 D2 R2
+
+C671 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->FL->BR->FR                    
+      公式: U2 R2 U2 L2 F2 U L2 F2 R2 D' L2 U2 F2
+
+C672 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->BL->FL->FR                    
+      公式: U2 R2 D2 R2 B2 D B2 L2 F2 U' L2 U2 F2
+
+C673 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->BL->BR->FR                    
+      公式: U2 F2 D2 R2 U L2 B2 R2 D' F2 L2 U2 R2
+
+C674 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR<->BL FL<->BR                   
+      公式: R2 U2 L2 F2 U L2 F2 R2 U2 D' F2 U2 L2
+
+C675 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->BR->FL->FR                    
+      公式: U2 F2 U2 L2 D B2 R2 F2 U' F2 L2 U2 R2
+
+C676 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR->BR->BL->FR                    
+      公式: U2 R2 U2 L2 F2 D F2 R2 B2 U' R2 D2 F2
+
+C677 [13步] U层: UF<->UB                            D层: DR->DL->DF->DB->DR                 E层: FR<->BR FL<->BL                   
+      公式: F2 R2 D' F2 L2 U2 D' F2 B2 U' F2 D' R2
+
+C678 [13步] U层: UF<->UB                            D层: DR<->DB DF<->DL                    E层: BL<->BR                           
+      公式: F2 R2 L2 U2 F2 U2 F2 U' R2 L2 D' F2 B2
+
+C679 [13步] U层: UF<->UB                            D层: DR<->DB DF<->DL                    E层: FL<->BL                           
+      公式: F2 R2 D2 B2 D2 L2 F2 U' R2 L2 D' F2 B2
+
+C680 [13步] U层: UF<->UB                            D层: DR<->DB DF<->DL                    E层: FR->FL->BR->BL->FR                
+      公式: F2 R2 U2 F2 U2 L2 F2 D' F2 B2 U' F2 B2
+
+C681 [13步] U层: UF<->UB                            D层: DR<->DB DF<->DL                    E层: FR->BL->FL->BR->FR                
+      公式: F2 U2 B2 U2 B2 D R2 F2 B2 R2 D F2 B2
+
+C682 [13步] U层: UR<->UF UL<->UB                    D层: DR<->DF DL<->DB                    E层: FL->BL->BR->FL                    
+      公式: U R2 D2 F2 D2 L2 D2 B2 U R2 L2 F2 B2
+
+C683 [13步] U层: UR<->UF UL<->UB                    D层: DR<->DF DL<->DB                    E层: FR->FL->BL->FR                    
+      公式: U R2 U2 F2 B2 U' D' B2 D' R2 L2 F2 B2
+
+C684 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DL->DB->DR                 E层: BL<->BR                           
+      公式: R2 L2 F2 U2 F2 U2 B2 D' R2 L2 F2 B2 D'
+
+C685 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DL->DB->DR                 E层: FL<->BL                           
+      公式: U R2 D2 F2 B2 R2 U2 R2 U R2 L2 F2 B2
+
+C686 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DL->DB->DR                 E层: FL<->BR                           
+      公式: F2 U2 L2 D R2 L2 F2 B2 D B2 L2 D2 L2
+
+C687 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DL->DB->DR                 E层: FR->FL->BL->BR->FR                
+      公式: F2 U2 R2 U R2 L2 F2 B2 U B2 R2 U2 L2
+
+C688 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DL->DB->DR                 E层: FR->FL->BR->BL->FR                
+      公式: R2 L2 U R2 D2 R2 F2 B2 U2 R2 U R2 L2
+
+C689 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DL->DB->DR                 E层: FR<->BL                           
+      公式: F2 U2 L2 U R2 L2 F2 B2 U F2 R2 U2 L2
+
+C690 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DL->DB->DR                 E层: FR->BL->FL->BR->FR                
+      公式: R2 L2 D R2 L2 F2 U2 F2 D2 F2 D R2 L2
+
+C691 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DL->DB->DR                 E层: FR->BR->BL->FL->FR                
+      公式: F2 U2 R2 D R2 L2 F2 B2 D F2 L2 D2 L2
+
+C692 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR->FL->BR->BL->FR                
+      公式: R2 L2 U F2 R2 D2 L2 F2 D2 L2 U R2 L2
+
+C693 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR->BL->BR->FL->FR                
+      公式: R2 L2 U F2 R2 U2 R2 B2 U2 L2 U R2 L2
+
+C694 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR->BL->FL->BR->FR                
+      公式: R2 L2 D R2 F2 U2 F2 L2 D2 F2 D R2 L2
+
+C695 [13步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR->BR->FL->BL->FR                
+      公式: R2 L2 D R2 F2 D2 B2 R2 U2 F2 D R2 L2
+
+C696 [13步] U层: UR<->UF UL<->UB                    D层: DR->DB->DL->DF->DR                 E层: BL<->BR                           
+      公式: U R2 L2 F2 D2 B2 U2 F2 U R2 L2 F2 B2
+
+C697 [13步] U层: UR<->UF UL<->UB                    D层: DR->DB->DL->DF->DR                 E层: FL<->BL                           
+      公式: R2 U2 R2 D2 R2 F2 B2 D' R2 L2 F2 B2 D'
+
+C698 [13步] U层: UR<->UF UL<->UB                    D层: DR->DB->DL->DF->DR                 E层: FL<->BR                           
+      公式: R2 U2 L2 B2 D' R2 L2 F2 B2 D' L2 D2 B2
+
+C699 [13步] U层: UR<->UF UL<->UB                    D层: DR->DB->DL->DF->DR                 E层: FR->FL->BL->BR->FR                
+      公式: R2 U2 F2 D' R2 L2 F2 B2 D' R2 B2 D2 B2
+
+C700 [13步] U层: UR<->UF UL<->UB                    D层: DR->DB->DL->DF->DR                 E层: FR->FL->BR->BL->FR                
+      公式: R2 U2 R2 U2 L2 U' R2 L2 F2 B2 U' R2 L2
+
+C701 [13步] U层: UR<->UF UL<->UB                    D层: DR->DB->DL->DF->DR                 E层: FR<->BL                           
+      公式: R2 U2 L2 B2 U' R2 L2 F2 B2 U' R2 U2 B2
+
+C702 [13步] U层: UR<->UF UL<->UB                    D层: DR->DB->DL->DF->DR                 E层: FR->BL->FL->BR->FR                
+      公式: R2 L2 D R2 L2 F2 U2 B2 U2 B2 D R2 L2
+
+C703 [13步] U层: UR<->UF UL<->UB                    D层: DR->DB->DL->DF->DR                 E层: FR->BR->BL->FL->FR                
+      公式: R2 U2 F2 U' R2 L2 F2 B2 U' L2 F2 U2 B2
+
+C704 [13步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DL->DB->DR                 E层: FR<->FL BL<->BR                   
+      公式: U F2 U2 R2 L2 U2 B2 U R2 L2 U2 F2 B2
+
+C705 [13步] U层: UR->UF->UL->UB->UR                 D层: DR<->DL DF<->DB                    E层: BL<->BR                           
+      公式: R2 F2 U2 R2 D2 F2 L2 D F2 B2 U R2 L2
+
+C706 [13步] U层: UR->UF->UL->UB->UR                 D层: DR<->DL DF<->DB                    E层: FR->FL->BR->BL->FR                
+      公式: R2 U2 L2 D2 R2 U' F2 R2 L2 F2 U' R2 L2
+
+C707 [13步] U层: UR->UF->UL->UB->UR                 D层: DR->DB->DL->DF->DR                 E层: FR<->FL BL<->BR                   
+      公式: U R2 L2 F2 U2 D2 F2 U D2 R2 L2 F2 B2
+
+C708 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DB->DL->DR                 E层: FL->BL->BR->FL                    
+      公式: U D R2 B2 U F2 B2 U' R2 F2 U2 F2 B2
+
+C709 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DB->DL->DR                 E层: FL->BR->BL->FL                    
+      公式: U D F2 L2 U' R2 L2 U F2 R2 D2 R2 L2
+
+C710 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DB->DL->DR                 E层: FR<->FL BL<->BR                   
+      公式: U2 R2 F2 U2 D' F2 B2 U' F2 R2 U2 R2 L2
+
+C711 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DB->DF->DR                 E层: FL->BL->BR->FL                    
+      公式: U D' R2 F2 D2 R2 L2 D' F2 B2 D' R2 F2
+
+C712 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DB->DF->DR                 E层: FR->FL->BL->FR                    
+      公式: U D F2 B2 U2 F2 L2 D' R2 L2 D B2 L2
+
+C713 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DB->DF->DR                 E层: FR->FL->BR->FR                    
+      公式: U D' R2 F2 U2 R2 L2 U' R2 L2 U' R2 F2
+
+C714 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DB->DF->DR                 E层: FR->BL->FL->FR                    
+      公式: U D R2 L2 D2 R2 B2 D' R2 L2 D L2 B2
+
+C715 [13步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FL<->BR                           
+      公式: R2 U2 R2 F2 U L2 B2 R2 D' L2 B2 D2 B2
+
+C716 [13步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR<->BL                           
+      公式: R2 U2 R2 F2 D F2 L2 B2 U' R2 F2 U2 B2
+
+C717 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DF->DB->DR                 E层: FL->BL->BR->FL                    
+      公式: U R2 F2 D2 R2 L2 D' F2 B2 D' R2 F2 D'
+
+C718 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DF->DB->DR                 E层: FL->BR->BL->FL                    
+      公式: U F2 L2 U' R2 L2 U F2 R2 D2 R2 L2 D
+
+C719 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DF->DB->DR                 E层: FR->FL->BL->FR                    
+      公式: U F2 R2 U2 F2 B2 D R2 L2 D B2 L2 D'
+
+C720 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DF->DB->DR                 E层: FR->FL->BR->FR                    
+      公式: U R2 F2 U2 R2 L2 U' R2 L2 U' R2 F2 D'
+
+C721 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DF->DB->DR                 E层: FR<->BL FL<->BR                   
+      公式: U R2 B2 D R2 L2 U' B2 R2 U2 R2 L2 U
+
+C722 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DL->DF->DB->DR                 E层: FR<->BR FL<->BL                   
+      公式: U R2 F2 U2 R2 L2 U' R2 L2 D' F2 L2 U'
+
+C723 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DB->DF->DL->DR                 E层: FL->BL->BR->FL                    
+      公式: U2 R2 D2 F2 D' F2 R2 L2 F2 D' R2 D2 F2
+
+C724 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DB->DF->DL->DR                 E层: FL->BR->BL->FL                    
+      公式: U' F2 R2 U2 F2 B2 U' R2 L2 U' F2 R2 D
+
+C725 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DB->DF->DL->DR                 E层: FR<->FL BL<->BR                   
+      公式: U' F2 R2 D2 F2 B2 D' F2 B2 U' R2 B2 U
+
+C726 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DB->DF->DL->DR                 E层: FR->FL->BR->FR                    
+      公式: U2 R2 U2 B2 D' F2 R2 L2 F2 D' L2 U2 F2
+
+C727 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DB->DF->DL->DR                 E层: FR->BL->BR->FR                    
+      公式: U F2 B2 U2 F2 L2 U' F2 B2 U B2 L2 D
+
+C728 [13步] U层: UR->UF->UB->UL->UR                 D层: DR->DB->DF->DL->DR                 E层: FR<->BL FL<->BR                   
+      公式: U R2 L2 U2 R2 B2 U R2 L2 D' B2 R2 U
+
+C729 [13步] U层: UR<->UL UF<->UB                    D层: DR->DF->DL->DB->DR                 E层: BL<->BR                           
+      公式: R2 F2 D2 R2 U2 F2 L2 U' F2 B2 D' R2 L2
+
+C730 [13步] U层: UR<->UL UF<->UB                    D层: DR->DF->DL->DB->DR                 E层: FR->FL->BR->BL->FR                
+      公式: R2 U2 R2 U2 L2 U R2 F2 B2 R2 U R2 L2
+
+C731 [13步] U层: UR->UB->UL->UF->UR                 D层: DR->DF->DL->DB->DR                 E层: FR<->FL BL<->BR                   
+      公式: U R2 L2 F2 U2 D2 F2 U R2 L2 F2 B2 D2
+
+C732 [14步] U层: OK                                 D层: DR->DF->DL->DB->DR                 E层: BL<->BR                           
+      公式: R2 B2 U L2 D2 R2 D R2 F2 L2 U' F2 D' F2
+
+C733 [14步] U层: OK                                 D层: DR->DF->DL->DB->DR                 E层: FL<->BR                           
+      公式: R2 U' B2 D' B2 R2 F2 U L2 D2 R2 D L2 F2
+
+C734 [14步] U层: OK                                 D层: DR->DF->DL->DB->DR                 E层: FR->FL->BL->BR->FR                
+      公式: R2 U' R2 U2 L2 U' L2 B2 R2 U B2 L2 D' R2
+
+C735 [14步] U层: OK                                 D层: DR->DF->DL->DB->DR                 E层: FR->FL->BR->BL->FR                
+      公式: R2 D' R2 U' B2 R2 F2 U L2 D2 R2 D L2 F2
+
+C736 [14步] U层: OK                                 D层: DR->DB->DL->DF->DR                 E层: BL<->BR                           
+      公式: R2 F2 U' L2 U2 L2 U' F2 R2 B2 D B2 D B2
+
+C737 [14步] U层: OK                                 D层: DR->DB->DL->DF->DR                 E层: FL<->BR                           
+      公式: R2 U F2 U L2 F2 R2 D' R2 U2 R2 D' L2 B2
+
+C738 [14步] U层: OK                                 D层: DR->DB->DL->DF->DR                 E层: FR->FL->BR->BL->FR                
+      公式: R2 D R2 U F2 R2 B2 U' L2 D2 R2 D' L2 B2
+
+C739 [14步] U层: OK                                 D层: DR->DB->DL->DF->DR                 E层: FR->BR->BL->FL->FR                
+      公式: R2 U R2 U2 L2 U L2 F2 R2 U' F2 L2 D R2
+
+C740 [14步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR->FL->BR->BL->FR                
+      公式: U2 R2 D2 F2 R2 L2 D F2 B2 U' B2 R2 U2 R2
+
+C741 [14步] U层: UL<->UB                            D层: DF->DL->DB->DF                     E层: FR->BL->BR->FL->FR                
+      公式: U2 R2 U F2 B2 D F2 L2 U R2 B2 L2 D' R2
+
+C742 [14步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR->FL->BR->BL->FR                
+      公式: U R2 F2 L2 U' R2 D2 R2 D' R2 F2 R2 U R2
+
+C743 [14步] U层: UL<->UB                            D层: DF->DB->DL->DF                     E层: FR->BL->BR->FL->FR                
+      公式: U R2 F2 L2 U' R2 U2 L2 U' F2 L2 F2 D R2
+
+C744 [14步] U层: UL<->UB                            D层: DR<->DF                            E层: FR<->BL FL<->BR                   
+      公式: U R2 U R2 F2 R2 F2 U' D B2 R2 U' B2 D'
+
+C745 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: BL<->BR                           
+      公式: B2 U B2 U2 F2 D' L2 F2 L2 D F2 L2 U B2
+
+C746 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FL<->BL                           
+      公式: L2 U R2 D B2 R2 B2 D' R2 B2 U2 L2 U L2
+
+C747 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FL<->BR                           
+      公式: L2 U B2 U2 F2 D' L2 F2 L2 D F2 L2 U L2
+
+C748 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR<->FL                           
+      公式: B2 U' L2 U2 R2 D B2 R2 B2 U' B2 L2 D' B2
+
+C749 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR->FL->BL->BR->FR                
+      公式: L2 U' F2 U' F2 R2 F2 U F2 L2 U2 B2 U' L2
+
+C750 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR->FL->BR->BL->FR                
+      公式: L2 U R2 U R2 F2 R2 U' R2 B2 U2 L2 U L2
+
+C751 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR->BL->BR->FL->FR                
+      公式: L2 U R2 D B2 R2 B2 U' B2 L2 D2 B2 D L2
+
+C752 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR<->BL                           
+      公式: L2 U' L2 U2 R2 D B2 R2 B2 U' B2 L2 D' L2
+
+C753 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR->BL->FL->BR->FR                
+      公式: B2 U B2 U2 F2 U' F2 R2 F2 U F2 L2 U B2
+
+C754 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR->BR->BL->FL->FR                
+      公式: L2 U B2 U2 F2 U' F2 R2 F2 U F2 L2 U L2
+
+C755 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR<->BR                           
+      公式: L2 U B2 U2 F2 D' L2 F2 L2 U L2 B2 D L2
+
+C756 [14步] U层: UL<->UB                            D层: DR<->DF DL<->DB                    E层: FR->BR->FL->BL->FR                
+      公式: B2 U' F2 U' F2 R2 F2 U F2 L2 U2 B2 U' B2
+
+C757 [14步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FL<->BR                           
+      公式: R2 U2 F2 U2 B2 D F2 B2 U' F2 R2 F2 U2 F2
+
+C758 [14步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR->FL->BL->BR->FR                
+      公式: R2 U2 F2 D2 F2 U R2 L2 D' F2 R2 F2 U2 F2
+
+C759 [14步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR<->BL                           
+      公式: U2 B2 U' R2 B2 L2 U R2 F2 U R2 L2 U B2
+
+C760 [14步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR->BL->FL->BR->FR                
+      公式: U R2 U2 R2 U R2 L2 U R2 B2 D' R2 B2 R2
+
+C761 [14步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR->BR->BL->FL->FR                
+      公式: R2 U2 F2 U2 B2 U R2 L2 D' B2 L2 B2 D2 F2
+
+C762 [14步] U层: UL<->UB                            D层: DR->DF->DL->DR                     E层: FR->BR->FL->BL->FR                
+      公式: U R2 D2 L2 D F2 B2 D R2 B2 D' R2 B2 R2
+
+C763 [14步] U层: UL<->UB                            D层: DR->DF->DL->DB->DR                 E层: FL->BL->BR->FL                    
+      公式: U R2 D' R2 B2 U' B2 L2 B2 D' L2 D B2 D'
+
+C764 [14步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FL<->BR                           
+      公式: U2 R2 B2 R2 L2 U' D' B2 U R2 L2 U B2 R2
+
+C765 [14步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR->FL->BL->BR->FR                
+      公式: U2 R2 U' R2 F2 L2 B2 L2 F2 D' B2 U' D' L2
+
+C766 [14步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR->FL->BR->BL->FR                
+      公式: U2 R2 D2 L2 U2 F2 R2 L2 U' F2 B2 D B2 R2
+
+C767 [14步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR->BL->BR->FL->FR                
+      公式: U2 R2 U2 R2 D2 F2 R2 L2 U' F2 B2 D B2 R2
+
+C768 [14步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR<->BL                           
+      公式: U2 R2 F2 U D B2 D' R2 L2 D' R2 L2 F2 R2
+
+C769 [14步] U层: UL<->UB                            D层: DR->DF->DB->DR                     E层: FR->BR->BL->FL->FR                
+      公式: U2 R2 F2 U' D' F2 U' F2 B2 U' R2 L2 F2 R2
+
+C770 [14步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FL<->BR                           
+      公式: U2 F2 L2 F2 B2 U D L2 U' F2 B2 U' L2 F2
+
+C771 [14步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR->FL->BL->BR->FR                
+      公式: U2 R2 F2 U R2 B2 L2 U' R2 D' R2 L2 D' F2
+
+C772 [14步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR<->BL                           
+      公式: U2 F2 R2 U' D' L2 D F2 B2 D F2 B2 R2 F2
+
+C773 [14步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR->BL->FL->BR->FR                
+      公式: U F2 L2 B2 D' F2 R2 D2 F2 U' R2 L2 D' F2
+
+C774 [14步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR->BR->BL->FL->FR                
+      公式: U2 F2 U R2 F2 R2 B2 L2 B2 D L2 U D B2
+
+C775 [14步] U层: UL<->UB                            D层: DR->DL->DF->DR                     E层: FR->BR->FL->BL->FR                
+      公式: U F2 D' R2 L2 U' F2 D2 L2 F2 D' B2 R2 F2
+
+C776 [14步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR->BL->FL->BR->FR                
+      公式: U F2 U' R2 B2 R2 U L2 D2 L2 D' L2 F2 R2
+
+C777 [14步] U层: UL<->UB                            D层: DR->DL->DB->DR                     E层: FR->BR->FL->BL->FR                
+      公式: U F2 R2 F2 B2 U2 B2 D' R2 L2 D' F2 L2 D
+
+C778 [14步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR->FL->BR->BL->FR                
+      公式: U2 R2 D2 F2 R2 D2 F2 R2 U' R2 B2 R2 U' B2
+
+C779 [14步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR->BL->BR->FL->FR                
+      公式: U R2 U F2 L2 B2 U' R2 B2 L2 F2 U2 B2 D
+
+C780 [14步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR->BL->FL->BR->FR                
+      公式: U2 R2 U' F2 R2 F2 U' F2 L2 D2 F2 L2 D2 F2
+
+C781 [14步] U层: UL<->UB                            D层: DR<->DL DF<->DB                    E层: FR->BR->FL->BL->FR                
+      公式: U2 R2 U' F2 R2 F2 U' F2 L2 U2 B2 R2 U2 F2
+
+C782 [14步] U层: UL<->UB                            D层: DR->DB->DL->DF->DR                 E层: FL->BR->BL->FL                    
+      公式: U2 R2 D R2 F2 D R2 F2 R2 U L2 U' R2 U2
+
+C783 [14步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FL<->BR                           
+      公式: R2 F2 R2 L2 U F2 B2 U F2 U' D' B2 L2 D2
+
+C784 [14步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR->FL->BL->BR->FR                
+      公式: R2 F2 R2 L2 U F2 B2 U F2 U D F2 R2 U2
+
+C785 [14步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR->FL->BR->BL->FR                
+      公式: U R2 F2 R2 D' L2 B2 D F2 B2 D F2 U2 F2
+
+C786 [14步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR->BL->BR->FL->FR                
+      公式: U R2 U R2 F2 R2 F2 R2 F2 D F2 U2 B2 D
+
+C787 [14步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR<->BL                           
+      公式: U2 L2 U F2 L2 B2 U' F2 R2 U' F2 B2 U' L2
+
+C788 [14步] U层: UL<->UB                            D层: DR->DB->DF->DR                     E层: FR->BR->BL->FL->FR                
+      公式: R2 U' R2 L2 U' B2 U' F2 R2 B2 U L2 B2 D2
+
+C789 [14步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR->BL->FL->BR->FR                
+      公式: U F2 U F2 L2 B2 U' F2 D2 F2 D' F2 L2 F2
+
+C790 [14步] U层: UL<->UB                            D层: DR->DB->DL->DR                     E层: FR->BR->FL->BL->FR                
+      公式: U F2 R2 F2 U' R2 D2 R2 D' B2 R2 F2 U F2
+
+C791 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: BL<->BR                           
+      公式: R2 F2 U R2 L2 D R2 U R2 L2 D B2 L2 D2
+
+C792 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FL<->BL                           
+      公式: R2 U R2 L2 D R2 U L2 B2 L2 U' R2 F2 D2
+
+C793 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FL<->BR                           
+      公式: R2 U R2 F2 D R2 L2 D L2 F2 D2 R2 D R2
+
+C794 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR<->FL                           
+      公式: R2 F2 D F2 B2 U R2 D F2 B2 U B2 L2 D2
+
+C795 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR->FL->BL->BR->FR                
+      公式: U2 F2 R2 U R2 L2 U R2 U F2 B2 U R2 F2
+
+C796 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR->FL->BR->BL->FR                
+      公式: R2 U R2 L2 D R2 D F2 L2 F2 D' R2 F2 D2
+
+C797 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR->BL->BR->FL->FR                
+      公式: R2 U' B2 U2 R2 F2 D R2 L2 D L2 F2 D' R2
+
+C798 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR<->BL                           
+      公式: U2 L2 U R2 F2 R2 D' B2 R2 D' F2 B2 D' R2
+
+C799 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR->BL->FL->BR->FR                
+      公式: R2 F2 D F2 B2 U R2 U R2 L2 D B2 L2 D2
+
+C800 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR->BR->BL->FL->FR                
+      公式: U2 R2 F2 U' F2 B2 U' F2 U' R2 L2 U' F2 R2
+
+C801 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR<->BR                           
+      公式: R2 U' B2 D2 R2 F2 D' F2 B2 D' R2 B2 D' R2
+
+C802 [14步] U层: UL<->UB                            D层: DR<->DB DF<->DL                    E层: FR->BR->FL->BL->FR                
+      公式: R2 F2 U R2 L2 D R2 D F2 B2 U B2 L2 D2
+
+C803 [14步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FL->BL->BR->FL                    
+      公式: U D' R2 D F2 B2 U' F2 D' B2 R2 B2 U' L2
+
+C804 [14步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR->FL->BR->FR                    
+      公式: U D' R2 D F2 B2 U' F2 U' L2 B2 L2 D' L2
+
+C805 [14步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR->BL->FL->FR                    
+      公式: U' R2 B2 R2 D' L2 U' R2 L2 F2 R2 F2 U' R2
+
+C806 [14步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR<->BL FL<->BR                   
+      公式: U2 F2 U F2 B2 D' R2 D' L2 B2 L2 D' L2 D2
+
+C807 [14步] U层: UF->UL->UB->UF                     D层: DR<->DF DL<->DB                    E层: FR->BR->BL->FR                    
+      公式: U' F2 U' R2 B2 R2 D' L2 D' F2 B2 U F2 D
+
+C808 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: BL<->BR                           
+      公式: U2 R2 U' B2 U L2 D B2 U F2 D B2 U' L2
+
+C809 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FL<->BL                           
+      公式: U2 R2 D2 F2 U' R2 B2 R2 F2 B2 D' B2 D2 R2
+
+C810 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR<->FL                           
+      公式: U2 R2 U' B2 U L2 D B2 D R2 D L2 D' L2
+
+C811 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 R2 U' B2 D F2 U B2 U F2 D B2 U' L2
+
+C812 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->FL->BR->BL->FR                
+      公式: U2 R2 U' B2 D F2 D L2 U R2 D L2 D' L2
+
+C813 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->BL->BR->FL->FR                
+      公式: U2 R2 U' B2 U L2 D B2 D R2 U B2 U' L2
+
+C814 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U2 F2 B2 D R2 F2 D2 B2 R2 U2 F2 D' F2 B2
+
+C815 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 R2 D' R2 D L2 D B2 D R2 D L2 D' L2
+
+C816 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR<->BR                           
+      公式: U2 R2 U2 B2 U' F2 B2 R2 F2 R2 D' F2 U2 R2
+
+C817 [14步] U层: UF->UL->UB->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U2 F2 B2 D R2 F2 U2 F2 L2 D2 F2 D' F2 B2
+
+C818 [14步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FL<->BL                           
+      公式: L2 U' R2 D F2 R2 F2 U' L2 D2 B2 R2 D' L2
+
+C819 [14步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FL<->BR                           
+      公式: L2 U' B2 R2 U2 B2 D' F2 L2 F2 U B2 D' L2
+
+C820 [14步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->FL->BL->BR->FR                
+      公式: L2 U' F2 R2 F2 U R2 U2 L2 U R2 L2 D F2
+
+C821 [14步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->FL->BR->BL->FR                
+      公式: L2 U' R2 U L2 F2 L2 U' B2 D2 R2 F2 U' L2
+
+C822 [14步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->BL->BR->FL->FR                
+      公式: L2 U' B2 R2 D2 F2 U' L2 B2 L2 U R2 U' L2
+
+C823 [14步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR<->BL                           
+      公式: L2 U' F2 R2 F2 U R2 U2 L2 D F2 B2 U F2
+
+C824 [14步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->BR->BL->FL->FR                
+      公式: L2 U' F2 R2 F2 D B2 D2 B2 D R2 L2 D F2
+
+C825 [14步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR<->BR                           
+      公式: L2 U' R2 U L2 F2 L2 D' R2 U2 B2 R2 D' L2
+
+C826 [14步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FL->BR->BL->FL                    
+      公式: U' D F2 D' F2 R2 F2 D' B2 D' R2 L2 D F2
+
+C827 [14步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR->FL->BL->FR                    
+      公式: U R2 U R2 L2 U' L2 U' B2 R2 B2 U' L2 D'
+
+C828 [14步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR->BL->BR->FR                    
+      公式: U R2 D R2 B2 R2 F2 B2 D R2 D R2 F2 R2
+
+C829 [14步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR<->BL FL<->BR                   
+      公式: U2 R2 U' B2 L2 B2 U' R2 U' R2 L2 D F2 D2
+
+C830 [14步] U层: UF->UL->UB->UF                     D层: DR<->DB DF<->DL                    E层: FR->BR->FL->FR                    
+      公式: U' D F2 D' F2 R2 F2 D' B2 U' F2 B2 U F2
+
+C831 [14步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FL->BR->BL->FL                    
+      公式: U R2 F2 U' F2 U' B2 U' B2 D' F2 L2 U R2
+
+C832 [14步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR->FL->BL->FR                    
+      公式: U D' B2 D B2 R2 B2 D F2 D R2 L2 D' B2
+
+C833 [14步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR->BL->BR->FR                    
+      公式: U D' B2 D B2 R2 B2 D F2 U F2 B2 U' B2
+
+C834 [14步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR<->BL FL<->BR                   
+      公式: U R2 F2 D' L2 U' R2 U' R2 D' L2 B2 D R2
+
+C835 [14步] U层: UF->UB->UL->UF                     D层: DR<->DF DL<->DB                    E层: FR->BR->FL->FR                    
+      公式: U' R2 D' R2 F2 R2 F2 B2 D' R2 D' R2 B2 R2
+
+C836 [14步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FL<->BL                           
+      公式: L2 U R2 D' B2 R2 B2 U L2 D2 F2 R2 D L2
+
+C837 [14步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FL<->BR                           
+      公式: L2 U F2 R2 D2 B2 U L2 F2 L2 D' F2 D L2
+
+C838 [14步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->FL->BL->BR->FR                
+      公式: F2 U' F2 B2 U' F2 D2 F2 U' L2 F2 L2 D L2
+
+C839 [14步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->FL->BR->BL->FR                
+      公式: L2 U R2 U' L2 B2 L2 U F2 D2 R2 B2 U L2
+
+C840 [14步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->BL->BR->FL->FR                
+      公式: L2 U F2 R2 D2 B2 U L2 F2 L2 U' R2 U L2
+
+C841 [14步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR<->BL                           
+      公式: F2 U' F2 B2 D' L2 U2 R2 U' F2 R2 F2 U L2
+
+C842 [14步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->BR->BL->FL->FR                
+      公式: F2 U' F2 B2 U' F2 U2 B2 D' F2 R2 F2 U L2
+
+C843 [14步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR<->BR                           
+      公式: L2 U R2 U' L2 B2 L2 D R2 U2 F2 R2 D L2
+
+C844 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: BL<->BR                           
+      公式: U2 R2 U F2 U' L2 D' F2 D' R2 D' L2 D L2
+
+C845 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FL<->BL                           
+      公式: U2 R2 D2 B2 U R2 F2 R2 F2 B2 D F2 D2 R2
+
+C846 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR<->FL                           
+      公式: U2 R2 U F2 U' L2 D' F2 U' B2 D' F2 U L2
+
+C847 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 R2 D R2 D' L2 D' F2 D' R2 D' L2 D L2
+
+C848 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->FL->BR->BL->FR                
+      公式: U2 R2 U F2 D' B2 D' L2 U' R2 D' L2 D L2
+
+C849 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->BL->BR->FL->FR                
+      公式: U2 R2 U F2 U' L2 D' F2 D' R2 U' F2 U L2
+
+C850 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U2 F2 B2 D F2 D2 R2 F2 U2 F2 L2 D' F2 B2
+
+C851 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 R2 U F2 D' B2 U' F2 U' B2 D' F2 U L2
+
+C852 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR<->BR                           
+      公式: U2 R2 U2 F2 U F2 B2 R2 B2 R2 D B2 U2 R2
+
+C853 [14步] U层: UF->UB->UL->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U2 F2 B2 D F2 U2 R2 F2 U2 B2 R2 D' F2 B2
+
+C854 [14步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FL->BL->BR->FL                    
+      公式: U R2 F2 R2 D L2 U R2 L2 B2 R2 B2 U R2
+
+C855 [14步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR->FL->BR->FR                    
+      公式: U D' L2 U' R2 L2 D B2 D F2 R2 F2 U L2
+
+C856 [14步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR->BL->FL->FR                    
+      公式: U F2 U R2 U F2 D L2 B2 U' F2 L2 D F2
+
+C857 [14步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR<->BL FL<->BR                   
+      公式: U R2 D B2 R2 D' B2 R2 D F2 U L2 D R2
+
+C858 [14步] U层: UF->UB->UL->UF                     D层: DR<->DB DF<->DL                    E层: FR->BR->BL->FR                    
+      公式: U R2 D B2 R2 U' L2 B2 D R2 U F2 U R2
+
+C859 [14步] U层: UF<->UB                            D层: DR<->DF DL<->DB                    E层: FL<->BR                           
+      公式: R2 U' F2 U2 F2 U R2 B2 R2 U' L2 U R2 B2
+
+C860 [14步] U层: UF<->UB                            D层: DR<->DF DL<->DB                    E层: FR->FL->BL->BR->FR                
+      公式: R2 U' B2 R2 U2 B2 U F2 R2 B2 U' F2 D' R2
+
+C861 [14步] U层: UF<->UB                            D层: DR<->DF DL<->DB                    E层: FR<->BL                           
+      公式: R2 D F2 U B2 R2 F2 D' R2 U2 F2 R2 D R2
+
+C862 [14步] U层: UF<->UB                            D层: DR<->DF DL<->DB                    E层: FR->BR->BL->FL->FR                
+      公式: R2 U' F2 U2 F2 D B2 L2 B2 D' L2 U R2 B2
+
+C863 [14步] U层: UF<->UB                            D层: DR<->DB DF<->DL                    E层: FL<->BR                           
+      公式: R2 D R2 B2 U2 R2 D' B2 R2 F2 U B2 D R2
+
+C864 [14步] U层: UF<->UB                            D层: DR<->DB DF<->DL                    E层: FR->FL->BL->BR->FR                
+      公式: R2 U B2 U2 B2 D' F2 L2 F2 D L2 U' R2 F2
+
+C865 [14步] U层: UF<->UB                            D层: DR<->DB DF<->DL                    E层: FR<->BL                           
+      公式: R2 U B2 U2 B2 U' R2 F2 R2 U L2 U' R2 F2
+
+C866 [14步] U层: UF<->UB                            D层: DR<->DB DF<->DL                    E层: FR->BR->BL->FL->FR                
+      公式: R2 U F2 R2 U2 F2 U' B2 R2 F2 U B2 D R2
+
+C867 [14步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: BL<->BR                           
+      公式: R2 L2 U F2 R2 U2 R2 B2 U' D' B2 D R2 L2
+
+C868 [14步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FL<->BL                           
+      公式: R2 L2 U F2 L2 U D F2 L2 D2 F2 D R2 L2
+
+C869 [14步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR<->FL                           
+      公式: R2 L2 U F2 L2 U2 L2 B2 U' D' F2 D R2 L2
+
+C870 [14步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR->FL->BL->BR->FR                
+      公式: R2 L2 U F2 U2 R2 D2 R2 D2 L2 B2 U' R2 L2
+
+C871 [14步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR->BR->BL->FL->FR                
+      公式: R2 L2 U F2 U2 R2 U2 L2 U2 L2 B2 U' R2 L2
+
+C872 [14步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR<->BR                           
+      公式: R2 L2 U F2 R2 U D B2 L2 D2 B2 D R2 L2
+
+C873 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: BL<->BR                           
+      公式: D2 R2 B2 D F2 B2 U L2 U R2 F2 R2 U' F2
+
+C874 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FL<->BL                           
+      公式: D2 R2 U' F2 R2 F2 U B2 U R2 L2 D L2 F2
+
+C875 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR<->FL                           
+      公式: D2 R2 B2 U R2 L2 D L2 D B2 R2 B2 D' F2
+
+C876 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 L2 U' B2 L2 B2 D R2 D R2 L2 D L2 F2
+
+C877 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR->FL->BR->BL->FR                
+      公式: D2 R2 U' F2 R2 F2 U B2 D F2 B2 U L2 F2
+
+C878 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR->BL->BR->FL->FR                
+      公式: D2 R2 D' L2 F2 L2 D B2 U R2 L2 D L2 F2
+
+C879 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR->BL->FL->BR->FR                
+      公式: D2 R2 B2 U R2 L2 D L2 U R2 F2 R2 U' F2
+
+C880 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 B2 U L2 B2 L2 D' F2 D' F2 B2 D' B2 R2
+
+C881 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR<->BR                           
+      公式: D2 R2 D' L2 F2 L2 D B2 D F2 B2 U L2 F2
+
+C882 [14步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR->BR->FL->BL->FR                
+      公式: D2 R2 B2 D F2 B2 U L2 D B2 R2 B2 D' F2
+
+C883 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DL->DB->DR                 E层: FL->BL->BR->FL                    
+      公式: U R2 U R2 L2 D' L2 D' F2 D' F2 B2 D L2
+
+C884 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DL->DB->DR                 E层: FL->BR->BL->FL                    
+      公式: U R2 U2 F2 B2 U D F2 D F2 B2 D2 R2 L2
+
+C885 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: OK                                
+      公式: R2 U R2 D L2 B2 L2 D R2 B2 D' F2 B2 R2
+
+C886 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FL->BL->BR->FL                    
+      公式: R2 U R2 U B2 R2 B2 D F2 R2 U' F2 B2 R2
+
+C887 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FL->BR->BL->FL                    
+      公式: U' L2 U' B2 U' R2 B2 U L2 F2 U' L2 U' B2
+
+C888 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR<->FL BL<->BR                   
+      公式: R2 L2 U' R2 U2 F2 L2 F2 D2 R2 F2 U R2 L2
+
+C889 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR->FL->BL->FR                    
+      公式: F2 R2 D L2 D' F2 R2 B2 D' F2 R2 D' L2 F2
+
+C890 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR->FL->BR->FR                    
+      公式: U' L2 U' B2 U' R2 B2 D F2 R2 D' L2 U' B2
+
+C891 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR->BL->FL->FR                    
+      公式: R2 D L2 D' R2 F2 R2 F2 B2 D' F2 R2 D' L2
+
+C892 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR->BL->BR->FR                    
+      公式: R2 D B2 U L2 B2 L2 D R2 B2 D' F2 B2 R2
+
+C893 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR<->BL FL<->BR                   
+      公式: U2 L2 U' F2 B2 R2 B2 R2 D' F2 D2 L2 F2 L2
+
+C894 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR->BR->FL->FR                    
+      公式: U' L2 U' B2 U' R2 B2 D F2 R2 U' F2 D' B2
+
+C895 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR->BR->BL->FR                    
+      公式: R2 U R2 D L2 B2 L2 U F2 R2 U' F2 B2 R2
+
+C896 [14步] U层: UR->UF->UL->UB->UR                 D层: DR->DF->DB->DL->DR                 E层: FR<->BR FL<->BL                   
+      公式: R2 L2 D' R2 F2 U2 R2 B2 R2 D2 F2 D R2 L2
+
+C897 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: OK                                
+      公式: R2 U2 R2 F2 U R2 L2 F2 L2 F2 D B2 D2 L2
+
+C898 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FL->BL->BR->FL                    
+      公式: R2 D' R2 D' B2 R2 B2 U' F2 R2 D F2 B2 R2
+
+C899 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FL->BR->BL->FL                    
+      公式: R2 U' B2 U' F2 L2 F2 D' R2 B2 U F2 B2 R2
+
+C900 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR<->FL BL<->BR                   
+      公式: R2 L2 D R2 U2 F2 L2 B2 U2 L2 B2 D' R2 L2
+
+C901 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR->FL->BL->FR                    
+      公式: U B2 D R2 U L2 F2 D' R2 B2 U F2 U B2
+
+C902 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR->FL->BR->FR                    
+      公式: U B2 U F2 U B2 L2 D' F2 R2 U L2 D B2
+
+C903 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR->BL->FL->FR                    
+      公式: U B2 U F2 D L2 F2 D' R2 B2 U F2 U B2
+
+C904 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR->BL->BR->FR                    
+      公式: R2 U' B2 D' L2 B2 L2 U' R2 B2 U F2 B2 R2
+
+C905 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR<->BL FL<->BR                   
+      公式: U B2 U F2 U B2 L2 U' R2 B2 U F2 U B2
+
+C906 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR->BR->FL->FR                    
+      公式: U B2 U F2 U B2 L2 D' F2 R2 D F2 U B2
+
+C907 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR->BR->BL->FR                    
+      公式: R2 D' R2 U' L2 B2 L2 D' F2 R2 D F2 B2 R2
+
+C908 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DL->DB->DR                 E层: FR<->BR FL<->BL                   
+      公式: U B2 D R2 D F2 R2 U' L2 F2 D L2 D B2
+
+C909 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DB->DL->DR                 E层: FR->FL->BL->FR                    
+      公式: U F2 U2 R2 U' R2 F2 B2 R2 D B2 D2 L2 D'
+
+C910 [14步] U层: UR->UF->UB->UL->UR                 D层: DR->DF->DB->DL->DR                 E层: FR->BL->BR->FR                    
+      公式: U F2 D2 L2 U' R2 F2 B2 R2 D F2 U2 L2 D'
+
+C911 [14步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: BL<->BR                           
+      公式: F2 U D L2 F2 U R2 B2 L2 U' F2 R2 D2 L2
+
+C912 [14步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FL<->BL                           
+      公式: R2 U D B2 R2 U F2 L2 B2 U' R2 F2 U2 B2
+
+C913 [14步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR<->FL                           
+      公式: R2 U2 L2 B2 U' F2 L2 B2 U B2 R2 U D B2
+
+C914 [14步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR->FL->BR->BL->FR                
+      公式: R2 U D F2 L2 U' R2 F2 L2 U L2 B2 U2 B2
+
+C915 [14步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR->BL->BR->FL->FR                
+      公式: L2 U D B2 R2 U' F2 L2 B2 U R2 F2 U2 F2
+
+C916 [14步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR->BL->FL->BR->FR                
+      公式: L2 U2 L2 B2 U B2 R2 F2 U' B2 R2 U D F2
+
+C917 [14步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR<->BR                           
+      公式: F2 U2 B2 L2 U F2 R2 B2 U' L2 F2 U' D' L2
+
+C918 [14步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR->BR->FL->BL->FR                
+      公式: R2 U2 R2 F2 U L2 B2 R2 U' F2 L2 U D B2
+
+C919 [15步] U层: OK                                 D层: DR->DF->DL->DB->DR                 E层: FR->BR->BL->FL->FR                
+      公式: U2 R2 U F2 U' R2 B2 R2 D' B2 D' B2 U2 L2 F2
+
+C920 [15步] U层: OK                                 D层: DR->DB->DL->DF->DR                 E层: FR->FL->BL->BR->FR                
+      公式: U2 R2 U' B2 U R2 F2 R2 D F2 D F2 U2 L2 B2
+
+C921 [15步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: BL<->BR                           
+      公式: U2 R2 U' B2 L2 B2 U' R2 D' F2 B2 U' F2 D2 F2
+
+C922 [15步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR<->FL                           
+      公式: U2 R2 U' L2 U R2 B2 R2 D B2 R2 D' L2 D2 R2
+
+C923 [15步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U2 R2 U' L2 D B2 L2 B2 U B2 R2 D' L2 D2 R2
+
+C924 [15步] U层: UF->UL->UB->UF                     D层: DR->DB->DL->DF->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U2 R2 D' R2 B2 R2 D' L2 D' F2 B2 U' B2 U2 F2
+
+C925 [15步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: BL<->BR                           
+      公式: U2 R2 U L2 U' R2 F2 R2 D' F2 R2 D L2 D2 R2
+
+C926 [15步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR<->FL                           
+      公式: U2 R2 U F2 L2 F2 U R2 D F2 B2 U B2 D2 B2
+
+C927 [15步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->BL->FL->BR->FR                
+      公式: U2 R2 D R2 F2 R2 D L2 D F2 B2 U F2 U2 B2
+
+C928 [15步] U层: UF->UB->UL->UF                     D层: DR->DF->DL->DB->DR                 E层: FR->BR->FL->BL->FR                
+      公式: U2 R2 U F2 L2 F2 U R2 U R2 L2 D B2 D2 B2
+
+C929 [15步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FL<->BR                           
+      公式: U F2 U' L2 B2 R2 U' F2 D' R2 U2 B2 R2 D2 F2
+
+C930 [15步] U层: UR<->UF UL<->UB                    D层: DR->DF->DB->DL->DR                 E层: FR<->BL                           
+      公式: U F2 D' B2 R2 F2 D' B2 D' L2 U2 F2 L2 U2 F2
+
+C931 [15步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FL<->BR                           
+      公式: U B2 U2 L2 B2 U2 L2 D' F2 D' B2 R2 F2 D' B2
+
+C932 [15步] U层: UR<->UF UL<->UB                    D层: DR->DL->DF->DB->DR                 E层: FR<->BL                           
+      公式: U B2 D2 R2 F2 U2 R2 D' B2 U' R2 F2 L2 U' B2
+
+C933 [15步] U层: UR->UF->UL->UB->UR                 D层: DR<->DL DF<->DB                    E层: FL<->BR                           
+      公式: R2 U D' R2 U2 F2 U2 L2 F2 U F2 B2 U R2 L2
+
+C934 [15步] U层: UR->UF->UL->UB->UR                 D层: DR<->DL DF<->DB                    E层: FR->FL->BL->BR->FR                
+      公式: U2 R2 U2 R2 U' R2 D' R2 F2 B2 R2 U B2 D' R2
+
+C935 [15步] U层: UR->UF->UL->UB->UR                 D层: DR<->DL DF<->DB                    E层: FR->BR->BL->FL->FR                
+      公式: R2 U D B2 U D R2 D' R2 L2 U' R2 F2 B2 R2
+
+C936 [15步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR->FL->BL->BR->FR                
+      公式: U F2 D2 L2 B2 U2 R2 U' F2 D' L2 B2 R2 D' F2
+
+C937 [15步] U层: UR->UF->UB->UL->UR                 D层: DR<->DL DF<->DB                    E层: FR->BR->BL->FL->FR                
+      公式: U F2 U2 R2 F2 U2 L2 U' B2 U' B2 R2 F2 U' F2
+
+C938 [15步] U层: UR<->UL UF<->UB                    D层: DR->DF->DL->DB->DR                 E层: FL<->BR                           
+      公式: U2 R2 U2 L2 D L2 U R2 F2 B2 R2 D' F2 U L2
+
+C939 [15步] U层: UR<->UL UF<->UB                    D层: DR->DF->DL->DB->DR                 E层: FR->FL->BL->BR->FR                
+      公式: R2 U F2 U' F2 R2 L2 F2 D L2 D L2 U2 R2 D2
+
+C940 [15步] U层: UR<->UL UF<->UB                    D层: DR->DF->DL->DB->DR                 E层: FR->BR->BL->FL->FR                
+      公式: R2 U D F2 U D R2 D F2 B2 U R2 F2 B2 R2
+
